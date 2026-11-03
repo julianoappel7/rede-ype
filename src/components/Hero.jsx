@@ -29,11 +29,6 @@ export const Hero = () => {
               <span>Rede Ypê • 13 Postos de Combustíveis em SJC</span>
             </div>
 
-            {/* Main Headline */}
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-[1.12]">
-              Qualidade e Confiança em <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-indigo-600 to-amber-500 underline decoration-amber-400/40 decoration-wavy underline-offset-8">Cada Gota</span>.
-            </h1>
-
             {/* Cidades em Super Destaque */}
             <div className="pt-2 pb-1">
               <div className="inline-block p-1.5 sm:p-2 rounded-2xl bg-white border-2 border-slate-900/10 shadow-md">
