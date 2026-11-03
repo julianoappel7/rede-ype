@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { PetrobrasLogo, ShellLogo, IpirangaLogo } from './BrandLogos';
 import { 
   ShieldCheck, 
   Droplets, 
@@ -112,34 +113,126 @@ export const ServicesSection = () => {
           })}
         </div>
 
-        {/* Banner de Troca de Óleo em Destaque */}
-        <div className="mt-16 rounded-3xl bg-gradient-to-r from-slate-900 via-slate-800 to-emerald-950 p-8 sm:p-12 text-white relative overflow-hidden shadow-2xl">
+        {/* Banner de Troca de Óleo em Destaque com Fotos 4K e Logos das Empresas */}
+        <div className="mt-16 rounded-3xl bg-gradient-to-r from-slate-900 via-slate-800 to-emerald-950 p-6 sm:p-10 lg:p-12 text-white relative overflow-hidden shadow-2xl space-y-10">
           <div className="absolute right-0 top-0 bottom-0 w-1/3 bg-radial from-emerald-500/10 to-transparent pointer-events-none" />
           
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
             <div className="lg:col-span-8 space-y-4">
-              <span className="px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 text-xs font-bold uppercase tracking-wider">
-                Centro de Lubrificação & Manutenção
-              </span>
+              <div className="flex flex-wrap items-center gap-2">
+                <span className="px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 text-xs font-bold uppercase tracking-wider">
+                  Centro de Lubrificação & Manutenção 4K
+                </span>
+                <span className="px-3 py-1 rounded-full bg-amber-400/20 text-amber-300 border border-amber-400/30 text-xs font-bold uppercase tracking-wider">
+                  Lubrax • Shell Helix • Ipiranga Jet Oil
+                </span>
+              </div>
               <h3 className="text-2xl sm:text-3xl font-black tracking-tight text-white">
                 Sua Troca de Óleo com Garantia das Principais Marcas Mundiais
               </h3>
               <p className="text-sm text-slate-300 max-w-2xl leading-relaxed">
                 Nossos mecânicos realizam o check-up gratuito de mais de 15 itens essenciais para a saúde mecânica do seu automóvel: fluido de freio, líquido de arrefecimento, palhetas, filtros e lâmpadas, com agilidade e laudo técnico.
               </p>
+
+              {/* Logos das 3 Empresas Homologadas para Troca de Óleo */}
+              <div className="pt-2 flex flex-wrap items-center gap-3">
+                <div className="bg-white px-3.5 py-2 rounded-xl shadow-md flex items-center gap-2">
+                  <PetrobrasLogo className="h-6 sm:h-7 w-auto" />
+                </div>
+                <div className="bg-white px-3.5 py-2 rounded-xl shadow-md flex items-center gap-2">
+                  <ShellLogo className="h-6 sm:h-7 w-auto" />
+                </div>
+                <div className="bg-white px-3.5 py-2 rounded-xl shadow-md flex items-center gap-2">
+                  <IpirangaLogo className="h-6 sm:h-7 w-auto" />
+                </div>
+              </div>
             </div>
 
             <div className="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col gap-3 justify-center">
               <a
                 href="#unidades"
-                className="inline-flex items-center justify-center px-6 py-3.5 rounded-xl text-sm font-bold text-slate-950 bg-white hover:bg-slate-100 transition-all text-center shadow-lg hover:-translate-y-0.5"
+                className="inline-flex items-center justify-center px-6 py-3.5 rounded-xl text-sm font-bold text-slate-950 bg-amber-400 hover:bg-amber-300 transition-all text-center shadow-lg hover:-translate-y-0.5"
               >
                 Localizar Posto com Troca de Óleo
               </a>
-              <span className="text-center text-xs text-slate-400">
-                Atendimento rápido sem agendamento prévio.
+              <span className="text-center text-xs text-slate-300">
+                Atendimento rápido sem agendamento prévio em 8 unidades.
               </span>
             </div>
+          </div>
+
+          {/* Galeria 4K da Troca de Óleo e Pistas com Logos */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 relative z-10 pt-4 border-t border-white/10">
+            
+            {/* Foto 4K 1: Aplicação de Óleo Sintético */}
+            <div className="relative rounded-2xl overflow-hidden aspect-16/10 bg-slate-950 border border-white/15 shadow-xl group">
+              <img
+                src="./images/troca-de-oleo-1.jpg"
+                alt="Troca de Óleo Sintético Homologado na Rede Ypê"
+                loading="lazy"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/25 to-transparent" />
+              
+              {/* Badges com Logos das Empresas na Imagem */}
+              <div className="absolute top-3 left-3 right-3 flex items-center justify-between gap-2">
+                <span className="bg-amber-400 text-slate-950 text-[11px] font-black uppercase tracking-wider px-3 py-1 rounded-lg shadow-md">
+                  🛢️ Lubrificantes 100% Originais
+                </span>
+                <div className="flex items-center gap-1.5 bg-white/95 backdrop-blur-md px-2.5 py-1.5 rounded-xl shadow-md">
+                  <PetrobrasLogo className="h-4 sm:h-5 w-auto" />
+                  <span className="text-slate-300">|</span>
+                  <ShellLogo className="h-4 sm:h-5 w-auto" />
+                  <span className="text-slate-300">|</span>
+                  <IpirangaLogo className="h-4 sm:h-5 w-auto" />
+                </div>
+              </div>
+
+              <div className="absolute bottom-4 left-4 right-4">
+                <h4 className="text-base sm:text-lg font-extrabold text-white">
+                  Óleos Sintéticos e Semissintéticos de Alta Performance
+                </h4>
+                <p className="text-xs text-slate-300 mt-1">
+                  Aplicação precisa seguindo rigorosamente a viscosidade recomendada pelo manual do seu veículo.
+                </p>
+              </div>
+            </div>
+
+            {/* Foto 4K 2: Box Completo de Troca de Óleo e Filtros */}
+            <div className="relative rounded-2xl overflow-hidden aspect-16/10 bg-slate-950 border border-white/15 shadow-xl group">
+              <img
+                src="./images/troca-de-oleo-2.jpg"
+                alt="Box de Troca de Óleo e Check-up Mecânico Rede Ypê"
+                loading="lazy"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/25 to-transparent" />
+
+              {/* Logo Rede Ypê + Selo Check-up */}
+              <div className="absolute top-3 left-3 right-3 flex items-center justify-between gap-2">
+                <div className="bg-white/95 backdrop-blur-md px-3 py-1.5 rounded-xl shadow-md flex items-center gap-2">
+                  <div className="w-5 h-5 rounded-md bg-emerald-600 text-white font-black text-xs flex items-center justify-center">
+                    Y
+                  </div>
+                  <span className="text-xs font-black tracking-tight text-slate-900">
+                    REDE <span className="text-emerald-600">YPÊ</span>
+                  </span>
+                </div>
+                <span className="bg-emerald-600 text-white text-[11px] font-black uppercase tracking-wider px-3 py-1 rounded-lg shadow-md">
+                  ✓ Check-up 15 Itens Grátis
+                </span>
+              </div>
+
+              <div className="absolute bottom-4 left-4 right-4">
+                <h4 className="text-base sm:text-lg font-extrabold text-white">
+                  Elevador Hidráulico, Troca de Filtros & Inspeção Completa
+                </h4>
+                <p className="text-xs text-slate-300 mt-1">
+                  Ambiente limpo, moderno e equipado para atender carros de passeio, SUVs, picapes e frotas comerciais.
+                </p>
+              </div>
+            </div>
+
           </div>
         </div>
 

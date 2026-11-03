@@ -66,6 +66,18 @@ export const UnidadesSection = () => {
     }
   };
 
+  const getStationImage = (bandeira) => {
+    switch (bandeira) {
+      case 'Shell':
+        return './images/posto-shell.jpg';
+      case 'Ipiranga':
+        return './images/posto-ipiranga.jpg';
+      case 'Petrobras':
+      default:
+        return './images/posto-petrobras.jpg';
+    }
+  };
+
   return (
     <section id="unidades" className="py-20 md:py-28 bg-slate-50 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -407,6 +419,50 @@ export const UnidadesSection = () => {
                     transition={{ duration: 0.25 }}
                     className="bg-white rounded-3xl border border-slate-200/90 p-6 sm:p-8 shadow-xl space-y-6"
                   >
+                    {/* 4K Photo Banner of Selected Station + Optional Oil Change Photo */}
+                    <div className={`grid grid-cols-1 ${currentPosto.trocaOleo ? 'sm:grid-cols-12' : ''} gap-3`}>
+                      <div className={`${currentPosto.trocaOleo ? 'sm:col-span-8' : ''} relative rounded-2xl overflow-hidden aspect-16/9 sm:aspect-auto sm:h-48 bg-slate-900 shadow-md group`}>
+                        <img
+                          src={getStationImage(currentPosto.bandeira)}
+                          alt={currentPosto.nome}
+                          loading="lazy"
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-900/20 to-transparent" />
+                        <div className="absolute top-3 left-3 bg-white/95 backdrop-blur-md px-3 py-1.5 rounded-xl shadow-md">
+                          {renderBrandLogo(currentPosto.bandeira, "h-6 sm:h-7 w-auto")}
+                        </div>
+                        <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between text-white">
+                          <span className="text-xs font-bold drop-shadow-xs">
+                            Pista Homologada {currentPosto.bandeira} • {currentPosto.bairro}
+                          </span>
+                          <span className="text-[10px] font-black uppercase bg-emerald-600 px-2 py-0.5 rounded-md">
+                            4K HD
+                          </span>
+                        </div>
+                      </div>
+
+                      {currentPosto.trocaOleo && (
+                        <div className="sm:col-span-4 relative rounded-2xl overflow-hidden aspect-16/9 sm:aspect-auto sm:h-48 bg-slate-900 shadow-md group">
+                          <img
+                            src="./images/troca-de-oleo-1.jpg"
+                            alt={`Troca de Óleo - ${currentPosto.nome}`}
+                            loading="lazy"
+                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-900/20 to-transparent" />
+                          <span className="absolute top-3 left-3 text-[10px] font-black uppercase tracking-wider bg-amber-400 text-slate-950 px-2.5 py-1 rounded-lg shadow-xs">
+                            🛢️ Troca de Óleo
+                          </span>
+                          <div className="absolute bottom-3 left-3 right-3 text-white">
+                            <p className="text-xs font-extrabold leading-tight">
+                              Centro de Lubrificação Ativo nesta Unidade
+                            </p>
+                          </div>
+                        </div>
+                      )}
+                    </div>
+
                     {/* Top Bar da Unidade Selecionada */}
                     <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-slate-100">
                       <div>

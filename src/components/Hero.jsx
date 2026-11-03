@@ -1,11 +1,43 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { MapPin, ShieldCheck, Award, Sparkles, ChevronRight, Fuel } from 'lucide-react';
-import { PetrobrasLogo, ShellLogo, IpirangaLogo } from './BrandLogos';
+import { MapPin, ShieldCheck, Award, Sparkles, ChevronRight, Fuel, Camera } from 'lucide-react';
+import { PetrobrasLogo, ShellLogo, IpirangaLogo, RedeYpeLogo } from './BrandLogos';
 
 export const Hero = () => {
+  const [activePhotoIndex, setActivePhotoIndex] = useState(0);
+
+  const heroPhotos = [
+    {
+      brand: 'Petrobras',
+      title: 'Padrão Petrobras Grid • 8 Unidades',
+      subtitle: 'Pistas amplas iluminadas em LED com Gasolina Grid, Diesel S-10 e Troca de Óleo',
+      image: './images/posto-petrobras.jpg',
+      Logo: PetrobrasLogo,
+      badgeBg: 'bg-emerald-600 text-white'
+    },
+    {
+      brand: 'Shell',
+      title: 'Tecnologia Shell V-Power • 3 Unidades',
+      subtitle: 'Abastecimento de alta performance com fórmula Dynaflex, Troca de Óleo e Lavagem',
+      image: './images/posto-shell.jpg',
+      Logo: ShellLogo,
+      badgeBg: 'bg-red-600 text-white'
+    },
+    {
+      brand: 'Ipiranga',
+      title: 'Ecossistema Ipiranga Ipmax • 2 Unidades',
+      subtitle: 'Atendimento 24h na Av. Guadalupe e Loja de Conveniência exclusiva no Posto da Gruta',
+      image: './images/posto-ipiranga.jpg',
+      Logo: IpirangaLogo,
+      badgeBg: 'bg-blue-600 text-white'
+    }
+  ];
+
+  const currentHeroPhoto = heroPhotos[activePhotoIndex];
+  const ActiveBrandLogo = currentHeroPhoto.Logo;
+
   return (
-    <section id="hero" className="relative pt-28 pb-16 md:pt-36 md:pb-28 overflow-hidden">
+    <section id="hero" className="relative pt-28 pb-16 md:pt-36 md:pb-24 overflow-hidden">
       {/* Background Decor Elements */}
       <div className="absolute inset-0 pointer-events-none -z-10">
         <div className="absolute top-10 left-1/2 -translate-x-1/2 w-[700px] h-[350px] bg-gradient-to-tr from-emerald-100/60 via-amber-100/40 to-blue-100/30 blur-3xl rounded-full" />
@@ -14,14 +46,14 @@ export const Hero = () => {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+
           {/* Main Content Column */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="lg:col-span-7 space-y-6 text-center lg:text-left"
+            className="lg:col-span-6 space-y-6 text-center lg:text-left"
           >
             {/* Pill Badge */}
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-50 border border-amber-200 text-amber-900 text-xs sm:text-sm font-bold tracking-wide">
@@ -42,7 +74,7 @@ export const Hero = () => {
                     { nome: 'Taubaté', cor: 'bg-amber-500 text-slate-950 font-black shadow-amber-500/20' },
                     { nome: 'Caçapava', cor: 'bg-slate-900 text-white shadow-slate-900/20' }
                   ].map((cid) => (
-                    <span 
+                    <span
                       key={cid.nome}
                       className={`inline-flex items-center text-xs sm:text-sm font-bold px-3.5 py-1.5 rounded-xl shadow-sm ${cid.cor} hover:scale-105 transition-transform cursor-default`}
                     >
@@ -95,73 +127,113 @@ export const Hero = () => {
             </div>
           </motion.div>
 
-          {/* Right Visual Presentation Card */}
-          <motion.div 
+          {/* Right Visual 4K Photo & Brand Logos Showcase Card */}
+          <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.7, delay: 0.2 }}
-            className="lg:col-span-5"
+            className="lg:col-span-6"
           >
-            <div className="relative mx-auto max-w-md lg:max-w-none">
-              
+            <div className="relative mx-auto max-w-xl lg:max-w-none">
+
               {/* Outer Card with subtle glass glow */}
-              <div className="relative rounded-3xl p-6 sm:p-8 bg-white/90 backdrop-blur-xl border border-slate-200/80 shadow-2xl shadow-slate-200/50 overflow-hidden">
-                
+              <div className="relative rounded-3xl p-4 sm:p-6 bg-white/95 backdrop-blur-xl border border-slate-200/90 shadow-2xl shadow-slate-200/60 overflow-hidden space-y-4">
+
                 {/* Status Indicator */}
-                <div className="flex items-center justify-between pb-6 border-b border-slate-100">
+                <div className="flex items-center justify-between pb-3 border-b border-slate-100">
                   <div className="flex items-center gap-2">
                     <span className="flex h-3 w-3 relative">
                       <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                       <span className="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
                     </span>
-                    <span className="text-xs font-bold tracking-wide uppercase text-emerald-800">Operação Ativa 24h</span>
+                    <span className="text-xs font-bold tracking-wide uppercase text-emerald-800">Infraestrutura 4K • Operação Ativa</span>
                   </div>
-                  <span className="text-xs text-slate-400 font-semibold">Padrão Ouro</span>
+                  <span className="inline-flex items-center gap-1 text-xs text-slate-500 font-bold bg-slate-100 px-2.5 py-1 rounded-full">
+                    <Camera className="w-3.5 h-3.5 text-emerald-600" /> Galeria Oficial
+                  </span>
                 </div>
 
-                {/* Bandeiras Display on Hero */}
-                <div className="py-6 space-y-4">
-                  <span className="text-xs font-bold text-slate-500 uppercase tracking-wider block">Bandeiras Oficiais Homologadas</span>
-                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 items-center justify-center p-4 bg-slate-50/90 rounded-2xl border border-slate-200">
-                    <div className="flex items-center justify-center p-3 rounded-xl bg-white shadow-xs hover:shadow-sm transition-all">
-                      <PetrobrasLogo className="h-8 sm:h-9 w-auto" />
+                {/* Main 4K Station Photo with Overlaid Company Logos */}
+                <div className="relative rounded-2xl overflow-hidden aspect-16/10 bg-slate-900 shadow-lg group">
+                  <img
+                    src={currentHeroPhoto.image}
+                    alt={currentHeroPhoto.title}
+                    fetchPriority="high"
+                    className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-900/25 to-transparent" />
+
+                  {/* Top-Left Rede Ypê Official Badge */}
+                  <div className="absolute top-3 left-3 bg-white/95 backdrop-blur-md px-3 py-1.5 rounded-xl shadow-md border border-white/50 flex items-center gap-2">
+                    <div className="w-6 h-6 rounded-lg bg-emerald-600 text-white font-black text-xs flex items-center justify-center">
+                      Y
                     </div>
-                    <div className="flex items-center justify-center p-3 rounded-xl bg-white shadow-xs hover:shadow-sm transition-all">
-                      <ShellLogo className="h-8 sm:h-9 w-auto" />
-                    </div>
-                    <div className="flex items-center justify-center p-3 rounded-xl bg-white shadow-xs hover:shadow-sm transition-all">
-                      <IpirangaLogo className="h-8 sm:h-9 w-auto" />
+                    <span className="text-xs font-black tracking-tight text-slate-900">
+                      REDE <span className="text-emerald-600">YPÊ</span>
+                    </span>
+                  </div>
+
+                  {/* Top-Right Active Brand Logo Overlay */}
+                  <div className="absolute top-3 right-3 bg-white/95 backdrop-blur-md px-3.5 py-2 rounded-xl shadow-lg border border-white/60">
+                    <ActiveBrandLogo className="h-7 sm:h-8 w-auto" />
+                  </div>
+
+                  {/* Bottom Caption inside 4K Photo */}
+                  <div className="absolute bottom-3 left-3 right-3 flex items-end justify-between gap-3 text-white">
+                    <div>
+                      <span className={`inline-block text-[10px] font-black uppercase tracking-wider px-2.5 py-0.5 rounded-md mb-1 ${currentHeroPhoto.badgeBg}`}>
+                        Bandeira {currentHeroPhoto.brand}
+                      </span>
+                      <h3 className="text-sm sm:text-base font-extrabold leading-tight drop-shadow-xs">
+                        {currentHeroPhoto.title}
+                      </h3>
+                      <p className="text-[11px] text-slate-200 line-clamp-1 mt-0.5">
+                        {currentHeroPhoto.subtitle}
+                      </p>
                     </div>
                   </div>
+                </div>
+
+                {/* Interactive 3-Photo Thumbnail Strip with Company Logos */}
+                <div className="grid grid-cols-3 gap-2.5">
+                  {heroPhotos.map((item, idx) => {
+                    const ThumbLogo = item.Logo;
+                    const isSelected = activePhotoIndex === idx;
+                    return (
+                      <button
+                        key={item.brand}
+                        onClick={() => setActivePhotoIndex(idx)}
+                        className={`relative rounded-xl overflow-hidden border-2 transition-all text-left group cursor-pointer ${isSelected
+                          ? 'border-emerald-600 ring-2 ring-emerald-500/30 scale-[1.02]'
+                          : 'border-slate-200 opacity-80 hover:opacity-100'
+                          }`}
+                      >
+                        <div className="aspect-16/10 w-full overflow-hidden bg-slate-800">
+                          <img
+                            src={item.image}
+                            alt={`Posto ${item.brand}`}
+                            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                          />
+                        </div>
+                        <div className="p-1.5 bg-white flex items-center justify-center border-t border-slate-100">
+                          <ThumbLogo className="h-5 sm:h-6 w-auto" />
+                        </div>
+                      </button>
+                    );
+                  })}
                 </div>
 
                 {/* Quality Seal Feature Box */}
-                <div className="p-4 rounded-2xl bg-gradient-to-r from-emerald-500/10 via-teal-500/10 to-amber-500/10 border border-emerald-500/20 flex items-start gap-3.5">
+                <div className="p-3.5 rounded-2xl bg-gradient-to-r from-emerald-500/10 via-teal-500/10 to-amber-500/10 border border-emerald-500/20 flex items-start gap-3">
                   <div className="p-2 rounded-xl bg-emerald-600 text-white shrink-0 mt-0.5">
-                    <ShieldCheck className="w-5 h-5" />
+                    <ShieldCheck className="w-4 h-4" />
                   </div>
                   <div>
-                    <h2 className="text-sm font-bold text-slate-900">Relação Oficial e Certificada</h2>
-                    <p className="text-xs text-slate-600 mt-0.5 leading-relaxed">
+                    <h2 className="text-xs sm:text-sm font-bold text-slate-900">Relação Oficial e Certificada</h2>
+                    <p className="text-[11px] sm:text-xs text-slate-600 mt-0.5 leading-relaxed">
                       Todos os 13 postos contam com controle volumétrico, teste de densímetro na bomba e laudos da ANP.
                     </p>
                   </div>
-                </div>
-
-                {/* Services quick highlight tags */}
-                <div className="mt-5 flex flex-wrap gap-2 pt-2">
-                  <span className="inline-flex items-center text-xs font-medium px-3 py-1 bg-slate-100 text-slate-700 rounded-full">
-                    ✓ Gasolina Comum e Aditivada
-                  </span>
-                  <span className="inline-flex items-center text-xs font-medium px-3 py-1 bg-slate-100 text-slate-700 rounded-full">
-                    ✓ Diesel S-10 & S-500
-                  </span>
-                  <span className="inline-flex items-center text-xs font-medium px-3 py-1 bg-slate-100 text-slate-700 rounded-full">
-                    ✓ Troca de Óleo & Lavagem
-                  </span>
-                  <span className="inline-flex items-center text-xs font-medium px-3 py-1 bg-slate-100 text-slate-700 rounded-full">
-                    ✓ Calibrador em Todos os Postos
-                  </span>
                 </div>
 
               </div>

@@ -10,6 +10,7 @@ export const BandeirasSection = () => {
   const brandComponents = {
     Petrobras: {
       Logo: PetrobrasLogo,
+      image: './images/posto-petrobras.jpg',
       badgeClass: 'bg-emerald-500/10 text-emerald-700 border-emerald-300',
       accentBg: 'from-emerald-500/10 via-emerald-500/5 to-transparent',
       borderColor: 'border-emerald-500/30',
@@ -18,6 +19,7 @@ export const BandeirasSection = () => {
     },
     Shell: {
       Logo: ShellLogo,
+      image: './images/posto-shell.jpg',
       badgeClass: 'bg-red-500/10 text-red-700 border-red-300',
       accentBg: 'from-red-500/10 via-amber-500/5 to-transparent',
       borderColor: 'border-red-500/30',
@@ -26,6 +28,7 @@ export const BandeirasSection = () => {
     },
     Ipiranga: {
       Logo: IpirangaLogo,
+      image: './images/posto-ipiranga.jpg',
       badgeClass: 'bg-blue-500/10 text-blue-700 border-blue-300',
       accentBg: 'from-blue-500/10 via-amber-500/5 to-transparent',
       borderColor: 'border-blue-500/30',
@@ -90,10 +93,25 @@ export const BandeirasSection = () => {
           >
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
               
-              {/* Brand Overview & Header */}
-              <div className="lg:col-span-4 space-y-5">
-                <div className="p-4 bg-white rounded-2xl border border-slate-200/80 shadow-sm inline-block">
-                  <currentConfig.Logo className="h-9 w-auto" />
+              {/* Brand Overview, 4K Photo & Header */}
+              <div className="lg:col-span-5 space-y-5">
+                {/* 4K Gas Station Photo with Company Logo Overlay */}
+                <div className="relative rounded-2xl overflow-hidden aspect-16/10 bg-slate-900 shadow-lg border border-white/80 group">
+                  <img
+                    src={currentConfig.image}
+                    alt={`Posto Bandeira ${selectedBrand} - Rede Ypê`}
+                    loading="lazy"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent" />
+                  <div className="absolute top-3 left-3 p-2.5 bg-white/95 backdrop-blur-md rounded-xl border border-slate-200/80 shadow-md">
+                    <currentConfig.Logo className="h-7 sm:h-8 w-auto" />
+                  </div>
+                  <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between text-white">
+                    <span className="text-xs font-bold bg-slate-900/80 backdrop-blur-xs px-3 py-1 rounded-lg border border-white/15">
+                      Pista Homologada {selectedBrand} • 4K
+                    </span>
+                  </div>
                 </div>
                 
                 <div>
@@ -120,7 +138,7 @@ export const BandeirasSection = () => {
               </div>
 
               {/* Specific Tech Cards (3 Key Technologies) */}
-              <div className="lg:col-span-8 grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div className="lg:col-span-7 grid grid-cols-1 md:grid-cols-3 gap-4">
                 {currentBrandData.destaques.map((item, idx) => (
                   <div
                     key={idx}
@@ -153,49 +171,91 @@ export const BandeirasSection = () => {
           </motion.div>
         </AnimatePresence>
 
-        {/* Tri-Card Grid comparison preview below */}
+        {/* Tri-Card Grid comparison preview below with 4K Photos & Brand Logos */}
         <div className="mt-14 grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="p-6 sm:p-7 rounded-3xl bg-slate-50/90 border border-slate-200/90 hover:border-emerald-400 hover:shadow-lg transition-all flex flex-col justify-between">
+          <div className="rounded-3xl bg-slate-50/90 border border-slate-200/90 hover:border-emerald-400 hover:shadow-xl transition-all flex flex-col justify-between overflow-hidden group">
             <div>
-              <div className="p-3 bg-white rounded-2xl border border-slate-200 inline-block mb-4 shadow-2xs">
-                <PetrobrasLogo className="h-9 w-auto" />
+              <div className="relative aspect-16/10 w-full overflow-hidden bg-slate-900">
+                <img
+                  src="./images/posto-petrobras.jpg"
+                  alt="Postos Petrobras Rede Ypê"
+                  loading="lazy"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/65 via-transparent to-transparent" />
+                <div className="absolute top-3 left-3 p-2.5 bg-white/95 backdrop-blur-md rounded-xl border border-slate-200 shadow-md">
+                  <PetrobrasLogo className="h-7 w-auto" />
+                </div>
+                <span className="absolute bottom-3 right-3 text-[11px] font-black uppercase tracking-wider bg-emerald-600 text-white px-2.5 py-1 rounded-lg shadow-xs">
+                  8 Unidades em SJC
+                </span>
               </div>
-              <h4 className="font-extrabold text-slate-900 text-base mb-1.5">Padrão Petrobras (8 Postos)</h4>
-              <p className="text-xs text-slate-600 leading-relaxed">
-                Aditivação de ponta com a consagrada <strong>Gasolina Grid</strong>, Diesel S-10 e S-500 de alta performance presentes em 8 unidades em SJC.
-              </p>
+              <div className="p-6 pb-2">
+                <h4 className="font-extrabold text-slate-900 text-base mb-1.5">Padrão Petrobras (8 Postos)</h4>
+                <p className="text-xs text-slate-600 leading-relaxed">
+                  Aditivação de ponta com a consagrada <strong>Gasolina Grid</strong>, Diesel S-10 e S-500 de alta performance presentes em 8 unidades em SJC.
+                </p>
+              </div>
             </div>
-            <div className="mt-4 pt-3 border-t border-slate-200 text-[11px] font-bold text-emerald-700">
+            <div className="px-6 pb-6 pt-3 mt-3 border-t border-slate-200/80 text-[11px] font-bold text-emerald-700">
               Morumbi, Motorama, Betânia, Satélite, Rossi, Vila Paiva, Cajuru e Putim
             </div>
           </div>
 
-          <div className="p-6 sm:p-7 rounded-3xl bg-slate-50/90 border border-slate-200/90 hover:border-red-400 hover:shadow-lg transition-all flex flex-col justify-between">
+          <div className="rounded-3xl bg-slate-50/90 border border-slate-200/90 hover:border-red-400 hover:shadow-xl transition-all flex flex-col justify-between overflow-hidden group">
             <div>
-              <div className="p-3 bg-white rounded-2xl border border-slate-200 inline-block mb-4 shadow-2xs">
-                <ShellLogo className="h-9 w-auto" />
+              <div className="relative aspect-16/10 w-full overflow-hidden bg-slate-900">
+                <img
+                  src="./images/posto-shell.jpg"
+                  alt="Postos Shell Rede Ypê"
+                  loading="lazy"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/65 via-transparent to-transparent" />
+                <div className="absolute top-3 left-3 p-2.5 bg-white/95 backdrop-blur-md rounded-xl border border-slate-200 shadow-md">
+                  <ShellLogo className="h-7 w-auto" />
+                </div>
+                <span className="absolute bottom-3 right-3 text-[11px] font-black uppercase tracking-wider bg-red-600 text-white px-2.5 py-1 rounded-lg shadow-xs">
+                  3 Unidades em SJC
+                </span>
               </div>
-              <h4 className="font-extrabold text-slate-900 text-base mb-1.5">Tecnologia Shell (3 Postos)</h4>
-              <p className="text-xs text-slate-600 leading-relaxed">
-                Fórmula Dynaflex mundial com <strong>Shell V-Power</strong>, Diesel Evolux S-10 e serviços de troca de óleo e lavagem.
-              </p>
+              <div className="p-6 pb-2">
+                <h4 className="font-extrabold text-slate-900 text-base mb-1.5">Tecnologia Shell (3 Postos)</h4>
+                <p className="text-xs text-slate-600 leading-relaxed">
+                  Fórmula Dynaflex mundial com <strong>Shell V-Power</strong>, Diesel Evolux S-10 e serviços de troca de óleo e lavagem.
+                </p>
+              </div>
             </div>
-            <div className="mt-4 pt-3 border-t border-slate-200 text-[11px] font-bold text-red-700">
+            <div className="px-6 pb-6 pt-3 mt-3 border-t border-slate-200/80 text-[11px] font-bold text-red-700">
               Jardim América (Guadalupe), Vila Maria e Vila Tesouro
             </div>
           </div>
 
-          <div className="p-6 sm:p-7 rounded-3xl bg-slate-50/90 border border-slate-200/90 hover:border-blue-400 hover:shadow-lg transition-all flex flex-col justify-between">
+          <div className="rounded-3xl bg-slate-50/90 border border-slate-200/90 hover:border-blue-400 hover:shadow-xl transition-all flex flex-col justify-between overflow-hidden group">
             <div>
-              <div className="p-3 bg-white rounded-2xl border border-slate-200 inline-block mb-4 shadow-2xs">
-                <IpirangaLogo className="h-9 w-auto" />
+              <div className="relative aspect-16/10 w-full overflow-hidden bg-slate-900">
+                <img
+                  src="./images/posto-ipiranga.jpg"
+                  alt="Postos Ipiranga Rede Ypê"
+                  loading="lazy"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/65 via-transparent to-transparent" />
+                <div className="absolute top-3 left-3 p-2.5 bg-white/95 backdrop-blur-md rounded-xl border border-slate-200 shadow-md">
+                  <IpirangaLogo className="h-7 w-auto" />
+                </div>
+                <span className="absolute bottom-3 right-3 text-[11px] font-black uppercase tracking-wider bg-blue-600 text-white px-2.5 py-1 rounded-lg shadow-xs">
+                  2 Unidades em SJC
+                </span>
               </div>
-              <h4 className="font-extrabold text-slate-900 text-base mb-1.5">Ecossistema Ipiranga (2 Postos)</h4>
-              <p className="text-xs text-slate-600 leading-relaxed">
-                Rendimento máximo com a aditivação <strong>Ipmax</strong>, atendimento 24h na Guadalupe e loja de conveniência exclusiva no Posto da Gruta.
-              </p>
+              <div className="p-6 pb-2">
+                <h4 className="font-extrabold text-slate-900 text-base mb-1.5">Ecossistema Ipiranga (2 Postos)</h4>
+                <p className="text-xs text-slate-600 leading-relaxed">
+                  Rendimento máximo com a aditivação <strong>Ipmax</strong>, atendimento 24h na Guadalupe e loja de conveniência exclusiva no Posto da Gruta.
+                </p>
+              </div>
             </div>
-            <div className="mt-4 pt-3 border-t border-slate-200 text-[11px] font-bold text-blue-700">
+            <div className="px-6 pb-6 pt-3 mt-3 border-t border-slate-200/80 text-[11px] font-bold text-blue-700">
               Cunha's (Av. Guadalupe 660) e Posto da Gruta (Jd. das Indústrias)
             </div>
           </div>
