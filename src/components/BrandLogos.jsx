@@ -70,30 +70,39 @@ export const ShellLogo = ({ className = "h-9 w-auto" }) => (
 );
 
 /**
- * Logo Oficial Ipiranga idêntica à imagem fornecida:
- * Emblema em caixa azul com detalhe amarelo do "i" e texto "Ipiranga" em azul oficial.
+ * Logo Oficial Ipiranga Original:
+ * Cápsula amarela oficial (#FFD100) com faixa curva azul (#003893) à esquerda contendo o "I" amarelo
+ * e tipografia "Ipiranga" em azul escuro itálico corporativo.
  */
 export const IpirangaLogo = ({ className = "h-9 w-auto" }) => (
-  <svg viewBox="0 0 195 52" className={className} fill="none" xmlns="http://www.w3.org/2000/svg">
-    {/* Emblema Ipiranga (caixa azul + elementos amarelos dinâmicos) */}
-    <g transform="translate(2, 4)">
-      <rect x="0" y="0" width="44" height="44" rx="10" fill="#004494" />
-      {/* Ponto amarelo do 'i' */}
-      <circle cx="16" cy="12" r="5" fill="#FFC700" />
-      {/* Corpo do 'i' em amarelo */}
-      <rect x="11" y="20" width="10" height="16" rx="2.5" fill="#FFC700" />
-      {/* Seta / Chevron Ipiranga */}
-      <path d="M25 10L35 22L25 34L20 28L26 22L20 16L25 10Z" fill="#FFC700" />
-    </g>
-    {/* Tipografia Ipiranga */}
+  <svg viewBox="0 0 210 54" className={className} fill="none" xmlns="http://www.w3.org/2000/svg">
+    {/* Cápsula / Fundo Amarelo Original Ipiranga com borda azul fina */}
+    <rect x="2" y="3" width="206" height="48" rx="18" fill="#FFD100" stroke="#003893" strokeWidth="2.5" />
+    {/* Faixa curva azul oficial à esquerda */}
+    <path
+      d="M20 4.2H54C44 18 44 36 54 49.8H20C10.8 49.8 3.2 42.2 3.2 33V21C3.2 11.8 10.8 4.2 20 4.2Z"
+      fill="#003893"
+    />
+    {/* Faixa laranja/amarela interna de transição característica da Ipiranga */}
+    <path
+      d="M52 4.2H59C49 18 49 36 59 49.8H52C42 36 42 18 52 4.2Z"
+      fill="#F58220"
+    />
+    {/* Letra "I" amarela em itálico dentro do escudo azul */}
+    <path
+      d="M25 13H36L31 41H20L25 13Z"
+      fill="#FFD100"
+    />
+    {/* Tipografia "Ipiranga" em Azul Escuro Itálico Original */}
     <text
-      x="56"
-      y="35"
-      fontFamily="'Inter', system-ui, sans-serif"
+      x="65"
+      y="36"
+      fontFamily="'Inter', 'Arial Black', system-ui, sans-serif"
       fontWeight="900"
-      fontSize="24"
-      fill="#004494"
-      letterSpacing="0.2"
+      fontStyle="italic"
+      fontSize="26"
+      fill="#003893"
+      letterSpacing="-0.3"
     >
       Ipiranga
     </text>

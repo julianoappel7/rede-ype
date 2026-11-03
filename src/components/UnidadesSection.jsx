@@ -71,7 +71,7 @@ export const UnidadesSection = () => {
       case 'Shell':
         return './images/posto-shell.jpg';
       case 'Ipiranga':
-        return './images/posto-ipiranga.jpg';
+        return './images/posto-ipiranga-oficial.jpg';
       case 'Petrobras':
       default:
         return './images/posto-petrobras.jpg';

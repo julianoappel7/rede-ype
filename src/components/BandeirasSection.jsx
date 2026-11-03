@@ -28,7 +28,7 @@ export const BandeirasSection = () => {
     },
     Ipiranga: {
       Logo: IpirangaLogo,
-      image: './images/posto-ipiranga.jpg',
+      image: './images/posto-ipiranga-oficial.jpg',
       badgeClass: 'bg-blue-500/10 text-blue-700 border-blue-300',
       accentBg: 'from-blue-500/10 via-amber-500/5 to-transparent',
       borderColor: 'border-blue-500/30',
@@ -235,7 +235,7 @@ export const BandeirasSection = () => {
             <div>
               <div className="relative aspect-16/10 w-full overflow-hidden bg-slate-900">
                 <img
-                  src="./images/posto-ipiranga.jpg"
+                  src="./images/posto-ipiranga-oficial.jpg"
                   alt="Postos Ipiranga Rede Ypê"
                   loading="lazy"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"

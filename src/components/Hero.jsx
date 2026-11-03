@@ -27,7 +27,7 @@ export const Hero = () => {
       brand: 'Ipiranga',
       title: 'Ecossistema Ipiranga Ipmax • 2 Unidades',
       subtitle: 'Atendimento 24h na Av. Guadalupe e Loja de Conveniência exclusiva no Posto da Gruta',
-      image: './images/posto-ipiranga.jpg',
+      image: './images/posto-ipiranga-oficial.jpg',
       Logo: IpirangaLogo,
       badgeBg: 'bg-blue-600 text-white'
     }
