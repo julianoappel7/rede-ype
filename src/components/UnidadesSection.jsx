@@ -2,16 +2,16 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { UNIDADES } from '../data/postosData';
 import { PetrobrasLogo, ShellLogo, IpirangaLogo } from './BrandLogos';
-import { 
-  MapPin, 
-  Clock, 
-  Phone, 
-  Navigation, 
-  Check, 
-  X as XIcon, 
-  Fuel, 
-  Wrench, 
-  Search, 
+import {
+  MapPin,
+  Clock,
+  Phone,
+  Navigation,
+  Check,
+  X as XIcon,
+  Fuel,
+  Wrench,
+  Search,
   Filter,
   ExternalLink,
   Sparkles,
@@ -33,14 +33,14 @@ export const UnidadesSection = () => {
   // Filtragem
   const filteredUnidades = UNIDADES.filter((posto) => {
     const matchesBrand = filterBrand === 'Todas' || posto.bandeira === filterBrand;
-    
+
     let matchesService = true;
     if (filterService === 'trocaOleo') matchesService = posto.trocaOleo;
     if (filterService === 'lavagem') matchesService = posto.lavagem;
     if (filterService === 'conveniencia') matchesService = posto.conveniencia;
     if (filterService === '24h') matchesService = posto.horario.includes('24h');
 
-    const matchesSearch = 
+    const matchesSearch =
       posto.nome.toLowerCase().includes(searchQuery.toLowerCase()) ||
       posto.bairro.toLowerCase().includes(searchQuery.toLowerCase()) ||
       posto.endereco.toLowerCase().includes(searchQuery.toLowerCase());
@@ -48,9 +48,9 @@ export const UnidadesSection = () => {
     return matchesBrand && matchesService && matchesSearch;
   });
 
-  const currentPosto = 
-    filteredUnidades.find((u) => u.id === activeTab) || 
-    filteredUnidades[0] || 
+  const currentPosto =
+    filteredUnidades.find((u) => u.id === activeTab) ||
+    filteredUnidades[0] ||
     UNIDADES[0];
 
   const renderBrandLogo = (bandeira, size = "h-8 sm:h-9 w-auto") => {
@@ -81,7 +81,7 @@ export const UnidadesSection = () => {
   return (
     <section id="unidades" className="py-20 md:py-28 bg-slate-50 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-12">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#0B2545] text-[#FFD100] text-xs font-bold uppercase tracking-wider mb-3 shadow-xs">
@@ -89,7 +89,7 @@ export const UnidadesSection = () => {
             <span>São José dos Campos • Relação Oficial</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0B2545] tracking-tight">
-            Relação dos 13 Postos, Bandeiras, Combustíveis e Serviços
+            Postos de Combustíveis, Bandeiras e Serviços
           </h2>
           <p className="mt-3 text-base text-slate-600">
             Consulte a planilha detalhada com endereços, combustíveis aditivados, diesel, troca de óleo, lavagem terceirizada e horários de funcionamento em São José dos Campos.
@@ -98,7 +98,7 @@ export const UnidadesSection = () => {
 
         {/* Toolbar de Filtros & Alternância de Visualização */}
         <div className="mb-8 flex flex-col gap-4 bg-white p-4 sm:p-5 rounded-3xl border border-slate-200/90 shadow-sm">
-          
+
           <div className="flex flex-col md:flex-row items-stretch md:items-center justify-between gap-4">
             {/* Search Input */}
             <div className="relative flex-1">
@@ -116,22 +116,20 @@ export const UnidadesSection = () => {
             <div className="flex items-center gap-1.5 p-1 bg-slate-100 rounded-xl shrink-0 self-start md:self-auto">
               <button
                 onClick={() => setViewMode('cards')}
-                className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer ${
-                  viewMode === 'cards'
+                className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer ${viewMode === 'cards'
                     ? 'bg-[#0B2545] text-white shadow-xs'
                     : 'text-slate-600 hover:text-[#0B2545]'
-                }`}
+                  }`}
               >
                 <LayoutGrid className={`w-3.5 h-3.5 ${viewMode === 'cards' ? 'text-[#FFD100]' : 'text-slate-500'}`} />
                 <span>Modo Interativo (Abas)</span>
               </button>
               <button
                 onClick={() => setViewMode('tabela')}
-                className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer ${
-                  viewMode === 'tabela'
+                className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer ${viewMode === 'tabela'
                     ? 'bg-[#0B2545] text-white shadow-xs'
                     : 'text-slate-600 hover:text-[#0B2545]'
-                }`}
+                  }`}
               >
                 <TableIcon className={`w-3.5 h-3.5 ${viewMode === 'tabela' ? 'text-[#FFD100]' : 'text-slate-500'}`} />
                 <span>Tabela Completa (Conforme Planilha)</span>
@@ -141,33 +139,27 @@ export const UnidadesSection = () => {
 
           {/* Filtros por Bandeira e por Serviços */}
           <div className="pt-3 border-t border-slate-100 flex flex-wrap items-center justify-between gap-3">
-            
+
             {/* Bandeiras */}
             <div className="flex items-center gap-1.5 overflow-x-auto pb-1 sm:pb-0">
               <span className="text-xs font-bold text-slate-400 mr-1 flex items-center gap-1">
                 <Filter className="w-3 h-3" /> Bandeira:
               </span>
               {[
-                { label: 'Todas', count: 13 },
-                { label: 'Petrobras', count: 8 },
-                { label: 'Shell', count: 3 },
-                { label: 'Ipiranga', count: 2 }
-              ].map(({ label, count }) => (
+                { label: 'Todas' },
+                { label: 'Petrobras' },
+                { label: 'Shell' },
+                { label: 'Ipiranga' }
+              ].map(({ label }) => (
                 <button
                   key={label}
                   onClick={() => setFilterBrand(label)}
-                  className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all whitespace-nowrap flex items-center gap-1.5 border cursor-pointer ${
-                    filterBrand === label
+                  className={`px-3.5 py-1.5 rounded-xl text-xs font-bold transition-all whitespace-nowrap flex items-center gap-1.5 border cursor-pointer ${filterBrand === label
                       ? 'bg-[#0B2545] text-white border-[#0B2545] shadow-xs'
                       : 'bg-slate-50 text-slate-600 border-slate-200 hover:bg-slate-100'
-                  }`}
+                    }`}
                 >
                   <span>{label}</span>
-                  <span className={`text-[10px] px-1.5 py-0.2 rounded-full font-extrabold ${
-                    filterBrand === label ? 'bg-[#FFD100] text-[#0B2545]' : 'bg-slate-200 text-slate-700'
-                  }`}>
-                    {count}
-                  </span>
                 </button>
               ))}
             </div>
@@ -185,11 +177,10 @@ export const UnidadesSection = () => {
                 <button
                   key={serv.id}
                   onClick={() => setFilterService(serv.id)}
-                  className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all whitespace-nowrap border cursor-pointer ${
-                    filterService === serv.id
+                  className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all whitespace-nowrap border cursor-pointer ${filterService === serv.id
                       ? 'bg-[#FFD100] text-[#0B2545] border-amber-400 shadow-xs'
                       : 'bg-slate-50 text-slate-600 border-slate-200 hover:bg-slate-100'
-                  }`}
+                    }`}
                 >
                   {serv.label}
                 </button>
@@ -204,26 +195,25 @@ export const UnidadesSection = () => {
         {viewMode === 'tabela' ? (
           <div className="bg-white rounded-3xl border border-slate-200 shadow-xl overflow-hidden">
             {/* Header da Tabela em Destaque */}
-            <div className="bg-gradient-to-r from-blue-700 via-blue-800 to-indigo-900 text-white p-4 sm:p-5 flex flex-col sm:flex-row items-center justify-between gap-3">
+            <div className="bg-gradient-to-r from-[#071930] via-[#0B2545] to-[#103460] text-white p-4 sm:p-5 flex flex-col sm:flex-row items-center justify-between gap-3">
               <div>
                 <h3 className="font-black text-base sm:text-lg tracking-wider uppercase">
-                  Relação dos Postos, Bandeira, Combustíveis e Serviços
+                  Postos de Combustíveis, Bandeiras e Serviços
                 </h3>
                 <span className="text-xs text-blue-200">
                   Dados oficiais auditados • Rede Ypê São José dos Campos
                 </span>
               </div>
-              <div className="flex items-center gap-2 text-xs bg-white/10 px-3 py-1.5 rounded-xl border border-white/20">
-                <span>Total: <strong>13 Postos</strong></span>
+              <div className="flex items-center gap-2 text-xs bg-[#FFD100] text-[#0B2545] px-3.5 py-1.5 rounded-xl font-black">
+                <span>Postos de Combustíveis</span>
               </div>
             </div>
 
             {/* Conteúdo com Scroll Horizontal Suave */}
             <div className="overflow-x-auto">
               <table className="w-full text-left text-xs text-slate-700">
-                <thead className="bg-amber-400 text-slate-950 font-black uppercase tracking-wider text-[11px] border-b border-amber-500">
+                <thead className="bg-[#FFD100] text-[#0B2545] font-black uppercase tracking-wider text-[11px] border-b border-amber-400">
                   <tr>
-                    <th className="py-3.5 px-3 text-center">#</th>
                     <th className="py-3.5 px-4 min-w-[200px]">Posto (Razão Social)</th>
                     <th className="py-3.5 px-3 min-w-[130px] text-center">Bandeira</th>
                     <th className="py-3.5 px-4 min-w-[260px]">Endereço / Bairro</th>
@@ -240,16 +230,12 @@ export const UnidadesSection = () => {
                 </thead>
                 <tbody className="divide-y divide-slate-100">
                   {filteredUnidades.map((posto) => (
-                    <tr 
-                      key={posto.id} 
-                      className={`hover:bg-amber-50/50 transition-colors ${
-                        posto.id === 13 ? 'bg-emerald-50/40' : ''
-                      }`}
+                    <tr
+                      key={posto.id}
+                      className={`hover:bg-amber-50/50 transition-colors ${posto.conveniencia ? 'bg-amber-50/30' : ''
+                        }`}
                     >
-                      <td className="py-3.5 px-3 text-center font-black text-slate-900">
-                        {posto.id}
-                      </td>
-                      <td className="py-3.5 px-4 font-bold text-slate-900 leading-tight">
+                      <td className="py-3.5 px-4 font-bold text-[#0B2545] leading-tight">
                         {posto.nome}
                       </td>
                       <td className="py-3.5 px-3 text-center">
@@ -275,13 +261,12 @@ export const UnidadesSection = () => {
                       </td>
                       {/* Gasolina Aditivada */}
                       <td className="py-3.5 px-3 text-center">
-                        <span className={`inline-block px-2.5 py-1 rounded-lg text-[11px] font-black ${
-                          posto.gasolinaAditivada === 'V-Power'
+                        <span className={`inline-block px-2.5 py-1 rounded-lg text-[11px] font-black ${posto.gasolinaAditivada === 'V-Power'
                             ? 'bg-red-50 text-red-700 border border-red-200'
                             : posto.gasolinaAditivada === 'Ipmax'
-                            ? 'bg-blue-50 text-blue-700 border border-blue-200'
-                            : 'bg-emerald-50 text-emerald-700 border border-emerald-200'
-                        }`}>
+                              ? 'bg-blue-50 text-blue-700 border border-blue-200'
+                              : 'bg-emerald-50 text-emerald-700 border border-emerald-200'
+                          }`}>
                           {posto.gasolinaAditivada}
                         </span>
                       </td>
@@ -328,7 +313,7 @@ export const UnidadesSection = () => {
               <div className="flex flex-wrap items-center gap-3">
                 <span className="flex items-center gap-1.5"><strong className="text-emerald-700">✔️</strong> Disponível</span>
                 <span className="flex items-center gap-1.5"><strong className="text-red-700">❌</strong> Não possui</span>
-                <span className="px-2 py-0.5 rounded bg-amber-100 text-amber-900 border border-amber-200">🏪 Conveniência (somente Gruta #13)</span>
+                <span className="px-2 py-0.5 rounded bg-amber-100 text-amber-900 border border-amber-200">🏪 Conveniência (somente Posto da Gruta)</span>
                 <span className="px-2 py-0.5 rounded bg-slate-200 text-slate-800">⛽ Gasolina Comum (todos os postos)</span>
                 <span className="px-2 py-0.5 rounded bg-red-100 text-red-800">V-Power (Shell)</span>
                 <span className="px-2 py-0.5 rounded bg-blue-100 text-blue-800">Ipmax (Ipiranga)</span>
@@ -339,7 +324,7 @@ export const UnidadesSection = () => {
 
               <button
                 onClick={() => setViewMode('cards')}
-                className="text-emerald-700 hover:text-emerald-800 font-bold underline"
+                className="text-[#0B2545] hover:text-blue-900 font-bold underline cursor-pointer"
               >
                 Alternar para visualização em Abas →
               </button>
@@ -348,11 +333,11 @@ export const UnidadesSection = () => {
         ) : (
           /* -------------------- MODO INTERATIVO (ABAS + DETALHES) -------------------- */
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-            
-            {/* Units Tab List (Coluna Esquerda com os 13 Postos) */}
+
+            {/* Units Tab List (Coluna Esquerda com os Postos de Combustíveis) */}
             <div className="lg:col-span-5 bg-white rounded-3xl border border-slate-200/90 p-3 shadow-sm max-h-[660px] overflow-y-auto space-y-2">
               <div className="px-3 py-2 text-xs font-bold text-slate-400 uppercase tracking-wider flex items-center justify-between">
-                <span>Relação dos Postos ({filteredUnidades.length})</span>
+                <span>Postos de Combustíveis</span>
                 <span className="text-[11px] font-semibold text-[#0B2545]">Clique para abrir detalhes</span>
               </div>
 
@@ -367,28 +352,25 @@ export const UnidadesSection = () => {
                     <button
                       key={posto.id}
                       onClick={() => setActiveTab(posto.id)}
-                      className={`w-full text-left p-3.5 rounded-2xl transition-all duration-200 flex items-center justify-between border cursor-pointer ${
-                        isActive
+                      className={`w-full text-left p-3.5 rounded-2xl transition-all duration-200 flex items-center justify-between border cursor-pointer ${isActive
                           ? 'bg-[#0B2545] text-white border-[#0B2545] shadow-md scale-[1.01]'
                           : 'bg-white hover:bg-slate-50 text-slate-700 border-slate-100 hover:border-slate-200'
-                      }`}
+                        }`}
                     >
                       <div className="space-y-1">
                         <div className="flex items-center gap-2">
-                          <span className={`text-[11px] font-black px-2 py-0.5 rounded-md ${
-                            isActive 
-                              ? 'bg-[#FFD100] text-[#0B2545]' 
+                          <span className={`text-[10px] font-black px-2 py-0.5 rounded-md uppercase ${isActive
+                              ? 'bg-[#FFD100] text-[#0B2545]'
                               : 'bg-slate-100 text-slate-700'
-                          }`}>
-                            #{posto.id < 10 ? `0${posto.id}` : posto.id}
+                            }`}>
+                            Posto
                           </span>
                           <h4 className="font-bold text-sm leading-tight">
                             {posto.nome}
                           </h4>
                         </div>
-                        <p className={`text-xs truncate max-w-[240px] sm:max-w-xs ${
-                          isActive ? 'text-slate-300' : 'text-slate-500'
-                        }`}>
+                        <p className={`text-xs truncate max-w-[240px] sm:max-w-xs ${isActive ? 'text-slate-300' : 'text-slate-500'
+                          }`}>
                           {posto.bairro} • {posto.endereco}
                         </p>
                       </div>
@@ -467,8 +449,8 @@ export const UnidadesSection = () => {
                     <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-slate-100">
                       <div>
                         <div className="flex items-center gap-2.5 mb-1.5">
-                          <span className="text-xs font-black px-2.5 py-0.5 rounded-md bg-[#FFD100] text-[#0B2545]">
-                            POSTO #{currentPosto.id < 10 ? `0${currentPosto.id}` : currentPosto.id}
+                          <span className="text-xs font-black px-2.5 py-0.5 rounded-md bg-[#FFD100] text-[#0B2545] uppercase">
+                            Posto de Combustíveis
                           </span>
                           <span className="text-xs font-semibold text-slate-500 flex items-center gap-1">
                             <Clock className="w-3.5 h-3.5 text-slate-400" />
@@ -522,13 +504,12 @@ export const UnidadesSection = () => {
                             <span className="w-2.5 h-2.5 rounded-full bg-amber-500" />
                             Gasolina Aditivada ({currentPosto.gasolinaAditivada})
                           </span>
-                          <span className={`text-[10px] uppercase font-black px-2 py-0.5 rounded ${
-                            currentPosto.gasolinaAditivada === 'V-Power'
+                          <span className={`text-[10px] uppercase font-black px-2 py-0.5 rounded ${currentPosto.gasolinaAditivada === 'V-Power'
                               ? 'bg-red-100 text-red-800'
                               : currentPosto.gasolinaAditivada === 'Ipmax'
-                              ? 'bg-blue-100 text-blue-800'
-                              : 'bg-emerald-100 text-emerald-800'
-                          }`}>
+                                ? 'bg-blue-100 text-blue-800'
+                                : 'bg-emerald-100 text-emerald-800'
+                            }`}>
                             {currentPosto.gasolinaAditivada}
                           </span>
                         </div>

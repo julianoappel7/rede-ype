@@ -187,13 +187,13 @@ export const BandeirasSection = () => {
                   <PetrobrasLogo className="h-7 w-auto" />
                 </div>
                 <span className="absolute bottom-3 right-3 text-[11px] font-black uppercase tracking-wider bg-emerald-600 text-white px-2.5 py-1 rounded-lg shadow-xs">
-                  8 Unidades em SJC
+                  Postos de Combustíveis
                 </span>
               </div>
               <div className="p-6 pb-2">
-                <h4 className="font-extrabold text-slate-900 text-base mb-1.5">Padrão Petrobras (8 Postos)</h4>
+                <h4 className="font-extrabold text-[#0B2545] text-base mb-1.5">Padrão Petrobras</h4>
                 <p className="text-xs text-slate-600 leading-relaxed">
-                  Aditivação de ponta com a consagrada <strong>Gasolina Grid</strong>, Diesel S-10 e S-500 de alta performance presentes em 8 unidades em SJC.
+                  Aditivação de ponta com a consagrada <strong>Gasolina Grid</strong>, Diesel S-10 e S-500 de alta performance presentes nos postos de combustíveis em SJC.
                 </p>
               </div>
             </div>
@@ -216,11 +216,11 @@ export const BandeirasSection = () => {
                   <ShellLogo className="h-7 w-auto" />
                 </div>
                 <span className="absolute bottom-3 right-3 text-[11px] font-black uppercase tracking-wider bg-red-600 text-white px-2.5 py-1 rounded-lg shadow-xs">
-                  3 Unidades em SJC
+                  Postos de Combustíveis
                 </span>
               </div>
               <div className="p-6 pb-2">
-                <h4 className="font-extrabold text-slate-900 text-base mb-1.5">Tecnologia Shell (3 Postos)</h4>
+                <h4 className="font-extrabold text-[#0B2545] text-base mb-1.5">Tecnologia Shell</h4>
                 <p className="text-xs text-slate-600 leading-relaxed">
                   Fórmula Dynaflex mundial com <strong>Shell V-Power</strong>, Diesel Evolux S-10 e serviços de troca de óleo e lavagem.
                 </p>
@@ -245,11 +245,11 @@ export const BandeirasSection = () => {
                   <IpirangaLogo className="h-7 w-auto" />
                 </div>
                 <span className="absolute bottom-3 right-3 text-[11px] font-black uppercase tracking-wider bg-blue-600 text-white px-2.5 py-1 rounded-lg shadow-xs">
-                  2 Unidades em SJC
+                  Postos de Combustíveis
                 </span>
               </div>
               <div className="p-6 pb-2">
-                <h4 className="font-extrabold text-slate-900 text-base mb-1.5">Ecossistema Ipiranga (2 Postos)</h4>
+                <h4 className="font-extrabold text-[#0B2545] text-base mb-1.5">Ecossistema Ipiranga</h4>
                 <p className="text-xs text-slate-600 leading-relaxed">
                   Rendimento máximo com a aditivação <strong>Ipmax</strong>, atendimento 24h na Guadalupe e loja de conveniência exclusiva no Posto da Gruta.
                 </p>

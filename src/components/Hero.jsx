@@ -9,7 +9,7 @@ export const Hero = () => {
   const heroPhotos = [
     {
       brand: 'Petrobras',
-      title: 'Padrão Petrobras Grid • 8 Unidades',
+      title: 'Padrão Petrobras Grid • Postos de Combustíveis',
       subtitle: 'Pistas amplas iluminadas em LED com Gasolina Grid, Diesel S-10 e Troca de Óleo',
       image: './images/posto-petrobras.jpg',
       Logo: PetrobrasLogo,
@@ -17,7 +17,7 @@ export const Hero = () => {
     },
     {
       brand: 'Shell',
-      title: 'Tecnologia Shell V-Power • 3 Unidades',
+      title: 'Tecnologia Shell V-Power • Postos de Combustíveis',
       subtitle: 'Abastecimento de alta performance com fórmula Dynaflex, Troca de Óleo e Lavagem',
       image: './images/posto-shell.jpg',
       Logo: ShellLogo,
@@ -25,7 +25,7 @@ export const Hero = () => {
     },
     {
       brand: 'Ipiranga',
-      title: 'Ecossistema Ipiranga Ipmax • 2 Unidades',
+      title: 'Ecossistema Ipiranga Ipmax • Postos de Combustíveis',
       subtitle: 'Atendimento 24h na Av. Guadalupe e Loja de Conveniência exclusiva no Posto da Gruta',
       image: './images/posto-ipiranga-oficial.jpg',
       Logo: IpirangaLogo,
@@ -58,7 +58,7 @@ export const Hero = () => {
             {/* Pill Badge */}
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#0B2545] text-[#FFD100] text-xs sm:text-sm font-bold tracking-wide shadow-sm">
               <Sparkles className="w-4 h-4 text-[#FFD100]" />
-              <span>Rede Ypê • 13 Postos de Combustíveis em SJC</span>
+              <span>Rede Ypê • Postos de Combustíveis</span>
             </div>
 
             {/* Cidades em Super Destaque - Clean & Harmonized */}
@@ -87,7 +87,7 @@ export const Hero = () => {
 
             {/* Subtitle */}
             <p className="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
-              Mais do que abastecimento: 13 unidades com controle rigoroso de pureza, procedência direta das refinarias homologadas Petrobras, Shell e Ipiranga, com serviços de lavagem, troca de óleo e calibradores digitais.
+              Mais do que abastecimento: postos de combustíveis com controle rigoroso de pureza, procedência direta das refinarias homologadas Petrobras, Shell e Ipiranga, com serviços de lavagem, troca de óleo e calibradores digitais.
             </p>
 
             {/* CTA Group */}
@@ -97,7 +97,7 @@ export const Hero = () => {
                 className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl text-base font-bold text-[#0B2545] bg-[#FFD100] hover:bg-[#f5c400] transition-all shadow-lg shadow-amber-500/20 hover:-translate-y-0.5"
               >
                 <MapPin className="w-5 h-5 text-[#0B2545]" />
-                <span>Relação dos 13 Postos</span>
+                <span>Postos de Combustíveis</span>
                 <ChevronRight className="w-4 h-4 ml-1 opacity-80" />
               </a>
 
@@ -113,8 +113,8 @@ export const Hero = () => {
             {/* Quick Metrics Bar */}
             <div className="pt-6 border-t border-slate-200/80 grid grid-cols-3 gap-4 max-w-lg mx-auto lg:mx-0">
               <div>
-                <div className="text-2xl sm:text-3xl font-black text-[#0B2545]">13</div>
-                <div className="text-xs text-slate-500 font-medium">Postos Oficiais</div>
+                <div className="text-xl sm:text-2xl font-black text-[#0B2545]">ANP</div>
+                <div className="text-xs text-slate-500 font-medium">Postos de Combustíveis</div>
               </div>
               <div>
                 <div className="text-2xl sm:text-3xl font-black text-[#0B2545]">100%</div>
@@ -229,9 +229,9 @@ export const Hero = () => {
                     <ShieldCheck className="w-4 h-4" />
                   </div>
                   <div>
-                    <h2 className="text-xs sm:text-sm font-bold text-[#0B2545]">Relação Oficial e Certificada</h2>
+                    <h2 className="text-xs sm:text-sm font-bold text-[#0B2545]">Postos de Combustíveis Certificados</h2>
                     <p className="text-[11px] sm:text-xs text-slate-600 mt-0.5 leading-relaxed">
-                      Todos os 13 postos contam com controle volumétrico, teste de densímetro na bomba e laudos da ANP.
+                      Todos os postos de combustíveis contam com controle volumétrico, teste de densímetro na bomba e laudos da ANP.
                     </p>
                   </div>
                 </div>

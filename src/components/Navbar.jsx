@@ -21,22 +21,21 @@ export const Navbar = () => {
   const navLinks = [
     { name: 'Início', href: '#hero' },
     { name: 'Bandeiras Homologadas', href: '#bandeiras' },
-    { name: 'Relação dos 13 Postos', href: '#unidades' },
+    { name: 'Postos de Combustíveis', href: '#unidades' },
     { name: 'Serviços & Troca de Óleo', href: '#servicos' },
     { name: 'Contato', href: '#contato' },
   ];
 
   return (
-    <header 
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled 
-          ? 'bg-white/95 backdrop-blur-md shadow-md border-b border-slate-200/90 py-2.5' 
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
+          ? 'bg-white/95 backdrop-blur-md shadow-md border-b border-slate-200/90 py-2.5'
           : 'bg-white/85 backdrop-blur-sm border-b border-slate-200/50 py-3.5'
-      }`}
+        }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between gap-4">
-          
+
           {/* Logo da Rede Ypê */}
           <a href="#hero" className="flex items-center shrink-0 transition-transform hover:scale-102">
             <RedeYpeLogo />
@@ -76,7 +75,7 @@ export const Navbar = () => {
               className="inline-flex items-center gap-2 px-4 sm:px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold text-[#0B2545] bg-[#FFD100] hover:bg-[#f5c400] transition-all shadow-md shadow-amber-500/20 hover:shadow-lg hover:-translate-y-0.5 border border-amber-400"
             >
               <MapPin className="w-4 h-4 text-[#0B2545]" />
-              <span>Ver os 13 Postos</span>
+              <span>Postos de Combustíveis</span>
             </a>
           </div>
 
@@ -116,7 +115,7 @@ export const Navbar = () => {
               className="flex items-center justify-center gap-2 w-full py-3 rounded-xl text-center text-sm font-bold text-[#0B2545] bg-[#FFD100] hover:bg-[#f5c400] shadow-md transition-all"
             >
               <MapPin className="w-4 h-4" />
-              <span>Consultar os 13 Postos em SJC</span>
+              <span>Postos de Combustíveis</span>
             </a>
             <a
               href="https://www.instagram.com/redeypepostos"

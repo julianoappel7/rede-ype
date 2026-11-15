@@ -276,7 +276,7 @@ export const UNIDADES = [
     bairro: "Jardim das Indústrias",
     cidade: "São José dos Campos - SP",
     horario: "Seg a Sáb 06h00 às 22h00 | Dom 06h00 às 19h00",
-    telefone: "(12) 3933-1313",
+    telefone: "(12) 3933-2500",
     conveniencia: true, // Única unidade com loja de conveniência
     gasolinaComum: true,
     gasolinaAditivada: "Ipmax",
@@ -297,7 +297,6 @@ export const BANDEIRAS_INFO = [
     logoColor: "#008542",
     accentColor: "border-emerald-500/30 text-emerald-600",
     tagline: "Tecnologia de Ponta & Rendimento Máximo",
-    postosCount: 8,
     destaques: [
       {
         produto: "Gasolina Petrobras Grid",
@@ -312,7 +311,7 @@ export const BANDEIRAS_INFO = [
         descricao: "Centros automotivos equipados para lubrificação de precisão com óleos homologados pelas montadoras."
       }
     ],
-    servicoChave: "8 Unidades em São José dos Campos operando com padrão Petrobras Grid."
+    servicoChave: "Postos de combustíveis em São José dos Campos operando com padrão Petrobras Grid."
   },
   {
     nome: "Shell",
@@ -320,7 +319,6 @@ export const BANDEIRAS_INFO = [
     logoColor: "#DD1D20",
     accentColor: "border-amber-500/30 text-amber-600",
     tagline: "Inovação V-Power & Eficiência de Fórmulas Globais",
-    postosCount: 3,
     destaques: [
       {
         produto: "Shell V-Power",
@@ -335,7 +333,7 @@ export const BANDEIRAS_INFO = [
         descricao: "Infraestrutura com lavagem especializada de veículos e calibradores digitais gratuitos."
       }
     ],
-    servicoChave: "3 Unidades estratégicas em SJC (Guadalupe, Vila Maria e Vila Tesouro)."
+    servicoChave: "Postos de combustíveis estratégicos em SJC (Guadalupe, Vila Maria e Vila Tesouro)."
   },
   {
     nome: "Ipiranga",
@@ -343,7 +341,6 @@ export const BANDEIRAS_INFO = [
     logoColor: "#004494",
     accentColor: "border-blue-500/30 text-blue-600",
     tagline: "Ipmax, Rendimento & Ponto da Gruta",
-    postosCount: 2,
     destaques: [
       {
         produto: "Linha Ipmax",
@@ -358,6 +355,6 @@ export const BANDEIRAS_INFO = [
         descricao: "Atendimento ininterrupto 24h na Av. Guadalupe com troca de óleo e calibrador."
       }
     ],
-    servicoChave: "2 Unidades chave: Cunha's (24h) e Auto Posto da Gruta."
+    servicoChave: "Postos de combustíveis chave: Cunha's (24h) e Auto Posto da Gruta."
   }
 ];

@@ -27,7 +27,7 @@ export const Footer = () => {
           <div className="lg:col-span-4 space-y-4">
             <RedeYpeLogo dark={true} />
             <p className="text-xs sm:text-sm text-slate-300/90 leading-relaxed max-w-sm">
-              A Rede Ypê reúne 13 postos de combustíveis operando com padrão rigoroso de pureza sob as bandeiras Petrobras, Shell e Ipiranga. Máxima procedência, agilidade de pista e serviços automotivos em São José dos Campos.
+              A Rede Ypê reúne postos de combustíveis operando com padrão rigoroso de pureza sob as bandeiras Petrobras, Shell e Ipiranga. Máxima procedência, agilidade de pista e serviços automotivos em São José dos Campos.
             </p>
             <div className="flex items-center gap-3 pt-2">
               <a 
@@ -70,7 +70,7 @@ export const Footer = () => {
                 <a href="#bandeiras" className="hover:text-[#FFD100] transition-colors">Qualidade & Bandeiras</a>
               </li>
               <li>
-                <a href="#unidades" className="hover:text-[#FFD100] transition-colors">Relação dos 13 Postos</a>
+                <a href="#unidades" className="hover:text-[#FFD100] transition-colors">Postos de Combustíveis</a>
               </li>
               <li>
                 <a href="#servicos" className="hover:text-[#FFD100] transition-colors">Troca de Óleo & Serviços</a>

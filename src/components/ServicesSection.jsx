@@ -151,12 +151,12 @@ export const ServicesSection = () => {
             <div className="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col gap-3 justify-center">
               <a
                 href="#unidades"
-                className="inline-flex items-center justify-center px-6 py-3.5 rounded-xl text-sm font-bold text-slate-950 bg-amber-400 hover:bg-amber-300 transition-all text-center shadow-lg hover:-translate-y-0.5"
+                className="inline-flex items-center justify-center px-6 py-3.5 rounded-xl text-sm font-bold text-[#0B2545] bg-[#FFD100] hover:bg-[#f5c400] transition-all text-center shadow-lg hover:-translate-y-0.5"
               >
                 Localizar Posto com Troca de Óleo
               </a>
               <span className="text-center text-xs text-slate-300">
-                Atendimento rápido sem agendamento prévio em 8 unidades.
+                Atendimento rápido sem agendamento prévio nos postos de combustíveis.
               </span>
             </div>
           </div>
@@ -210,15 +210,15 @@ export const ServicesSection = () => {
 
               {/* Logo Rede Ypê + Selo Check-up */}
               <div className="absolute top-3 left-3 right-3 flex items-center justify-between gap-2">
-                <div className="bg-white/95 backdrop-blur-md px-3 py-1.5 rounded-xl shadow-md flex items-center gap-2">
-                  <div className="w-5 h-5 rounded-md bg-emerald-600 text-white font-black text-xs flex items-center justify-center">
+                <div className="bg-[#0B2545]/95 backdrop-blur-md px-3 py-1.5 rounded-xl shadow-md border border-[#FFD100]/60 flex items-center gap-2">
+                  <div className="w-5 h-5 rounded-md bg-[#FFD100] text-[#0B2545] font-black text-xs flex items-center justify-center">
                     Y
                   </div>
-                  <span className="text-xs font-black tracking-tight text-slate-900">
-                    REDE <span className="text-emerald-600">YPÊ</span>
+                  <span className="text-xs font-black tracking-tight text-white">
+                    REDE <span className="text-[#FFD100]">YPÊ</span>
                   </span>
                 </div>
-                <span className="bg-emerald-600 text-white text-[11px] font-black uppercase tracking-wider px-3 py-1 rounded-lg shadow-md">
+                <span className="bg-[#FFD100] text-[#0B2545] text-[11px] font-black uppercase tracking-wider px-3 py-1 rounded-lg shadow-md">
                   ✓ Check-up 15 Itens Grátis
                 </span>
               </div>
