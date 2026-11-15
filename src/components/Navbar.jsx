@@ -21,7 +21,7 @@ export const Navbar = () => {
   const navLinks = [
     { name: 'Início', href: '#hero' },
     { name: 'Bandeiras Homologadas', href: '#bandeiras' },
-    { name: 'Postos de Combustíveis', href: '#unidades' },
+    { name: 'Relação dos 15 Postos', href: '#unidades' },
     { name: 'Serviços & Troca de Óleo', href: '#servicos' },
     { name: 'Contato', href: '#contato' },
   ];
@@ -75,7 +75,7 @@ export const Navbar = () => {
               className="inline-flex items-center gap-2 px-4 sm:px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold text-[#0B2545] bg-[#FFD100] hover:bg-[#f5c400] transition-all shadow-md shadow-amber-500/20 hover:shadow-lg hover:-translate-y-0.5 border border-amber-400"
             >
               <MapPin className="w-4 h-4 text-[#0B2545]" />
-              <span>Postos de Combustíveis</span>
+              <span>Ver os 15 Postos</span>
             </a>
           </div>
 
@@ -115,7 +115,7 @@ export const Navbar = () => {
               className="flex items-center justify-center gap-2 w-full py-3 rounded-xl text-center text-sm font-bold text-[#0B2545] bg-[#FFD100] hover:bg-[#f5c400] shadow-md transition-all"
             >
               <MapPin className="w-4 h-4" />
-              <span>Postos de Combustíveis</span>
+              <span>Consultar os 15 Postos</span>
             </a>
             <a
               href="https://www.instagram.com/redeypepostos"
