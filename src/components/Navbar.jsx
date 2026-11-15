@@ -53,20 +53,29 @@ export const Navbar = () => {
               <a
                 key={link.name}
                 href={link.href}
-                className="text-xs sm:text-sm font-semibold text-slate-700 hover:text-emerald-700 px-3 py-2 rounded-xl transition-colors hover:bg-slate-100/70"
+                className="text-xs sm:text-sm font-semibold text-slate-700 hover:text-[#0B2545] px-3 py-2 rounded-xl transition-colors hover:bg-amber-50/80"
               >
                 {link.name}
               </a>
             ))}
           </nav>
 
-          {/* CTA Button */}
-          <div className="hidden sm:flex items-center gap-3 shrink-0">
+          {/* CTA Button + Instagram Official Link */}
+          <div className="hidden sm:flex items-center gap-2.5 shrink-0">
+            <a
+              href="https://www.instagram.com/redeypepostos"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 px-3.5 py-2.5 rounded-xl text-xs font-bold text-[#0B2545] bg-slate-100 hover:bg-[#FFD100] transition-all border border-slate-200/80"
+              title="Instagram Oficial @redeypepostos"
+            >
+              <span>@redeypepostos</span>
+            </a>
             <a
               href="#unidades"
-              className="inline-flex items-center gap-2 px-4 sm:px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold text-white bg-emerald-600 hover:bg-emerald-700 transition-all shadow-md shadow-emerald-600/25 hover:shadow-lg hover:shadow-emerald-600/35 hover:-translate-y-0.5"
+              className="inline-flex items-center gap-2 px-4 sm:px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold text-[#0B2545] bg-[#FFD100] hover:bg-[#f5c400] transition-all shadow-md shadow-amber-500/20 hover:shadow-lg hover:-translate-y-0.5 border border-amber-400"
             >
-              <MapPin className="w-4 h-4 text-emerald-200" />
+              <MapPin className="w-4 h-4 text-[#0B2545]" />
               <span>Ver os 13 Postos</span>
             </a>
           </div>
@@ -89,25 +98,33 @@ export const Navbar = () => {
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="xl:hidden bg-white/95 backdrop-blur-xl border-b border-slate-200 px-4 pt-3 pb-6 space-y-2 shadow-xl animate-in slide-in-from-top-4 duration-200">
+        <div className="xl:hidden bg-white/98 backdrop-blur-xl border-b border-slate-200 px-4 pt-3 pb-6 space-y-2 shadow-xl animate-in slide-in-from-top-4 duration-200">
           {navLinks.map((link) => (
             <a
               key={link.name}
               href={link.href}
               onClick={() => setMobileMenuOpen(false)}
-              className="block px-3 py-2.5 rounded-xl text-base font-semibold text-slate-700 hover:bg-emerald-50 hover:text-emerald-700 transition-colors"
+              className="block px-3 py-2.5 rounded-xl text-base font-semibold text-slate-700 hover:bg-amber-50 hover:text-[#0B2545] transition-colors"
             >
               {link.name}
             </a>
           ))}
-          <div className="pt-2">
+          <div className="pt-2 space-y-2">
             <a
               href="#unidades"
               onClick={() => setMobileMenuOpen(false)}
-              className="flex items-center justify-center gap-2 w-full py-3 rounded-xl text-center text-sm font-bold text-white bg-emerald-600 hover:bg-emerald-700 shadow-md transition-all"
+              className="flex items-center justify-center gap-2 w-full py-3 rounded-xl text-center text-sm font-bold text-[#0B2545] bg-[#FFD100] hover:bg-[#f5c400] shadow-md transition-all"
             >
               <MapPin className="w-4 h-4" />
               <span>Consultar os 13 Postos em SJC</span>
+            </a>
+            <a
+              href="https://www.instagram.com/redeypepostos"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center gap-2 w-full py-2.5 rounded-xl text-center text-xs font-bold text-white bg-[#0B2545] hover:bg-slate-800 transition-all"
+            >
+              <span>Siga no Instagram @redeypepostos</span>
             </a>
           </div>
         </div>

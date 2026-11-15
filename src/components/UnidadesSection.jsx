@@ -84,11 +84,11 @@ export const UnidadesSection = () => {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold uppercase tracking-wider mb-3 shadow-2xs">
-            <MapPin className="w-3.5 h-3.5 text-emerald-600" />
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#0B2545] text-[#FFD100] text-xs font-bold uppercase tracking-wider mb-3 shadow-xs">
+            <MapPin className="w-3.5 h-3.5 text-[#FFD100]" />
             <span>São José dos Campos • Relação Oficial</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0B2545] tracking-tight">
             Relação dos 13 Postos, Bandeiras, Combustíveis e Serviços
           </h2>
           <p className="mt-3 text-base text-slate-600">
@@ -108,7 +108,7 @@ export const UnidadesSection = () => {
                 placeholder="Buscar por nome do posto, bairro ou endereço em SJC..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-10 pr-4 py-2.5 text-sm rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition-all bg-slate-50/50"
+                className="w-full pl-10 pr-4 py-2.5 text-sm rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-[#0B2545]/20 focus:border-[#0B2545] transition-all bg-slate-50/50"
               />
             </div>
 
@@ -116,24 +116,24 @@ export const UnidadesSection = () => {
             <div className="flex items-center gap-1.5 p-1 bg-slate-100 rounded-xl shrink-0 self-start md:self-auto">
               <button
                 onClick={() => setViewMode('cards')}
-                className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold transition-all ${
+                className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer ${
                   viewMode === 'cards'
-                    ? 'bg-white text-slate-900 shadow-xs'
-                    : 'text-slate-600 hover:text-slate-900'
+                    ? 'bg-[#0B2545] text-white shadow-xs'
+                    : 'text-slate-600 hover:text-[#0B2545]'
                 }`}
               >
-                <LayoutGrid className="w-3.5 h-3.5 text-emerald-600" />
+                <LayoutGrid className={`w-3.5 h-3.5 ${viewMode === 'cards' ? 'text-[#FFD100]' : 'text-slate-500'}`} />
                 <span>Modo Interativo (Abas)</span>
               </button>
               <button
                 onClick={() => setViewMode('tabela')}
-                className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold transition-all ${
+                className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer ${
                   viewMode === 'tabela'
-                    ? 'bg-white text-slate-900 shadow-xs'
-                    : 'text-slate-600 hover:text-slate-900'
+                    ? 'bg-[#0B2545] text-white shadow-xs'
+                    : 'text-slate-600 hover:text-[#0B2545]'
                 }`}
               >
-                <TableIcon className="w-3.5 h-3.5 text-blue-600" />
+                <TableIcon className={`w-3.5 h-3.5 ${viewMode === 'tabela' ? 'text-[#FFD100]' : 'text-slate-500'}`} />
                 <span>Tabela Completa (Conforme Planilha)</span>
               </button>
             </div>
@@ -156,15 +156,15 @@ export const UnidadesSection = () => {
                 <button
                   key={label}
                   onClick={() => setFilterBrand(label)}
-                  className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all whitespace-nowrap flex items-center gap-1.5 border ${
+                  className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all whitespace-nowrap flex items-center gap-1.5 border cursor-pointer ${
                     filterBrand === label
-                      ? 'bg-slate-900 text-white border-slate-900 shadow-xs'
+                      ? 'bg-[#0B2545] text-white border-[#0B2545] shadow-xs'
                       : 'bg-slate-50 text-slate-600 border-slate-200 hover:bg-slate-100'
                   }`}
                 >
                   <span>{label}</span>
-                  <span className={`text-[10px] px-1.5 py-0.2 rounded-full ${
-                    filterBrand === label ? 'bg-white/25 text-white' : 'bg-slate-200 text-slate-700'
+                  <span className={`text-[10px] px-1.5 py-0.2 rounded-full font-extrabold ${
+                    filterBrand === label ? 'bg-[#FFD100] text-[#0B2545]' : 'bg-slate-200 text-slate-700'
                   }`}>
                     {count}
                   </span>
@@ -185,9 +185,9 @@ export const UnidadesSection = () => {
                 <button
                   key={serv.id}
                   onClick={() => setFilterService(serv.id)}
-                  className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all whitespace-nowrap border ${
+                  className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all whitespace-nowrap border cursor-pointer ${
                     filterService === serv.id
-                      ? 'bg-emerald-600 text-white border-emerald-600 shadow-xs'
+                      ? 'bg-[#FFD100] text-[#0B2545] border-amber-400 shadow-xs'
                       : 'bg-slate-50 text-slate-600 border-slate-200 hover:bg-slate-100'
                   }`}
                 >
@@ -353,7 +353,7 @@ export const UnidadesSection = () => {
             <div className="lg:col-span-5 bg-white rounded-3xl border border-slate-200/90 p-3 shadow-sm max-h-[660px] overflow-y-auto space-y-2">
               <div className="px-3 py-2 text-xs font-bold text-slate-400 uppercase tracking-wider flex items-center justify-between">
                 <span>Relação dos Postos ({filteredUnidades.length})</span>
-                <span className="text-[11px] font-semibold text-emerald-600">Clique para abrir detalhes</span>
+                <span className="text-[11px] font-semibold text-[#0B2545]">Clique para abrir detalhes</span>
               </div>
 
               {filteredUnidades.length === 0 ? (
@@ -367,9 +367,9 @@ export const UnidadesSection = () => {
                     <button
                       key={posto.id}
                       onClick={() => setActiveTab(posto.id)}
-                      className={`w-full text-left p-3.5 rounded-2xl transition-all duration-200 flex items-center justify-between border ${
+                      className={`w-full text-left p-3.5 rounded-2xl transition-all duration-200 flex items-center justify-between border cursor-pointer ${
                         isActive
-                          ? 'bg-slate-900 text-white border-slate-900 shadow-md scale-[1.01]'
+                          ? 'bg-[#0B2545] text-white border-[#0B2545] shadow-md scale-[1.01]'
                           : 'bg-white hover:bg-slate-50 text-slate-700 border-slate-100 hover:border-slate-200'
                       }`}
                     >
@@ -377,7 +377,7 @@ export const UnidadesSection = () => {
                         <div className="flex items-center gap-2">
                           <span className={`text-[11px] font-black px-2 py-0.5 rounded-md ${
                             isActive 
-                              ? 'bg-white/20 text-white' 
+                              ? 'bg-[#FFD100] text-[#0B2545]' 
                               : 'bg-slate-100 text-slate-700'
                           }`}>
                             #{posto.id < 10 ? `0${posto.id}` : posto.id}
@@ -467,7 +467,7 @@ export const UnidadesSection = () => {
                     <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-slate-100">
                       <div>
                         <div className="flex items-center gap-2.5 mb-1.5">
-                          <span className="text-xs font-black px-2.5 py-0.5 rounded-md bg-emerald-100 text-emerald-800">
+                          <span className="text-xs font-black px-2.5 py-0.5 rounded-md bg-[#FFD100] text-[#0B2545]">
                             POSTO #{currentPosto.id < 10 ? `0${currentPosto.id}` : currentPosto.id}
                           </span>
                           <span className="text-xs font-semibold text-slate-500 flex items-center gap-1">
@@ -475,11 +475,11 @@ export const UnidadesSection = () => {
                             {currentPosto.horario}
                           </span>
                         </div>
-                        <h3 className="text-2xl sm:text-3xl font-black text-slate-900 leading-tight">
+                        <h3 className="text-2xl sm:text-3xl font-black text-[#0B2545] leading-tight">
                           {currentPosto.nome}
                         </h3>
                         <p className="text-sm text-slate-600 mt-1 flex items-center gap-1.5">
-                          <MapPin className="w-4 h-4 text-emerald-600 shrink-0" />
+                          <MapPin className="w-4 h-4 text-[#D99B00] shrink-0" />
                           <span>{currentPosto.endereco} — {currentPosto.bairro}, {currentPosto.cidade}</span>
                         </p>
                       </div>
@@ -639,7 +639,7 @@ export const UnidadesSection = () => {
                         href={currentPosto.mapsUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl text-sm font-bold text-white bg-emerald-600 hover:bg-emerald-700 transition-all shadow-md shadow-emerald-600/25 hover:-translate-y-0.5"
+                        className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl text-sm font-bold text-[#0B2545] bg-[#FFD100] hover:bg-[#f5c400] transition-all shadow-md shadow-amber-500/20 hover:-translate-y-0.5"
                       >
                         <Navigation className="w-4 h-4" />
                         <span>Como Chegar no Google Maps</span>

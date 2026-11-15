@@ -70,33 +70,35 @@ export const ShellLogo = ({ className = "h-9 w-auto" }) => (
 );
 
 /**
- * Logo Oficial Ipiranga Original:
- * Cápsula amarela oficial (#FFD100) com faixa curva azul (#003893) à esquerda contendo o "I" amarelo
- * e tipografia "Ipiranga" em azul escuro itálico corporativo.
+ * Logo Oficial Ipiranga Original (idêntica ao material oficial da Rede Ypê):
+ * Ícone quadrado amarelo (#FFD100) à esquerda com a faixa curva azul (#003893) e o "i" amarelo,
+ * seguido da tipografia "Ipiranga" em azul escuro itálico corporativo.
  */
 export const IpirangaLogo = ({ className = "h-9 w-auto" }) => (
-  <svg viewBox="0 0 210 54" className={className} fill="none" xmlns="http://www.w3.org/2000/svg">
-    {/* Cápsula / Fundo Amarelo Original Ipiranga com borda azul fina */}
-    <rect x="2" y="3" width="206" height="48" rx="18" fill="#FFD100" stroke="#003893" strokeWidth="2.5" />
-    {/* Faixa curva azul oficial à esquerda */}
+  <svg viewBox="0 0 205 52" className={className} fill="none" xmlns="http://www.w3.org/2000/svg">
+    {/* Emblema Quadrado Amarelo Original Ipiranga */}
+    <rect x="2" y="3" width="48" height="46" rx="9" fill="#FFD100" />
+    {/* Escudo Curvo Azul Oficial dentro do quadrado amarelo */}
     <path
-      d="M20 4.2H54C44 18 44 36 54 49.8H20C10.8 49.8 3.2 42.2 3.2 33V21C3.2 11.8 10.8 4.2 20 4.2Z"
+      d="M11 8C15 8 36 8 40 8C42 8 43 9.5 42.5 11.5L36.5 44H10C8 44 7 42.5 7.5 40.5L13.5 10.5C13.8 9 11 8 11 8Z"
       fill="#003893"
     />
-    {/* Faixa laranja/amarela interna de transição característica da Ipiranga */}
+    {/* Ponto amarelo do 'i' */}
+    <circle cx="27.5" cy="15.5" r="4" fill="#FFD100" />
+    {/* Haste curva amarela do 'i' */}
     <path
-      d="M52 4.2H59C49 18 49 36 59 49.8H52C42 36 42 18 52 4.2Z"
-      fill="#F58220"
-    />
-    {/* Letra "I" amarela em itálico dentro do escudo azul */}
-    <path
-      d="M25 13H36L31 41H20L25 13Z"
+      d="M22.5 22.5H30.5L26.5 40.5H18.5L22.5 22.5Z"
       fill="#FFD100"
+    />
+    {/* Detalhe laranja/vermelho inferior da curva Ipiranga */}
+    <path
+      d="M8 42.5H37L36.2 45H7.5L8 42.5Z"
+      fill="#F58220"
     />
     {/* Tipografia "Ipiranga" em Azul Escuro Itálico Original */}
     <text
-      x="65"
-      y="36"
+      x="60"
+      y="35"
       fontFamily="'Inter', 'Arial Black', system-ui, sans-serif"
       fontWeight="900"
       fontStyle="italic"
@@ -110,21 +112,27 @@ export const IpirangaLogo = ({ className = "h-9 w-auto" }) => (
 );
 
 /**
- * Logo da Rede Ypê limpa, sem menção a conveniência
+ * Logo Oficial da Rede Ypê na paleta institucional (Azul Marinho Profundo + Amarelo Ipê Ouro + Clean White)
  */
 export const RedeYpeLogo = ({ className = "h-10 w-auto", dark = false }) => (
   <div className="flex items-center gap-3">
-    <div className="relative flex items-center justify-center w-11 h-11 rounded-2xl bg-gradient-to-tr from-emerald-600 via-teal-600 to-amber-400 shadow-md shadow-emerald-600/25 text-white font-black text-2xl tracking-tighter">
-      <span>Y</span>
-      <div className="absolute -top-1 -right-1 w-3.5 h-3.5 bg-amber-400 rounded-full border-2 border-white animate-pulse" />
+    <div className="relative flex items-center justify-center w-11 h-11 rounded-2xl bg-[#0B2545] border-2 border-[#FFD100] shadow-md shadow-blue-950/20 text-[#FFD100] font-black text-2xl tracking-tighter">
+      <svg viewBox="0 0 36 36" className="w-7 h-7" fill="none" xmlns="http://www.w3.org/2000/svg">
+        {/* Copa de Ipê Amarelo estilizada + Gota/Chama de Energia */}
+        <circle cx="18" cy="11" r="4.5" fill="#FFD100" />
+        <circle cx="11.5" cy="14.5" r="4" fill="#FFD100" opacity="0.92" />
+        <circle cx="24.5" cy="14.5" r="4" fill="#FFD100" opacity="0.92" />
+        <path d="M16 17H20L21.5 29H14.5L16 17Z" fill="#FFFFFF" />
+        <path d="M11 29H25" stroke="#FFD100" strokeWidth="2.5" strokeLinecap="round" />
+      </svg>
     </div>
     <div className="flex flex-col">
       <div className="flex items-center gap-1.5">
-        <span className={`text-2xl font-black tracking-tight leading-none ${dark ? 'text-white' : 'text-slate-900'}`}>
-          REDE <span className="text-emerald-600">YPÊ</span>
+        <span className={`text-2xl font-black tracking-tight leading-none ${dark ? 'text-white' : 'text-[#0B2545]'}`}>
+          REDE <span className={dark ? 'text-[#FFD100]' : 'text-[#D99B00]'}>YPÊ</span>
         </span>
       </div>
-      <span className="text-[11px] uppercase font-bold tracking-widest text-slate-400 mt-0.5">
+      <span className={`text-[10px] uppercase font-extrabold tracking-widest mt-0.5 ${dark ? 'text-blue-200/80' : 'text-slate-500'}`}>
         Postos de Combustíveis
       </span>
     </div>

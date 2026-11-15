@@ -65,11 +65,11 @@ export const ServicesSection = () => {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 text-emerald-800 text-xs font-bold uppercase tracking-wider mb-3">
-            <Layers className="w-3.5 h-3.5 text-emerald-600" />
+          <div className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[#0B2545] text-[#FFD100] text-xs font-bold uppercase tracking-wider mb-3 shadow-xs">
+            <Layers className="w-3.5 h-3.5 text-[#FFD100]" />
             <span>Diferenciais Que Agregam Valor</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0B2545] tracking-tight">
             Excelência em Cada Detalhe da Sua Parada
           </h2>
           <p className="mt-4 text-base text-slate-600">
@@ -88,14 +88,14 @@ export const ServicesSection = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: index * 0.1 }}
-                className="group relative p-8 rounded-3xl bg-slate-50/60 border border-slate-200/80 hover:bg-white hover:border-slate-300 hover:shadow-xl hover:shadow-slate-200/60 transition-all duration-300 flex flex-col justify-between"
+                className="group relative p-8 rounded-3xl bg-slate-50/70 border border-slate-200/80 hover:bg-white hover:border-[#0B2545]/30 hover:shadow-xl hover:shadow-slate-200/60 transition-all duration-300 flex flex-col justify-between"
               >
                 <div>
-                  <div className={`w-14 h-14 rounded-2xl ${item.bgGlow} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                    <IconComponent className={`w-7 h-7 ${item.iconColor}`} />
+                  <div className="w-14 h-14 rounded-2xl bg-[#0B2545] text-[#FFD100] flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-md">
+                    <IconComponent className="w-7 h-7 text-[#FFD100]" />
                   </div>
 
-                  <h3 className="text-lg font-bold text-slate-900 mb-3 group-hover:text-emerald-700 transition-colors">
+                  <h3 className="text-lg font-bold text-[#0B2545] mb-3">
                     {item.title}
                   </h3>
 
@@ -104,8 +104,8 @@ export const ServicesSection = () => {
                   </p>
                 </div>
 
-                <div className="mt-6 pt-4 border-t border-slate-100 flex items-center text-xs font-semibold text-emerald-700">
-                  <CheckCircle className="w-4 h-4 mr-1.5 text-emerald-600" />
+                <div className="mt-6 pt-4 border-t border-slate-100 flex items-center text-xs font-bold text-[#0B2545]">
+                  <CheckCircle className="w-4 h-4 mr-1.5 text-[#D99B00]" />
                   <span>Padrão Rede Ypê Garantido</span>
                 </div>
               </motion.div>
@@ -114,7 +114,7 @@ export const ServicesSection = () => {
         </div>
 
         {/* Banner de Troca de Óleo em Destaque com Fotos 4K e Logos das Empresas */}
-        <div className="mt-16 rounded-3xl bg-gradient-to-r from-slate-900 via-slate-800 to-emerald-950 p-6 sm:p-10 lg:p-12 text-white relative overflow-hidden shadow-2xl space-y-10">
+        <div className="mt-16 rounded-3xl bg-gradient-to-r from-[#071930] via-[#0B2545] to-[#103460] p-6 sm:p-10 lg:p-12 text-white relative overflow-hidden shadow-2xl space-y-10 border border-blue-900/40">
           <div className="absolute right-0 top-0 bottom-0 w-1/3 bg-radial from-emerald-500/10 to-transparent pointer-events-none" />
           
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">

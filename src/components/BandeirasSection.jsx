@@ -46,11 +46,11 @@ export const BandeirasSection = () => {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-100 text-slate-700 text-xs font-semibold uppercase tracking-wider mb-3">
-            <Award className="w-3.5 h-3.5 text-amber-500" />
+          <div className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[#0B2545] text-[#FFD100] text-xs font-bold uppercase tracking-wider mb-3 shadow-xs">
+            <Award className="w-3.5 h-3.5 text-[#FFD100]" />
             <span>Padrão Rigoroso de Pureza e Desempenho</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0B2545] tracking-tight">
             As Três Maiores Bandeiras do País no Mesmo Padrão de Atendimento
           </h2>
           <p className="mt-4 text-base text-slate-600 leading-relaxed">
@@ -66,14 +66,14 @@ export const BandeirasSection = () => {
               <button
                 key={b.nome}
                 onClick={() => setSelectedBrand(b.nome)}
-                className={`flex items-center gap-3 px-6 py-3.5 rounded-2xl font-bold text-sm transition-all duration-200 border ${
+                className={`flex items-center gap-3 px-6 py-3.5 rounded-2xl font-bold text-sm transition-all duration-200 border cursor-pointer ${
                   isSelected
-                    ? 'bg-slate-900 text-white border-slate-900 shadow-lg shadow-slate-900/15 scale-102'
-                    : 'bg-slate-50 text-slate-600 border-slate-200 hover:bg-slate-100 hover:text-slate-900'
+                    ? 'bg-[#0B2545] text-white border-[#0B2545] shadow-lg shadow-blue-950/15 scale-102'
+                    : 'bg-slate-50 text-slate-600 border-slate-200 hover:bg-slate-100 hover:text-[#0B2545]'
                 }`}
               >
                 <span>{b.nome}</span>
-                <span className={`text-xs px-2 py-0.5 rounded-md ${isSelected ? 'bg-white/20 text-white' : 'bg-slate-200 text-slate-600'}`}>
+                <span className={`text-xs px-2 py-0.5 rounded-md font-extrabold ${isSelected ? 'bg-[#FFD100] text-[#0B2545]' : 'bg-slate-200 text-slate-600'}`}>
                   {b.nome === 'Shell' ? 'V-Power' : b.nome === 'Petrobras' ? 'Grid & Podium' : 'Ipimax'}
                 </span>
               </button>
