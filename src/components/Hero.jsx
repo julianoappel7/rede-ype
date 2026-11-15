@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { MapPin, ShieldCheck, Award, Sparkles, ChevronRight, Fuel, Camera } from 'lucide-react';
-import { PetrobrasLogo, ShellLogo, IpirangaLogo, RedeYpeLogo } from './BrandLogos';
+import { PetrobrasLogo, ShellLogo, IpirangaLogo, RedeYpeLogo, RedeYpePumpIcon } from './BrandLogos';
 
 export const Hero = () => {
   const [activePhotoIndex, setActivePhotoIndex] = useState(0);
@@ -55,16 +55,19 @@ export const Hero = () => {
             transition={{ duration: 0.6 }}
             className="lg:col-span-6 space-y-6 text-center lg:text-left"
           >
-            {/* Pill Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#0B2545] text-[#FFD100] text-xs sm:text-sm font-bold tracking-wide shadow-sm">
-              <Sparkles className="w-4 h-4 text-[#FFD100]" />
+            {/* Pill Badge com Logo Bomba de Combustível Amarela e Preta */}
+            <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-[#111111] text-[#FFD100] text-xs sm:text-sm font-bold tracking-wide shadow-md border border-[#FFD100]">
+              <RedeYpePumpIcon className="w-6 h-6 border" />
               <span>Rede Ypê de Postos de Combustíveis</span>
             </div>
 
-            {/* Título Principal de Entrada */}
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#0B2545] tracking-tight leading-tight">
-              Rede Ypê de <span className="text-[#D99B00]">Postos de Combustíveis</span>
-            </h1>
+            {/* Título Principal de Entrada com Logo Instagram */}
+            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+              <RedeYpePumpIcon className="w-16 h-16 sm:w-20 sm:h-20 shadow-lg" />
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#111111] tracking-tight leading-tight">
+                Rede Ypê de <span className="bg-[#FFD100] text-[#111111] px-2.5 py-0.5 rounded-xl inline-block mt-1 sm:mt-0">Postos de Combustíveis</span>
+              </h1>
+            </div>
 
             {/* Cidades em Super Destaque - Clean & Harmonized */}
             <div className="pt-2 pb-1">
@@ -169,10 +172,8 @@ export const Hero = () => {
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-900/25 to-transparent" />
 
                   {/* Top-Left Rede Ypê Official Badge */}
-                  <div className="absolute top-3 left-3 bg-[#0B2545]/95 backdrop-blur-md px-3 py-1.5 rounded-xl shadow-md border border-[#FFD100]/60 flex items-center gap-2">
-                    <div className="w-5 h-5 rounded-md bg-[#FFD100] text-[#0B2545] font-black text-xs flex items-center justify-center">
-                      Y
-                    </div>
+                  <div className="absolute top-3 left-3 bg-[#111111]/95 backdrop-blur-md px-3 py-1.5 rounded-xl shadow-md border border-[#FFD100] flex items-center gap-2">
+                    <RedeYpePumpIcon className="w-6 h-6" />
                     <span className="text-xs font-black tracking-tight text-white">
                       REDE <span className="text-[#FFD100]">YPÊ</span>
                     </span>

@@ -112,27 +112,58 @@ export const IpirangaLogo = ({ className = "h-9 w-auto" }) => (
 );
 
 /**
- * Logo Oficial da Rede Ypê na paleta institucional (Azul Marinho Profundo + Amarelo Ipê Ouro + Clean White)
+ * Ícone Oficial da Rede Ypê (idêntico à logo do Instagram @redeypepostos):
+ * Bomba de combustível amarela (#FFD100) com preto (#111111).
+ */
+export const RedeYpePumpIcon = ({ className = "w-11 h-11" }) => (
+  <div className={`relative flex items-center justify-center rounded-full bg-[#FFD100] border-2 border-[#111111] shadow-md shrink-0 ${className}`}>
+    <svg viewBox="0 0 48 48" className="w-[78%] h-[78%]" fill="none" xmlns="http://www.w3.org/2000/svg">
+      {/* Base da Bomba de Combustível */}
+      <rect x="9" y="38" width="22" height="3.5" rx="1.5" fill="#111111" />
+      {/* Corpo Principal da Bomba (Preto com interior Amarelo) */}
+      <rect x="11" y="9" width="18" height="30" rx="3" fill="#111111" />
+      {/* Visor / Painel Superior Amarelo da Bomba */}
+      <rect x="14" y="12.5" width="12" height="8" rx="1.5" fill="#FFD100" />
+      {/* Detalhe do marcador no visor (Preto) */}
+      <rect x="16" y="15" width="8" height="2" rx="1" fill="#111111" />
+      {/* Gota de Combustível Amarela no centro do corpo preto da bomba */}
+      <path
+        d="M20 24C20 24 16.5 28.2 16.5 30.8C16.5 32.7 18.1 34.2 20 34.2C21.9 34.2 23.5 32.7 23.5 30.8C23.5 28.2 20 24 20 24Z"
+        fill="#FFD100"
+      />
+      {/* Mangueira Lateral e Bico de Abastecimento (Preto) */}
+      <path
+        d="M29 18H33C34.7 18 36 19.3 36 21V30.5C36 32.4 34.4 34 32.5 34C30.6 34 29 32.4 29 30.5"
+        stroke="#111111"
+        strokeWidth="3.2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      {/* Bico da Bomba / Gatilho Superior */}
+      <path
+        d="M32 18L36.5 13.5C37.3 12.7 38.6 12.7 39.4 13.5L40.5 14.6L35.5 19.6"
+        stroke="#111111"
+        strokeWidth="3"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  </div>
+);
+
+/**
+ * Logo Oficial da Rede Ypê (Bomba de Combustível Amarela com Preto - Padrão Instagram @redeypepostos)
  */
 export const RedeYpeLogo = ({ className = "h-10 w-auto", dark = false }) => (
   <div className="flex items-center gap-3">
-    <div className="relative flex items-center justify-center w-11 h-11 rounded-2xl bg-[#0B2545] border-2 border-[#FFD100] shadow-md shadow-blue-950/20 text-[#FFD100] font-black text-2xl tracking-tighter">
-      <svg viewBox="0 0 36 36" className="w-7 h-7" fill="none" xmlns="http://www.w3.org/2000/svg">
-        {/* Copa de Ipê Amarelo estilizada + Gota/Chama de Energia */}
-        <circle cx="18" cy="11" r="4.5" fill="#FFD100" />
-        <circle cx="11.5" cy="14.5" r="4" fill="#FFD100" opacity="0.92" />
-        <circle cx="24.5" cy="14.5" r="4" fill="#FFD100" opacity="0.92" />
-        <path d="M16 17H20L21.5 29H14.5L16 17Z" fill="#FFFFFF" />
-        <path d="M11 29H25" stroke="#FFD100" strokeWidth="2.5" strokeLinecap="round" />
-      </svg>
-    </div>
+    <RedeYpePumpIcon className="w-11 h-11 sm:w-12 sm:h-12" />
     <div className="flex flex-col">
       <div className="flex items-center gap-1.5">
-        <span className={`text-2xl font-black tracking-tight leading-none ${dark ? 'text-white' : 'text-[#0B2545]'}`}>
-          REDE <span className={dark ? 'text-[#FFD100]' : 'text-[#D99B00]'}>YPÊ</span>
+        <span className={`text-2xl font-black tracking-tight leading-none ${dark ? 'text-white' : 'text-[#111111]'}`}>
+          REDE <span className={dark ? 'text-[#FFD100]' : 'text-[#111111] bg-[#FFD100] px-1.5 py-0.5 rounded-md'}>YPÊ</span>
         </span>
       </div>
-      <span className={`text-[10px] uppercase font-extrabold tracking-widest mt-0.5 ${dark ? 'text-blue-200/80' : 'text-slate-500'}`}>
+      <span className={`text-[10px] uppercase font-extrabold tracking-widest mt-1 ${dark ? 'text-[#FFD100]' : 'text-slate-700'}`}>
         Postos de Combustíveis
       </span>
     </div>

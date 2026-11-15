@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { PetrobrasLogo, ShellLogo, IpirangaLogo } from './BrandLogos';
+import { PetrobrasLogo, ShellLogo, IpirangaLogo, RedeYpePumpIcon } from './BrandLogos';
 import { 
   ShieldCheck, 
   Droplets, 
@@ -210,15 +210,13 @@ export const ServicesSection = () => {
 
               {/* Logo Rede Ypê + Selo Check-up */}
               <div className="absolute top-3 left-3 right-3 flex items-center justify-between gap-2">
-                <div className="bg-[#0B2545]/95 backdrop-blur-md px-3 py-1.5 rounded-xl shadow-md border border-[#FFD100]/60 flex items-center gap-2">
-                  <div className="w-5 h-5 rounded-md bg-[#FFD100] text-[#0B2545] font-black text-xs flex items-center justify-center">
-                    Y
-                  </div>
+                <div className="bg-[#111111]/95 backdrop-blur-md px-3 py-1.5 rounded-xl shadow-md border border-[#FFD100] flex items-center gap-2">
+                  <RedeYpePumpIcon className="w-6 h-6" />
                   <span className="text-xs font-black tracking-tight text-white">
                     REDE <span className="text-[#FFD100]">YPÊ</span>
                   </span>
                 </div>
-                <span className="bg-[#FFD100] text-[#0B2545] text-[11px] font-black uppercase tracking-wider px-3 py-1 rounded-lg shadow-md">
+                <span className="bg-[#FFD100] text-[#111111] text-[11px] font-black uppercase tracking-wider px-3 py-1 rounded-lg shadow-md">
                   ✓ Check-up 15 Itens Grátis
                 </span>
               </div>
