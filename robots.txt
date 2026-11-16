@@ -1,0 +1,7 @@
+# Permite que buscadores leiam todo o site.
+# Se o endereço do site mudar, troque também a linha Sitemap.
+User-agent: *
+Allow: /
+Disallow: /404.html
+
+Sitemap: https://julianoappel7.github.io/rede-ype/sitemap.xml
