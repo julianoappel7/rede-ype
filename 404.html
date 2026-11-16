@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Página não encontrada | Rede Ypê Combustíveis</title>
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#121315">
+<link rel="icon" href="img/icones/icone-192.png" type="image/png">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,500..900&family=Barlow:wght@400;500;600;700&display=swap">
+<style>
+/* Página de erro: uma tela só, preto-asfalto, com o caminho de volta. */
+:root { --asfalto: #121315; --amarelo: #FFD000; --texto: #F5F4F0; --texto-2: #B5B6B8; --linha: rgba(255,255,255,.2); }
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0; background: var(--asfalto);
+  color: var(--texto); font-family: "Barlow", "Segoe UI", system-ui, sans-serif; font-size: 1.0625rem; line-height: 1.6;
+  display: grid; place-items: center;
+  padding: 32px max(20px, env(safe-area-inset-right, 0px)) 32px max(20px, env(safe-area-inset-left, 0px));
+}
+main { max-width: 560px; display: grid; gap: 18px; }
+.logo { display: block; justify-self: start; padding: 6px 10px; border-radius: 6px; background: var(--amarelo); }
+.logo img { display: block; height: 32px; width: auto; }
+.codigo { font-family: "Archivo", "Arial Black", sans-serif; font-weight: 800; font-size: clamp(4.5rem, 18vw, 8rem); line-height: 1; letter-spacing: -0.04em; color: var(--amarelo); margin: 12px 0 0; }
+h1 { font-family: "Archivo", sans-serif; font-weight: 700; font-size: clamp(1.6rem, 5vw, 2.2rem); line-height: 1.15; margin: 0; }
+p { margin: 0; color: var(--texto-2); }
+.acoes { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 8px; }
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 12px 22px; border-radius: 999px;
+  font: 600 1rem/1.1 inherit; text-decoration: none; border: 1.5px solid transparent;
+}
+.btn-amarelo { background: var(--amarelo); color: #141414; }
+.btn-contorno { border-color: var(--linha); color: var(--texto); }
+.btn:focus-visible { outline: 3px solid var(--amarelo); outline-offset: 3px; }
+</style>
+</head>
+<body>
+<main>
+  <a class="logo" href="./"><img src="img/marca/rede-ype-preto-120.png" alt="Rede Ypê Combustíveis, página inicial" width="369" height="120"></a>
+  <p class="codigo">404</p>
+  <h1>Essa página saiu da rota</h1>
+  <p>O endereço que você abriu não existe ou mudou de lugar. Volte para o início ou veja direto a lista dos 15 postos da rede.</p>
+  <div class="acoes">
+    <a class="btn btn-amarelo" href="./#postos">Ver os postos</a>
+    <a class="btn btn-contorno" href="./">Ir para o início</a>
+    <a class="btn btn-contorno" href="https://wa.me/5512974096149">Falar com a central</a>
+  </div>
+</main>
+</body>
+</html>

@@ -1,21 +1,2509 @@
 <!doctype html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'><circle cx='24' cy='24' r='22' fill='%23FFD100' stroke='%23111111' stroke-width='3'/><rect x='9' y='38' width='22' height='3.5' rx='1.5' fill='%23111111'/><rect x='11' y='9' width='18' height='30' rx='3' fill='%23111111'/><rect x='14' y='12.5' width='12' height='8' rx='1.5' fill='%23FFD100'/><path d='M20 24C20 24 16.5 28.2 16.5 30.8C16.5 32.7 18.1 34.2 20 34.2C21.9 34.2 23.5 32.7 23.5 30.8C23.5 28.2 20 24 20 24Z' fill='%23FFD100'/><path d='M29 18H33C34.7 18 36 19.3 36 21V30.5C36 32.4 34.4 34 32.5 34C30.6 34 29 32.4 29 30.5' stroke='%23111111' stroke-width='3.2' fill='none' stroke-linecap='round'/><path d='M32 18L36.5 13.5C37.3 12.7 38.6 12.7 39.4 13.5L40.5 14.6L35.5 19.6' stroke='%23111111' stroke-width='3' fill='none' stroke-linecap='round'/></svg>" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-    <meta http-equiv="Pragma" content="no-cache" />
-    <meta http-equiv="Expires" content="0" />
-    <title>Rede Ypê de Postos de Combustíveis | 15 Postos e Serviços</title>
-    <meta name="description" content="Rede Ypê de Postos de Combustíveis: Excelência em combustíveis com as bandeiras Petrobras, Shell e Ipiranga. Conheça nossos 15 postos, serviços automotivos, troca de óleo e loja de conveniência." />
-    <!-- Google Fonts Inter -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-  </head>
-  <body class="bg-slate-50 antialiased">
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Rede Ypê Combustíveis | Postos em São José dos Campos e região</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="15 postos Shell, Ipiranga e Petrobras em São José dos Campos, Jacareí, Taubaté e Caçapava. Veja o mais perto e abra a rota no Google Maps ou Waze.">
+<meta name="theme-color" content="#121315">
+<meta name="robots" content="index, follow">
+<!-- Endereço do site: se mudar (nome novo na Netlify ou domínio próprio), troque aqui, no robots.txt, no sitemap.xml e na política de privacidade. -->
+<link rel="canonical" href="https://julianoappel7.github.io/rede-ype/">
+<meta property="og:site_name" content="Rede Ypê Combustíveis">
+<meta property="og:title" content="Rede Ypê Combustíveis | Postos em São José dos Campos e região">
+<meta property="og:description" content="15 postos Shell, Ipiranga e Petrobras. Veja o mais perto de você e abra a rota no Google Maps ou Waze.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:url" content="https://julianoappel7.github.io/rede-ype/">
+<meta property="og:image" content="https://julianoappel7.github.io/rede-ype/img/compartilhar.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Posto da Rede Ypê com o texto: Encontre o posto Ypê mais perto de você">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://julianoappel7.github.io/rede-ype/img/compartilhar.jpg">
+<link rel="icon" href="img/icones/icone-192.png" type="image/png">
+<link rel="preload" as="image" href="img/postos/putim-1-600.jpg" media="(max-width: 900px)" fetchpriority="high">
+<link rel="preload" as="image" href="img/postos/putim-1.jpg" media="(min-width: 901px)" fetchpriority="high">
+<link rel="apple-touch-icon" href="img/icones/apple-touch-icon.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,500..900&family=Barlow:wght@400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,500..900&family=Barlow:wght@400;500;600;700&display=swap"></noscript>
+<!-- Marcação de negócio local: a rede e cada um dos 15 postos, para o Google entender endereço, bandeira e telefone. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {"@type": "Organization", "@id": "#rede", "name": "Rede Ypê Combustíveis", "slogan": "Rede Ypê. Sempre com você.", "logo": "https://julianoappel7.github.io/rede-ype/img/icones/icone-512.png", "url": "https://julianoappel7.github.io/rede-ype/", "telephone": "+55-12-97409-6149",
+     "areaServed": ["São José dos Campos", "Jacareí", "Taubaté", "Caçapava"],
+     "address": {"@type": "PostalAddress", "addressLocality": "São José dos Campos", "addressRegion": "SP", "addressCountry": "BR"}},
+    {"@type": "GasStation", "name": "Auto Posto Ipê", "brand": {"@type": "Brand", "name": "Shell"}, "parentOrganization": {"@id": "#rede"}, "telephone": "+55-12-97409-6149", "geo": {"@type": "GeoCoordinates", "latitude": -23.2319549, "longitude": -45.9010723}, "address": {"@type": "PostalAddress", "streetAddress": "Av. Guadalupe, 659 - Jardim América", "addressLocality": "São José dos Campos", "addressRegion": "SP", "postalCode": "12235-000", "addressCountry": "BR"}},
+    {"@type": "GasStation", "name": "Cunha's Auto Posto", "brand": {"@type": "Brand", "name": "Ipiranga"}, "parentOrganization": {"@id": "#rede"}, "telephone": "+55-12-97409-6149", "geo": {"@type": "GeoCoordinates", "latitude": -23.231564, "longitude": -45.9012208}, "address": {"@type": "PostalAddress", "streetAddress": "Av. Guadalupe, 660 - Jardim América", "addressLocality": "São José dos Campos", "addressRegion": "SP", "postalCode": "12235-000", "addressCountry": "BR"}},
+    {"@type": "GasStation", "name": "Auto Posto Bosque dos Ipês", "brand": {"@type": "Brand", "name": "Petrobras"}, "parentOrganization": {"@id": "#rede"}, "telephone": "+55-12-97409-6149", "geo": {"@type": "GeoCoordinates", "latitude": -23.2502208, "longitude": -45.8971075}, "address": {"@type": "PostalAddress", "streetAddress": "Rua Gisele Martins, 401 - Jardim Morumbi", "addressLocality": "São José dos Campos", "addressRegion": "SP", "postalCode": "12236-500", "addressCountry": "BR"}},
+    {"@type": "GasStation", "name": "HP Comércio de Combustíveis", "brand": {"@type": "Brand", "name": "Petrobras"}, "parentOrganization": {"@id": "#rede"}, "telephone": "+55-12-97409-6149", "geo": {"@type": "GeoCoordinates", "latitude": -23.237655, "longitude": -45.901003}, "address": {"@type": "PostalAddress", "streetAddress": "Rua Sumatra, 315 - Jardim Paraíso", "addressLocality": "São José dos Campos", "addressRegion": "SP", "postalCode": "12235-410", "addressCountry": "BR"}},
+    {"@type": "GasStation", "name": "Auto Posto Vila Rossi", "brand": {"@type": "Brand", "name": "Petrobras"}, "parentOrganization": {"@id": "#rede"}, "telephone": "+55-12-97409-6149", "geo": {"@type": "GeoCoordinates", "latitude": -23.1672509, "longitude": -45.8929724}, "address": {"@type": "PostalAddress", "streetAddress": "Travessa Constantino Pintos, 44 - Vila Rossi", "addressLocality": "São José dos Campos", "addressRegion": "SP", "postalCode": "12211-110", "addressCountry": "BR"}},
+    {"@type": "GasStation", "name": "Auto Posto Vila Maria", "brand": {"@type": "Brand", "name": "Shell"}, "parentOrganization": {"@id": "#rede"}, "telephone": "+55-12-97409-6149", "geo": {"@type": "GeoCoordinates", "latitude": -23.1743473, "longitude": -45.8831385}, "address": {"@type": "PostalAddress", "streetAddress": "Av. Eng. Sebastião Gualberto, 700 - Vila Maria", "addressLocality": "São José dos Campos", "addressRegion": "SP", "postalCode": "12209-320", "addressCountry": "BR"}},
+    {"@type": "GasStation", "name": "Auto Posto da Gruta", "brand": {"@type": "Brand", "name": "Ipiranga"}, "parentOrganization": {"@id": "#rede"}, "telephone": "+55-12-97409-6149", "geo": {"@type": "GeoCoordinates", "latitude": -23.2339898, "longitude": -45.9166104}, "address": {"@type": "PostalAddress", "streetAddress": "Av. Dep. Benedito Matarazzo, 4229 - Jardim das Indústrias", "addressLocality": "São José dos Campos", "addressRegion": "SP", "postalCode": "12246-840", "addressCountry": "BR"}},
+    {"@type": "GasStation", "name": "Auto Posto Vila Tesouro", "brand": {"@type": "Brand", "name": "Shell"}, "parentOrganization": {"@id": "#rede"}, "telephone": "+55-12-97409-6149", "geo": {"@type": "GeoCoordinates", "latitude": -23.1714632, "longitude": -45.8418464}, "address": {"@type": "PostalAddress", "streetAddress": "Rua Professora Maria Siqueira Nathan, 117 - Vila Tesouro", "addressLocality": "São José dos Campos", "addressRegion": "SP", "postalCode": "12221-521", "addressCountry": "BR"}},
+    {"@type": "GasStation", "name": "Posto de Serviços Super Jet Ski", "brand": {"@type": "Brand", "name": "Petrobras"}, "parentOrganization": {"@id": "#rede"}, "telephone": "+55-12-97409-6149", "geo": {"@type": "GeoCoordinates", "latitude": -23.1764633, "longitude": -45.8291515}, "address": {"@type": "PostalAddress", "streetAddress": "Av. Pedro Friggi, 1001 - Jardim Morotama", "addressLocality": "São José dos Campos", "addressRegion": "SP", "postalCode": "12223-430", "addressCountry": "BR"}},
+    {"@type": "GasStation", "name": "Auto Posto Santa Inês", "brand": {"@type": "Brand", "name": "Petrobras"}, "parentOrganization": {"@id": "#rede"}, "telephone": "+55-12-97409-6149", "geo": {"@type": "GeoCoordinates", "latitude": -23.170985, "longitude": -45.8004141}, "address": {"@type": "PostalAddress", "streetAddress": "Rua Rodolfo Mayer, 10 - Jardim Santa Inês II", "addressLocality": "São José dos Campos", "addressRegion": "SP", "postalCode": "12248-181", "addressCountry": "BR"}},
+    {"@type": "GasStation", "name": "Auto Posto Cajuru", "brand": {"@type": "Brand", "name": "Petrobras"}, "parentOrganization": {"@id": "#rede"}, "telephone": "+55-12-97409-6149", "geo": {"@type": "GeoCoordinates", "latitude": -23.1849351, "longitude": -45.8106073}, "address": {"@type": "PostalAddress", "streetAddress": "Estrada Dom José Antônio do Couto, 2780 - Campos de São José", "addressLocality": "São José dos Campos", "addressRegion": "SP", "postalCode": "12226-551", "addressCountry": "BR"}},
+    {"@type": "GasStation", "name": "Auto Posto Putim", "brand": {"@type": "Brand", "name": "Petrobras"}, "parentOrganization": {"@id": "#rede"}, "telephone": "+55-12-97409-6149", "image": "img/postos/putim-1.jpg", "geo": {"@type": "GeoCoordinates", "latitude": -23.2471069, "longitude": -45.8282608}, "address": {"@type": "PostalAddress", "streetAddress": "Av. João Rodolfo Castelli, 1220 - Putim", "addressLocality": "São José dos Campos", "addressRegion": "SP", "postalCode": "12228-000", "addressCountry": "BR"}},
+    {"@type": "GasStation", "name": "Auto Posto Jd. São Paulo II", "brand": {"@type": "Brand", "name": "Shell"}, "parentOrganization": {"@id": "#rede"}, "telephone": "+55-12-97409-6149", "geo": {"@type": "GeoCoordinates", "latitude": -23.3133621, "longitude": -45.9849949}, "address": {"@type": "PostalAddress", "streetAddress": "Av. Maria Augusta Fagundes Gomes, 61 - Residencial São Paulo", "addressLocality": "Jacareí", "addressRegion": "SP", "postalCode": "12322-300", "addressCountry": "BR"}},
+    {"@type": "GasStation", "name": "Centro Automotivo Barreiro", "brand": {"@type": "Brand", "name": "Shell"}, "parentOrganization": {"@id": "#rede"}, "telephone": "+55-12-97409-6149", "geo": {"@type": "GeoCoordinates", "latitude": -23.0535522, "longitude": -45.5774649}, "address": {"@type": "PostalAddress", "streetAddress": "Estrada do Barreiro, 1972 - São Gonçalo", "addressLocality": "Taubaté", "addressRegion": "SP", "postalCode": "12092-000", "addressCountry": "BR"}},
+    {"@type": "GasStation", "name": "Auto Posto Avenida Brasil", "brand": {"@type": "Brand", "name": "Petrobras"}, "parentOrganization": {"@id": "#rede"}, "telephone": "+55-12-97409-6149", "geo": {"@type": "GeoCoordinates", "latitude": -23.1042147, "longitude": -45.7104666}, "address": {"@type": "PostalAddress", "streetAddress": "Av. Brasil, 352 - Vila Antônio Augusto Luiz", "addressLocality": "Caçapava", "addressRegion": "SP", "postalCode": "12287-020", "addressCountry": "BR"}}
+  ]
+}
+</script>
+<style>
+/* Layout: página clara e espaçada nas cores da marca (amarelo, preto e branco). O preto-asfalto faz a moldura
+   (topo, abertura, contato, rodapé); o amarelo marca o que se aperta e onde você está. Coluna de 1200px. */
+:root {
+  /* Marca: amarelo, preto e branco. O amarelo é a única cor saturada da página, então qualquer coisa
+     amarela salta aos olhos (rota, botão principal, seção atual); superfícies e textos são neutros. */
+  --bg: #F5F4F0;
+  --papel: #FFFFFF;
+  --tinta: #151618;
+  --cinza: #5A5D62;
+  --linha: #E2E0D9;
+  --amarelo: #FFD000;
+  --amarelo-escuro: #E6BC00;
+  --amarelo-suave: #FFF3BF;
+  --sobre-amarelo: #121314;
+  --asfalto: #121315;
+  --marinho: #2E3136;
+  --marinho-suave: #EEECE6;
+  --estrada: #1D1F22;
+  --sobre-asfalto: #F5F4F0;
+  --sobre-asfalto-2: #B5B6B8;
+  --sucesso: #1B7A4B;
+  --erro: #B42318;
+  --sombra: 0 10px 30px rgba(18, 19, 21, 0.10);
+  --font-display: "Archivo", "Segoe UI", system-ui, sans-serif;
+  --font-body: "Barlow", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --gutter: 20px;
+  --max: 1200px;
+  --raio: 12px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0E0F10; --papel: #17181A; --tinta: #EDECE8; --cinza: #A4A6A9; --linha: #2A2B2E;
+    --amarelo-suave: #3A3312; --asfalto: #08090A; --marinho: #D0D1D3; --marinho-suave: #222326; --estrada: #33363A; --sucesso: #4CC38A; --erro: #F97066;
+    --sombra: 0 10px 30px rgba(0, 0, 0, 0.4); color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0E0F10; --papel: #17181A; --tinta: #EDECE8; --cinza: #A4A6A9; --linha: #2A2B2E;
+  --amarelo-suave: #3A3312; --asfalto: #08090A; --marinho: #D0D1D3; --marinho-suave: #222326; --estrada: #33363A; --sucesso: #4CC38A; --erro: #F97066;
+  --sombra: 0 10px 30px rgba(0, 0, 0, 0.4); color-scheme: dark;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 84px; }
+body {
+  margin: 0; background: var(--bg); color: var(--tinta);
+  font-family: var(--font-body); font-size: 1.0625rem; line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+body::before {
+  content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px);
+  z-index: 60; background: var(--asfalto);
+}
+::selection { background: var(--amarelo); color: var(--sobre-amarelo); }
+html { accent-color: var(--amarelo-escuro); caret-color: var(--tinta); scrollbar-color: var(--cinza) var(--bg); }
+img { max-width: 100%; display: block; }
+[hidden] { display: none !important; }
+a { color: inherit; }
+h1, h2, h3 { font-family: var(--font-display); line-height: 1.1; margin: 0; text-wrap: balance; }
+p { margin: 0; }
+:focus-visible { outline: 3px solid var(--amarelo-escuro); outline-offset: 3px; border-radius: 6px; }
+.wrap {
+  width: 100%; max-width: calc(var(--max) + 2 * var(--gutter)); margin-inline: auto;
+  padding-left: max(var(--gutter), env(safe-area-inset-left, 0px));
+  padding-right: max(var(--gutter), env(safe-area-inset-right, 0px));
+}
+
+/* Logo */
+.logo { display: inline-flex; align-items: center; text-decoration: none; }
+/* Lema oficial: a primeira frase firme, a segunda em amarelo. */
+.lema { font-family: var(--font-display); font-weight: 800; font-size: 1.25rem; line-height: 1.2; letter-spacing: -0.01em; color: var(--sobre-asfalto); }
+.lema span { color: var(--amarelo); }
+
+/* Botões */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  min-height: 48px; padding: 12px 24px; border-radius: 999px; border: 1.5px solid transparent;
+  font: 600 1rem/1.1 var(--font-body); text-decoration: none; cursor: pointer;
+  transition: background-color .2s, color .2s, border-color .2s;
+}
+.btn svg { width: 19px; height: 19px; flex: none; }
+.btn-amarelo { background: var(--amarelo); color: var(--sobre-amarelo); }
+.btn-amarelo:hover { background: var(--amarelo-escuro); }
+.btn-vidro { border-color: rgba(255,255,255,.7); color: var(--sobre-asfalto); }
+.btn-vidro:hover { background: var(--sobre-asfalto); color: var(--asfalto); }
+.btn-contorno { border-color: var(--linha); color: var(--tinta); background: var(--papel); }
+.btn-contorno:hover { border-color: var(--tinta); }
+
+/* Topo: sempre azul-marinho de vidro (nos dois temas), com a faixa de pista amarela embaixo.
+   Ao rolar ele afina e fica mais sólido; a pílula clara segue o link sob o mouse ou a seção atual. */
+.topo {
+  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 50; color: #F4F7FA;
+  background: rgba(18, 19, 21, .84); -webkit-backdrop-filter: blur(16px) saturate(1.5); backdrop-filter: blur(16px) saturate(1.5);
+  border-bottom: 1px solid rgba(255,255,255,.08); transition: background-color .3s;
+}
+.topo.rolou { background: rgba(12, 13, 14, .94); }
+.topo-linha { display: flex; align-items: center; justify-content: space-between; gap: 20px; min-height: 76px; transition: min-height .35s cubic-bezier(.2,.7,.2,1); }
+.topo.rolou .topo-linha { min-height: 64px; }
+/* Etiqueta amarela do logo oficial: a arte é preta com o visor vazado, então o amarelo aparece por dentro. */
+.logo-etiqueta {
+  display: block; flex: none; padding: 7px 11px; border-radius: 6px; background: var(--amarelo);
+  transition: transform .35s cubic-bezier(.3,1.5,.5,1);
+}
+.logo-etiqueta img { display: block; height: 34px; width: auto; }
+.logo-etiqueta:hover { transform: translateY(-1px) rotate(-1.5deg); }
+.topo.rolou .logo-etiqueta img { height: 30px; }
+.logo-etiqueta:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
+@media (max-width: 400px) { .logo-etiqueta img { height: 30px; } }
+.menu { display: flex; align-items: center; gap: 28px; }
+.menu ul { position: relative; display: flex; gap: 2px; list-style: none; margin: 0; padding: 0; }
+.menu-marca {
+  position: absolute; z-index: -1; top: 0; left: 0; height: 100%; border-radius: 999px; pointer-events: none;
+  background: rgba(255,255,255,.08); opacity: 0;
+  transition: transform .45s cubic-bezier(.3,1.3,.5,1), width .45s cubic-bezier(.3,1.3,.5,1), opacity .25s;
+}
+.menu ul { isolation: isolate; }
+.menu ul a {
+  position: relative; display: inline-block; padding: 12px 15px; border-radius: 999px; text-decoration: none;
+  font-weight: 600; color: #CFD0D2; transition: color .2s;
+}
+.menu ul a:hover { color: #fff; }
+.menu ul a[aria-current="true"] { color: var(--amarelo); }
+.menu ul a::after {
+  content: ""; position: absolute; left: 50%; bottom: 4px; width: 5px; height: 5px; margin-left: -2.5px; border-radius: 50%;
+  background: var(--amarelo); transform: scale(0); transition: transform .35s cubic-bezier(.3,1.6,.5,1);
+}
+.menu ul a[aria-current="true"]::after { transform: none; }
+.topo-direita { display: flex; align-items: center; gap: 18px; }
+.topo-tel { display: flex; align-items: center; gap: 10px; min-height: 44px; text-decoration: none; color: #fff; }
+.topo-tel-icone {
+  width: 38px; height: 38px; flex: none; border-radius: 50%; display: grid; place-items: center;
+  border: 1.5px solid rgba(255,208,0,.55); color: var(--amarelo); transition: background-color .25s, color .25s;
+}
+.topo-tel-icone svg { width: 18px; height: 18px; }
+.topo-tel:hover .topo-tel-icone { background: var(--amarelo); color: #141414; }
+.topo-tel span:last-child { display: flex; flex-direction: column; line-height: 1.2; }
+.topo-tel small { font-size: 0.78rem; color: #B5B6B8; }
+.topo-tel strong { font-weight: 700; font-variant-numeric: tabular-nums; }
+.menu .btn { position: relative; overflow: hidden; min-height: 44px; padding: 10px 20px 10px 16px; box-shadow: 0 0 0 0 rgba(255,208,0,.45); transition: background-color .2s, box-shadow .3s; }
+.menu .btn:hover { box-shadow: 0 0 0 6px rgba(255,208,0,.16); }
+.menu .btn::after {
+  content: ""; position: absolute; inset: 0; transform: translateX(-120%);
+  background: linear-gradient(100deg, transparent 30%, rgba(255,255,255,.55) 50%, transparent 70%);
+}
+.menu .btn:hover::after { transform: translateX(120%); transition: transform .7s cubic-bezier(.2,.7,.2,1); }
+.menu-botao {
+  display: none; width: 46px; height: 46px; border-radius: 12px; border: 1px solid rgba(255,255,255,.16);
+  background: rgba(255,255,255,.04); color: #fff; cursor: pointer; align-items: center; justify-content: center;
+}
+.menu-botao svg { width: 22px; height: 22px; }
+.menu-botao svg path { transition: transform .3s, opacity .2s; transform-origin: 12px 12px; }
+.menu-botao[aria-expanded="true"] svg path:nth-child(1) { transform: translateY(5px) rotate(45deg); }
+.menu-botao[aria-expanded="true"] svg path:nth-child(2) { opacity: 0; }
+.menu-botao[aria-expanded="true"] svg path:nth-child(3) { transform: translateY(-5px) rotate(-45deg); }
+@media (max-width: 1180px) { .menu ul a { padding-inline: 11px; } }
+@media (max-width: 1060px) { .topo-tel { display: none; } }
+@media (max-width: 900px) {
+  .menu-botao { display: inline-flex; }
+  .menu {
+    position: absolute; inset: 100% 0 auto; flex-direction: column; align-items: stretch; gap: 0;
+    background: rgba(12, 13, 14, .97); border-bottom: 1px solid rgba(255,255,255,.08); box-shadow: 0 18px 40px rgba(0,0,0,.35);
+    padding: 4px max(var(--gutter), env(safe-area-inset-right, 0px)) 20px max(var(--gutter), env(safe-area-inset-left, 0px));
+  }
+  .menu:not(.aberto) { display: none; }
+  .menu ul { flex-direction: column; gap: 0; }
+  .menu-marca { display: none; }
+  .menu ul a { display: block; padding: 14px 0; border-radius: 0; font-size: 1.1rem; color: #F4F7FA; border-bottom: 1px solid rgba(255,255,255,.08); }
+  .menu ul a::after { left: auto; right: 4px; bottom: 50%; margin: 0 0 -2.5px; }
+  .topo-direita { flex-direction: column; align-items: stretch; margin-top: 16px; }
+  .topo-tel { display: flex; }
+}
+
+/* Abertura */
+.abertura { position: relative; background: var(--asfalto); color: var(--sobre-asfalto); }
+.abertura {
+  background:
+    var(--asfalto);
+}
+/* Abertura dividida: texto e busca à esquerda; o filme ocupa a metade direita até a borda da tela. */
+.abertura-conteudo {
+  display: flex; align-items: center; min-height: min(86vh, 800px);
+  padding-block: clamp(56px, 8vw, 96px) clamp(120px, 12vw, 150px);
+}
+.abertura-texto-bloco { position: relative; z-index: 1; min-width: 0; width: min(600px, 54%); }
+
+/* Filme da abertura */
+.filme {
+  --duracao: 6s;
+  position: absolute; top: 0; right: 0; bottom: 0; width: 50vw; max-width: 960px;
+  overflow: hidden; background: var(--asfalto);
+}
+.filme-quadros { position: absolute; inset: 0; }
+.filme-quadro {
+  position: absolute; inset: 0; width: 100%; height: 100%; max-width: none; object-fit: cover;
+  opacity: 0; transform: scale(1.05); transition: opacity 1.2s ease;
+}
+.filme-quadro.ativo { opacity: 1; animation: aproximar var(--duracao) linear forwards; }
+.filme-quadro:nth-child(even).ativo { animation-name: afastar; }
+@keyframes aproximar { from { transform: scale(1.05) translate(0, 0); } to { transform: scale(1.18) translate(-2.5%, -2%); } }
+@keyframes afastar { from { transform: scale(1.18) translate(2%, -1.5%); } to { transform: scale(1.05) translate(0, 0); } }
+.filme::after {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background:
+    linear-gradient(90deg, var(--asfalto) 0%, rgba(18, 19, 21, .55) 16%, transparent 42%),
+    linear-gradient(180deg, rgba(12,13,14,.35) 0%, transparent 16%, transparent 58%, rgba(12,13,14,.85) 100%);
+}
+.filme-barras { position: absolute; z-index: 2; top: 24px; left: 20%; right: 28px; display: flex; gap: 6px; }
+.filme-barras { margin-top: -12px; }
+.filme-barras button { flex: 1; height: 44px; padding: 20px 0; background: none; border: 0; cursor: pointer; }
+.filme-barras i { display: block; height: 4px; border-radius: 4px; background: rgba(255,255,255,.35); overflow: hidden; position: relative; }
+.filme-barras i::after { content: ""; position: absolute; inset: 0; background: #FFFFFF; transform-origin: left; transform: scaleX(0); }
+.filme-barras .feita i::after { transform: scaleX(1); }
+.filme-barras .atual i::after { animation: encher var(--duracao) linear forwards; }
+@keyframes encher { to { transform: scaleX(1); } }
+.filme.pausado .filme-quadro.ativo, .filme.pausado .filme-barras .atual i::after,
+.filme.fora .filme-quadro.ativo, .filme.fora .filme-barras .atual i::after { animation-play-state: paused; }
+.filme-rodape { position: absolute; z-index: 2; left: 20%; right: 28px; bottom: 96px; display: flex; align-items: center; gap: 10px; }
+.filme-posto {
+  flex: 1; min-width: 0; display: flex; align-items: center; gap: 12px; padding: 10px 14px; border-radius: 14px; cursor: pointer;
+  background: rgba(255,255,255,.14); border: 1px solid rgba(255,255,255,.22); color: #FFFFFF; text-align: left; font: inherit;
+  backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); transition: background-color .2s;
+}
+.filme-posto:hover { background: rgba(255,255,255,.24); }
+.filme-posto > svg:first-child { width: 34px; height: 34px; flex: none; }
+.filme-posto span { display: grid; min-width: 0; line-height: 1.25; }
+.filme-posto strong { font-size: 1rem; }
+.filme-posto small { font-size: 0.85rem; color: rgba(255,255,255,.78); }
+.filme-seta { width: 20px; height: 20px; margin-left: auto; flex: none; color: var(--amarelo); }
+.filme-pausa {
+  flex: none; width: 48px; height: 48px; border-radius: 50%; cursor: pointer; display: grid; place-items: center;
+  background: rgba(255,255,255,.14); border: 1px solid rgba(255,255,255,.22); color: #FFFFFF;
+  backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+}
+.filme-pausa svg { width: 18px; height: 18px; }
+.filme-pausa .icone-tocar, .filme.pausado .filme-pausa .icone-pausa { display: none; }
+.filme.pausado .filme-pausa .icone-tocar { display: block; }
+
+/* No celular o filme vira o fundo da abertura, com o texto por cima */
+@media (max-width: 900px) {
+  .abertura-conteudo { min-height: min(92vh, 820px); align-items: flex-end; padding-block: 130px 112px; }
+  .abertura-texto-bloco { width: 100%; }
+  .filme { inset: 0; width: auto; max-width: none; }
+  .filme::after { background: linear-gradient(180deg, rgba(12,13,14,.55) 0%, rgba(12,13,14,.2) 20%, rgba(12,13,14,.6) 45%, rgba(12,13,14,.95) 100%); }
+  .filme-barras { top: 14px; left: 14px; right: 14px; }
+  .filme-rodape { top: 40px; bottom: auto; left: 14px; right: 14px; }
+  .filme-posto { flex: 0 1 auto; padding: 8px 12px; }
+  .filme-posto > svg:first-child { width: 28px; height: 28px; }
+  .filme-pausa { margin-left: auto; width: 44px; height: 44px; }
+  .abertura-acoes .btn { flex: 1 1 auto; }
+}
+@media (prefers-reduced-motion: reduce) { .filme-pausa { display: none; } }
+
+/* Título no desenho do cartaz: caixa alta larga, a primeira linha pesada e a segunda leve. */
+.abertura h1 {
+  font-size: clamp(2.3rem, 5.2vw, 4.2rem); font-stretch: 112%; text-transform: uppercase; line-height: .98;
+  letter-spacing: -0.01em; max-width: 13ch; color: var(--sobre-asfalto);
+}
+.h1-forte { display: block; font-weight: 900; }
+.h1-leve { display: block; font-weight: 500; font-size: .74em; margin-top: .14em; color: var(--sobre-asfalto); }
+
+/* A faixa curva do cartaz, fechando a abertura */
+.faixa-cartaz { position: absolute; left: 0; right: 0; bottom: -1px; z-index: 1; display: block; width: 100%; height: clamp(48px, 7vw, 112px); pointer-events: none; }
+.faixa-chao { fill: var(--papel); }
+.faixa-amarela { fill: var(--amarelo); }
+.faixa-fio { stroke: var(--amarelo); stroke-width: 2; opacity: .55; vector-effect: non-scaling-stroke; }
+.abertura-texto { margin-top: 20px; max-width: 44ch; font-size: clamp(1.08rem, 1.6vw, 1.22rem); color: rgba(245,245,242,.86); }
+.abertura-acoes { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 18px; margin-top: 14px; }
+
+/* Buscador da abertura */
+.localizador {
+  display: flex; gap: 6px; margin-top: 30px; padding: 6px 6px 6px 18px; max-width: 540px;
+  border-radius: 999px; background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.22);
+  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); transition: border-color .2s, background-color .2s;
+}
+.localizador:focus-within { border-color: var(--amarelo); background: rgba(255,255,255,.14); }
+.localizador svg { width: 22px; height: 22px; flex: none; align-self: center; color: rgba(255,255,255,.7); }
+.localizador input {
+  flex: 1; min-width: 0; min-height: 48px; padding: 0 6px; border: 0; background: transparent;
+  color: var(--sobre-asfalto); font: 500 1.05rem var(--font-body);
+}
+.localizador input::placeholder { color: rgba(244,247,250,.62); }
+.localizador input:focus { outline: none; }
+.localizador .btn { min-height: 48px; padding: 10px 22px; }
+.btn-localizar {
+  display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 8px 4px; border: 0; background: none; cursor: pointer;
+  color: var(--sobre-asfalto); font: 600 1rem var(--font-body); text-decoration: underline; text-decoration-color: var(--amarelo);
+  text-decoration-thickness: 2px; text-underline-offset: 6px;
+}
+.btn-localizar svg { width: 20px; height: 20px; color: var(--amarelo); flex: none; }
+.btn-localizar[aria-busy="true"] svg { animation: girar 1s linear infinite; }
+@keyframes girar { to { transform: rotate(360deg); } }
+.abertura-acoes a { color: rgba(244,247,250,.8); font-weight: 600; text-decoration: none; padding-block: 8px; }
+.abertura-acoes a:hover { color: var(--sobre-asfalto); }
+
+/* Resultado "mais perto de você" */
+.perto {
+  margin-top: 16px; max-width: 540px; padding: 16px 18px; border-radius: 16px;
+  background: var(--papel); color: var(--tinta); box-shadow: 0 20px 40px rgba(0,0,0,.3);
+  display: grid; grid-template-columns: 44px 1fr auto; gap: 4px 14px; align-items: center;
+  animation: surgir-baixo .5s cubic-bezier(.2,.7,.2,1) both;
+}
+.perto > svg { width: 44px; height: 44px; grid-column: 1; grid-row: 1 / span 3; }
+.perto small { grid-column: 2; color: var(--cinza); font-size: 0.85rem; }
+.perto strong { grid-column: 2; font-size: 1.1rem; line-height: 1.25; }
+.perto-acoes { grid-column: 3; grid-row: 1 / span 3; display: flex; gap: 6px; }
+.perto-acoes a, .perto-acoes button {
+  width: 44px; height: 44px; display: grid; place-items: center; border-radius: 12px; cursor: pointer;
+  border: 1px solid var(--linha); background: var(--papel); color: var(--tinta);
+}
+.perto-acoes svg { width: 24px; height: 24px; }
+.perto-erro { grid-template-columns: 1fr; color: var(--tinta); }
+@media (max-width: 520px) {
+  .perto { grid-template-columns: 40px 1fr; }
+  .perto-acoes { grid-column: 1 / -1; grid-row: 4; margin-top: 8px; }
+  .localizador { padding-left: 14px; }
+  .localizador .btn { padding: 10px 16px; }
+}
+.posto-distancia {
+  position: absolute; top: 10px; left: 10px; z-index: 1; display: inline-flex; align-items: center; gap: 5px;
+  padding: 3px 10px; border-radius: 999px; background: var(--amarelo); color: var(--sobre-amarelo); font-size: 0.82rem; font-weight: 700;
+}
+.posto-distancia svg { width: 14px; height: 14px; }
+.posto-capa > b ~ .posto-distancia, .posto-capa .posto-distancia { pointer-events: none; }
+
+/* Resumo sobre a foto */
+.resumo-faixa { position: relative; z-index: 2; margin-top: -64px; }
+.resumo {
+  display: grid; grid-template-columns: repeat(4, minmax(0, 1fr));
+  background: var(--papel); border: 1px solid var(--linha); border-radius: var(--raio);
+}
+.resumo div { padding: 24px 28px; min-width: 0; }
+.resumo div + div { border-left: 1px solid var(--linha); }
+.resumo strong { display: block; font-family: var(--font-display); font-weight: 700; font-size: clamp(1.7rem, 3vw, 2.3rem); line-height: 1.15; font-variant-numeric: tabular-nums; color: var(--marinho); }
+.resumo div { position: relative; }
+.resumo strong { transform-origin: left center; display: flex; }
+.odo { display: inline-block; height: 1.15em; overflow: hidden; }
+.odo-fita { display: block; }
+.odo-fita span { display: block; height: 1.15em; line-height: 1.15em; }
+.resumo div::after { transition: transform 1.8s cubic-bezier(.12,.75,.2,1); }
+.resumo div.parou strong { animation: brilho-numero .9s ease-out; }
+@keyframes brilho-numero {
+  0% { text-shadow: 0 0 0 rgba(255, 208, 0, 0); }
+  30% { text-shadow: 0 0 18px rgba(255, 208, 0, .75); }
+  100% { text-shadow: 0 0 0 rgba(255, 208, 0, 0); }
+}
+.resumo div::after {
+  content: ""; position: absolute; left: 28px; bottom: 0; width: 28px; height: 3px; border-radius: 3px;
+  background: var(--amarelo); transform-origin: left; transform: scaleX(var(--barra, 1));
+}
+@media (max-width: 760px) { .resumo div::after { left: 18px; } }
+.resumo div > span { color: var(--cinza); font-size: 0.97rem; }
+@media (max-width: 760px) {
+  .resumo { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .resumo div { padding: 18px; }
+  .resumo div:nth-child(3) { border-left: 0; }
+  .resumo div:nth-child(n+3) { border-top: 1px solid var(--linha); }
+}
+
+/* Seções */
+.secao { padding-block: clamp(64px, 9vw, 112px); }
+.secao-branca { background: var(--papel); }
+.secao-cabeca { display: grid; gap: 12px; max-width: 60ch; margin-bottom: clamp(32px, 5vw, 52px); }
+.secao h2 { font-weight: 700; font-size: clamp(1.9rem, 3.6vw, 2.75rem); letter-spacing: -0.02em; }
+.secao-cabeca p { color: var(--cinza); font-size: 1.12rem; }
+
+/* A rede */
+.rede-grade { display: grid; grid-template-columns: 1fr 1.05fr; gap: clamp(36px, 6vw, 88px); align-items: center; }
+.rede-texto { display: grid; gap: 18px; min-width: 0; }
+.rede-texto p { color: var(--cinza); max-width: 56ch; }
+.rede-texto .btn { justify-self: start; margin-top: 8px; }
+.rede-foto { min-width: 0; }
+.rede-foto img { width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; object-position: 50% 78%; border-radius: var(--raio); }
+.rede-foto { margin: 0; }
+.rede-foto figcaption { margin-top: 10px; font-size: 0.92rem; color: var(--cinza); }
+.servicos-titulo { font-family: var(--font-display); font-weight: 700; font-size: 1.3rem; margin: clamp(48px, 7vw, 80px) 0 24px; }
+@media (max-width: 820px) { .rede-grade { grid-template-columns: 1fr; } }
+/* O lema como título: caixa alta larga do cartaz; a segunda frase vai numa etiqueta amarela com letra preta,
+   a mesma etiqueta do logo, legível nos dois temas. */
+.secao h2.rede-lema {
+  font-size: clamp(2.3rem, 4.8vw, 3.7rem); font-weight: 900; font-stretch: 112%; text-transform: uppercase;
+  line-height: 1; letter-spacing: -0.01em;
+}
+.rede-lema span {
+  display: inline; padding: .04em .14em .02em; border-radius: 4px; line-height: 1.2;
+  -webkit-box-decoration-break: clone; box-decoration-break: clone;
+  background: var(--amarelo); color: var(--sobre-amarelo);
+}
+
+/* Espaço comercial do Putim */
+.putim { background: var(--asfalto); color: var(--sobre-asfalto); }
+.putim-grade { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(36px, 6vw, 88px); align-items: start; }
+@media (max-width: 860px) { .putim-grade { grid-template-columns: 1fr; } }
+.putim-texto { display: grid; gap: 18px; align-content: start; min-width: 0; }
+.putim-texto p { color: var(--sobre-asfalto-2); max-width: 52ch; font-size: 1.1rem; }
+.putim .secao h2, .putim h2 { color: var(--sobre-asfalto); }
+.putim-acoes { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 6px; }
+.putim .btn-contorno { background: transparent; color: var(--sobre-asfalto); border-color: rgba(255,255,255,.35); }
+.putim .btn-contorno:hover { border-color: var(--sobre-asfalto); background: rgba(255,255,255,.08); }
+.putim-fotos { display: grid; grid-template-columns: 2fr 1fr; grid-template-rows: 1fr 1fr; gap: 8px; margin: 0; min-width: 0; }
+.putim-fotos img { width: 100%; height: 100%; object-fit: cover; border-radius: 10px; }
+.putim-fotos img:first-child { grid-row: 1 / span 2; aspect-ratio: 3 / 4; }
+.putim-fotos figcaption { grid-column: 1 / -1; font-size: 0.9rem; color: var(--sobre-asfalto-2); }
+.putim-local {
+  display: grid; grid-template-columns: auto 1fr auto; gap: 6px 16px; align-items: center; margin-top: 10px;
+  padding: 16px 18px; border-radius: var(--raio); border: 1px solid rgba(255,255,255,.14);
+}
+.putim-local svg { width: 26px; height: 26px; color: var(--amarelo); grid-row: span 2; }
+.putim-local strong { font-size: 1rem; }
+.putim-local small { grid-column: 2; font-size: 0.875rem; color: var(--sobre-asfalto-2); }
+.putim-local a { grid-row: 1 / span 2; grid-column: 3; font-weight: 600; color: var(--sobre-asfalto); text-decoration-color: var(--amarelo); text-decoration-thickness: 2px; text-underline-offset: 5px; padding-block: 10px; }
+@media (max-width: 480px) {
+  .putim-local { grid-template-columns: auto 1fr; }
+  .putim-local svg { grid-row: span 3; align-self: start; }
+  .putim-local a { grid-column: 2; grid-row: auto; padding-block: 8px 0; justify-self: start; }
+}
+.putim-nota { font-size: 0.95rem !important; color: var(--sobre-asfalto-2); border-top: 1px solid rgba(255,255,255,.12); padding-top: 16px; }
+
+/* Formulário de interesse: abre dentro da seção, sem modal. */
+.interesse { margin-top: clamp(40px, 6vw, 64px); padding: clamp(24px, 4vw, 44px); border-radius: calc(var(--raio) + 4px); background: var(--papel); color: var(--tinta); }
+.interesse h3 { font-family: var(--font-display); font-size: clamp(1.4rem, 2.4vw, 1.8rem); font-weight: 800; }
+.interesse > p { color: var(--cinza); margin-top: 8px; max-width: 60ch; }
+.interesse-grade { display: grid; grid-template-columns: 1fr 1fr; gap: 18px 20px; margin-top: 28px; }
+@media (max-width: 640px) { .interesse-grade { grid-template-columns: 1fr; } }
+.interesse .campo-inteiro { grid-column: 1 / -1; }
+.interesse label, .interesse .rotulo { display: block; font-weight: 600; font-size: 0.95rem; margin-bottom: 6px; }
+.interesse label small { font-weight: 500; color: var(--cinza); }
+.interesse input:not([type="checkbox"]), .interesse select, .interesse textarea {
+  width: 100%; min-height: 48px; padding: 10px 14px; border-radius: 10px; border: 1.5px solid var(--linha);
+  background: var(--bg); color: var(--tinta); font: 500 1rem var(--font-body); transition: border-color .2s, box-shadow .2s;
+}
+.interesse textarea { min-height: 112px; resize: vertical; }
+.interesse input:focus, .interesse select:focus, .interesse textarea:focus { outline: none; border-color: var(--tinta); box-shadow: 0 0 0 3px var(--amarelo); }
+.interesse [aria-invalid="true"] { border-color: var(--erro) !important; }
+.campo-erro { display: block; min-height: 1.3em; margin-top: 4px; font-size: 0.875rem; font-weight: 600; color: var(--erro); }
+.consentimento { display: grid; grid-template-columns: 24px 1fr; gap: 12px; align-items: start; font-weight: 500 !important; font-size: 0.95rem !important; color: var(--cinza); }
+.consentimento input { width: 22px; height: 22px; margin: 2px 0 0; }
+.consentimento a { color: var(--tinta); text-decoration-color: var(--amarelo-escuro); text-underline-offset: 3px; }
+.interesse-enviar { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 18px; margin-top: 8px; }
+.interesse-enviar .btn[aria-busy="true"] { opacity: .7; cursor: progress; }
+.interesse-status { font-weight: 600; }
+.interesse-status.ok { color: var(--sucesso); }
+.interesse-status.falhou { color: var(--erro); }
+.interesse-status a { color: var(--tinta); }
+.interesse-feito { display: grid; gap: 10px; justify-items: start; }
+.interesse-feito svg { width: 44px; height: 44px; color: var(--sucesso); }
+.isca { position: absolute; left: -9999px; }
+
+/* A rota Ypê */
+.rota { position: relative; background: var(--bg); border-top: 1px solid var(--linha); }
+.rota-palco { padding-block: clamp(56px, 8vw, 96px); }
+.rota.animada { height: 170vh; }
+.visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.rota.animada .rota-palco {
+  position: sticky; top: calc(76px + env(safe-area-inset-top, 0px));
+  height: calc(100vh - 76px); height: calc(100dvh - 76px - env(safe-area-inset-top, 0px));
+  display: flex; flex-direction: column; justify-content: center; padding-block: 20px; overflow: hidden;
+}
+.rota-cabeca { display: grid; gap: 8px; max-width: 60ch; margin-bottom: clamp(36px, 7vh, 72px); }
+@media (max-width: 700px) { .rota-cabeca { margin-bottom: clamp(12px, 3vh, 28px); } }
+.rota-cabeca h2 { font-weight: 700; font-size: clamp(1.8rem, 3.6vw, 2.75rem); letter-spacing: -0.02em; }
+.rota-cabeca p { color: var(--cinza); font-size: 1.08rem; }
+.rota-mapa {
+  position: relative; margin-inline: auto; aspect-ratio: 1200 / 520;
+  width: min(100%, calc((100vh - 300px) * 2.3)); width: min(100%, calc((100dvh - 300px) * 2.3));
+}
+.rota-svg { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+.rota-asfalto { fill: none; stroke: var(--estrada); stroke-width: 30; stroke-linecap: round; stroke-linejoin: round; }
+.rota-tracejado { fill: none; stroke: rgba(255,255,255,.55); stroke-width: 2.5; stroke-dasharray: 16 18; stroke-linecap: round; }
+.rota-faixa { fill: none; stroke: var(--amarelo); stroke-width: 8; stroke-linecap: round; stroke-linejoin: round; }
+.rota-ponta { fill: var(--amarelo); stroke: var(--papel); stroke-width: 4; filter: drop-shadow(0 2px 6px rgba(0,0,0,.35)); }
+.rota-paradas { position: absolute; inset: 0; }
+/* Cartão acima da estrada: o pino fica embaixo, em cima da faixa. Cartão abaixo: o pino fica em cima. */
+.parada {
+  position: absolute; display: flex; flex-direction: column-reverse; align-items: center; gap: 6px;
+  background: none; border: 0; padding: 0; font: inherit; color: var(--tinta); cursor: pointer;
+  transform: translate(-50%, calc(-100% + 9px));
+}
+.parada.embaixo { flex-direction: column; transform: translate(-50%, -9px); }
+.parada-pino {
+  width: 18px; height: 18px; border-radius: 50%; background: var(--papel); border: 3px solid var(--sobre-asfalto-2);
+  transition: background-color .3s, border-color .3s, transform .35s cubic-bezier(.2,.7,.2,1);
+}
+.parada-cartao {
+  display: grid; justify-items: center; gap: 4px; padding: 8px 12px; border-radius: 12px; min-width: 104px;
+  background: var(--papel); border: 1px solid var(--linha);
+  transform: scale(.92); transition: color .35s, transform .35s cubic-bezier(.2,.7,.2,1), border-color .2s;
+}
+/* Região ainda não alcançada pela faixa: texto em cinza e logos sem cor, em vez de transparência,
+   para o texto continuar legível (contraste acima de 4,5:1). */
+.parada:not(.acesa) .parada-cartao { color: var(--cinza); }
+.parada:not(.acesa) .parada-cartao em { color: var(--cinza); }
+.parada:not(.acesa) .parada-cartao svg { filter: grayscale(1); opacity: .6; }
+.parada-cartao strong { font-size: 0.92rem; line-height: 1.1; white-space: nowrap; }
+.parada-cartao small { color: var(--cinza); font-size: 0.875rem; white-space: nowrap; }
+.parada-cartao em {
+  font-style: normal; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.04em; padding: 1px 6px; border-radius: 4px;
+  background: var(--marinho-suave); color: var(--marinho);
+}
+/* Faixa "São José dos Campos" sobre as quatro zonas da cidade */
+.rota-cidade {
+  position: absolute; display: flex; align-items: center; gap: 8px; transform: translateY(-50%);
+  font-size: 0.82rem; font-weight: 700; color: var(--marinho); white-space: nowrap; pointer-events: none;
+}
+.rota-cidade::before, .rota-cidade::after { content: ""; flex: 1; height: 2px; border-radius: 2px; background: var(--marinho); opacity: .35; }
+@media (max-width: 700px) { .rota-cidade { display: none; } }
+.parada-logos { display: flex; gap: 4px; }
+.parada-logos svg { width: 20px; height: 20px; }
+.parada.acesa .parada-pino { background: var(--amarelo); border-color: var(--asfalto); transform: scale(1.3); }
+.parada.acesa .parada-cartao { transform: none; }
+.parada:hover .parada-cartao, .parada:focus-visible .parada-cartao { border-color: var(--tinta); color: var(--tinta); }
+.parada:focus-visible { outline: none; }
+.parada:focus-visible .parada-cartao { outline: 3px solid var(--amarelo-escuro); outline-offset: 2px; }
+.rota-fim { display: flex; justify-content: center; margin-top: clamp(12px, 3vh, 28px); transition: opacity .4s, transform .4s; }
+.rota.animada .rota-fim:not(.visivel) { opacity: 0; transform: translateY(10px); pointer-events: none; }
+@media (max-width: 700px) {
+  .rota-mapa { aspect-ratio: 400 / 720; width: min(100%, calc((100vh - 290px) * .56)); width: min(100%, calc((100dvh - 290px) * .56)); }
+  .parada, .parada.embaixo { flex-direction: row; gap: 8px; transform: translate(-9px, -50%); }
+  .parada-cartao {
+    grid-template-columns: auto auto; grid-template-areas: "cid logos" "nome logos" "qtd logos";
+    justify-items: start; align-items: center; column-gap: 12px; row-gap: 0; min-width: 0; padding: 7px 12px;
+  }
+  .parada-cartao em { grid-area: cid; justify-self: start; margin-bottom: 2px; }
+  .parada-cartao strong { grid-area: nome; }
+  .parada-cartao small { grid-area: qtd; }
+  .parada-logos { grid-area: logos; }
+  .rota-asfalto { stroke-width: 26; }
+}
+
+/* Postos */
+.filtros { display: grid; gap: 16px; margin-bottom: 24px; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip {
+  min-height: 44px; padding: 8px 16px; border-radius: 999px; cursor: pointer;
+  border: 1px solid var(--linha); background: var(--papel); color: var(--tinta);
+  font: 500 0.97rem/1 var(--font-body); transition: background-color .2s, border-color .2s;
+}
+.chip:hover { border-color: var(--tinta); }
+.chips-grupo { flex-basis: 100%; margin-top: 6px; font-size: 0.85rem; font-weight: 600; color: var(--cinza); }
+.chip[aria-pressed="true"] { background: var(--amarelo); border-color: var(--amarelo); color: var(--sobre-amarelo); font-weight: 600; }
+/* A busca vem primeiro: serve para quem sabe a rua, o bairro ou o nome; as regiões ficam logo abaixo. */
+.filtros-linha { order: -1; display: flex; flex-wrap: wrap; gap: 12px; align-items: end; }
+.filtros-mais {
+  display: inline-flex; align-items: center; gap: 6px; min-height: 48px; padding: 0 6px; border: 0; background: none; cursor: pointer;
+  color: var(--tinta); font: 600 0.97rem var(--font-body); text-decoration: underline; text-decoration-color: var(--amarelo-escuro);
+  text-decoration-thickness: 2px; text-underline-offset: 5px;
+}
+.filtros-mais svg { width: 18px; height: 18px; transition: transform .3s; }
+.filtros-mais[aria-expanded="true"] svg { transform: rotate(180deg); }
+.campo { display: grid; gap: 6px; flex: 1 1 240px; min-width: 0; }
+.campo label { font-size: 0.92rem; font-weight: 600; }
+.campo input, .campo select {
+  width: 100%; min-height: 48px; padding: 10px 16px; border-radius: 10px;
+  border: 1px solid var(--linha); background: var(--papel); color: var(--tinta);
+  font: 500 1rem var(--font-body);
+}
+.campo input::placeholder { color: var(--cinza); }
+.campo input:focus, .campo select:focus { outline: none; border-color: var(--amarelo-escuro); box-shadow: 0 0 0 3px var(--amarelo-suave); }
+.campo-bandeira { flex: 0 1 auto; }
+.contagem { color: var(--cinza); margin-bottom: 16px; font-variant-numeric: tabular-nums; }
+.contagem strong { color: var(--tinta); }
+
+.lista-postos { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; list-style: none; margin: 0; padding: 0; }
+@media (max-width: 1020px) { .lista-postos { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 640px) { .lista-postos { grid-template-columns: 1fr; } }
+.posto {
+  position: relative; display: flex; flex-direction: column; gap: 6px; padding: 20px; border-radius: var(--raio);
+  background: var(--papel); border: 1px solid var(--linha); min-width: 0; transition: border-color .2s, box-shadow .2s;
+}
+.posto:hover { border-color: var(--amarelo-escuro); }
+.posto-topo { display: flex; justify-content: space-between; align-items: center; gap: 10px; font-size: 0.9rem; }
+.bandeira { width: 34px; height: 34px; flex: none; }
+.zona { color: var(--tinta); font-weight: 600; text-align: right; line-height: 1.25; }
+.zona small { display: block; color: var(--cinza); font-weight: 400; font-size: 0.875rem; }
+.posto h3 { font-family: var(--font-body); font-weight: 700; font-size: 1.15rem; line-height: 1.3; margin-top: 6px; }
+/* O nome é um botão que cobre o card inteiro: tocar em qualquer parte abre a página do posto. */
+.posto-abrir { background: none; border: 0; padding: 0; margin: 0; font: inherit; color: inherit; text-align: left; cursor: pointer; }
+.posto-abrir::after { content: ""; position: absolute; inset: 0; border-radius: inherit; z-index: 1; }
+.posto-abrir:focus-visible { outline: none; }
+.posto:has(.posto-abrir:focus-visible) { outline: 3px solid var(--amarelo-escuro); outline-offset: 3px; }
+.endereco { color: var(--cinza); font-size: 0.97rem; line-height: 1.45; flex: 1; }
+.rotas { position: relative; z-index: 2; display: flex; align-items: center; gap: 8px; margin-top: 10px; pointer-events: none; }
+.rotas a {
+  pointer-events: auto; width: 48px; height: 48px; display: grid; place-items: center;
+  border-radius: 12px; border: 1px solid var(--linha); background: var(--papel); transition: background-color .2s, border-color .2s, transform .2s;
+}
+.rotas a:hover { background: var(--bg); border-color: var(--tinta); }
+.rotas a:active { transform: scale(.94); }
+.rotas a svg { width: 26px; height: 26px; }
+.posto-mais {
+  margin-left: auto; width: 42px; height: 42px; border-radius: 50%; display: grid; place-items: center;
+  background: var(--marinho-suave); color: var(--marinho); transition: background-color .2s, color .2s, transform .2s;
+}
+.posto-mais svg { width: 20px; height: 20px; }
+.posto:hover .posto-mais { background: var(--amarelo); color: var(--sobre-amarelo); transform: translate(2px, -2px); }
+
+/* Filtro de bandeira com os símbolos */
+.campo-rotulo { font-size: 0.92rem; font-weight: 600; }
+.chips-bandeira { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip-logo {
+  min-width: 52px; height: 48px; padding: 0 14px; border-radius: 999px; cursor: pointer;
+  border: 1px solid var(--linha); background: var(--papel); color: var(--tinta);
+  display: inline-flex; align-items: center; justify-content: center; font: 500 0.97rem var(--font-body);
+  transition: border-color .2s, background-color .2s;
+}
+.chip-logo svg { width: 28px; height: 28px; }
+.chip-logo:hover { border-color: var(--tinta); }
+.chip-logo[aria-pressed="true"] { background: var(--amarelo-suave); border-color: var(--tinta); box-shadow: inset 0 0 0 1px var(--tinta); font-weight: 600; }
+
+/* Página do posto */
+html:has(.detalhe[open]) { overflow: hidden; }
+.detalhe { padding: 0; border: 0; margin: 0; width: 100%; height: 100%; max-width: none; max-height: none; background: transparent; color: var(--tinta); }
+.detalhe::backdrop { background: rgba(12, 13, 15, .55); backdrop-filter: blur(3px); }
+.detalhe-caixa {
+  position: absolute; left: 0; right: 0; bottom: 0; display: flex; flex-direction: column;
+  max-height: calc(100% - 20px - env(safe-area-inset-top, 0px));
+  background: var(--papel); border-radius: 20px 20px 0 0; overflow: hidden; padding-bottom: env(safe-area-inset-bottom, 0px);
+  animation: subir .36s cubic-bezier(.2,.7,.2,1);
+}
+.detalhe.fechando .detalhe-caixa { animation: descer .22s cubic-bezier(.4,0,1,1) forwards; }
+@keyframes subir { from { transform: translateY(100%); } to { transform: none; } }
+@keyframes descer { to { transform: translateY(100%); } }
+@media (min-width: 761px) {
+  .detalhe-caixa {
+    left: 50%; right: auto; top: 50%; bottom: auto; width: min(920px, calc(100% - 48px)); max-height: calc(100% - 48px);
+    border-radius: 18px; transform: translate(-50%, -50%); animation-name: surgir; animation-duration: .3s;
+  }
+  .detalhe.fechando .detalhe-caixa { animation-name: sumir; animation-duration: .2s; }
+  @keyframes surgir { from { opacity: 0; transform: translate(-50%, -46%) scale(.98); } to { opacity: 1; transform: translate(-50%, -50%); } }
+  @keyframes sumir { to { opacity: 0; transform: translate(-50%, -47%) scale(.98); } }
+}
+.detalhe-topo { display: flex; align-items: center; gap: 14px; padding: 18px 20px; border-bottom: 1px solid var(--linha); }
+/* Alça do painel no celular: mostra que dá para arrastar para baixo e fechar. */
+.detalhe-alca { width: 40px; height: 5px; border-radius: 3px; background: var(--linha); margin: 8px auto -4px; flex: none; }
+@media (max-width: 760px) { .detalhe-topo { touch-action: none; cursor: grab; } }
+@media (min-width: 761px) { .detalhe-alca { display: none; } }
+.detalhe-bandeira { width: 46px; height: 46px; flex: none; }
+.detalhe-zona { color: var(--cinza); font-size: 0.92rem; }
+.detalhe h2 { font-weight: 700; font-size: clamp(1.25rem, 3vw, 1.65rem); letter-spacing: -0.01em; }
+.detalhe-fechar {
+  margin-left: auto; flex: none; width: 46px; height: 46px; border-radius: 50%; cursor: pointer;
+  border: 1px solid var(--linha); background: var(--papel); color: var(--tinta); display: grid; place-items: center;
+}
+.detalhe-fechar:hover { border-color: var(--tinta); }
+.detalhe-fechar svg { width: 20px; height: 20px; }
+.detalhe-corpo { overflow-y: auto; overscroll-behavior: contain; }
+.detalhe-info { display: grid; gap: 16px; padding: 18px 20px 20px; }
+@media (min-width: 761px) { .detalhe-info { grid-template-columns: 1fr 1fr; gap: 20px 32px; align-items: start; } }
+.detalhe-dados { display: grid; gap: 12px; min-width: 0; }
+.detalhe-linha { display: grid; grid-template-columns: 24px 1fr auto; gap: 12px; align-items: center; min-width: 0; }
+.detalhe-linha > svg { width: 22px; height: 22px; color: var(--cinza); }
+.detalhe-linha address, .detalhe-linha p { font-style: normal; line-height: 1.45; min-width: 0; overflow-wrap: anywhere; }
+.icone-botao {
+  width: 42px; height: 42px; border-radius: 10px; cursor: pointer; display: grid; place-items: center;
+  border: 1px solid var(--linha); background: var(--papel); color: var(--tinta);
+}
+.icone-botao:hover { border-color: var(--tinta); }
+.icone-botao svg { width: 18px; height: 18px; }
+.detalhe-recado { color: var(--cinza); font-size: 0.92rem; min-height: 1.4em; }
+.detalhe-acoes { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; }
+.detalhe-acoes a {
+  display: flex; flex-direction: column; align-items: center; gap: 6px; padding: 12px 4px; border-radius: 12px;
+  border: 1px solid var(--linha); text-decoration: none; font-size: 0.82rem; font-weight: 600; line-height: 1.1; text-align: center;
+  transition: border-color .2s, background-color .2s, transform .2s;
+}
+.detalhe-acoes a:hover { border-color: var(--tinta); background: var(--bg); }
+.detalhe-acoes a:active { transform: scale(.96); }
+.detalhe-acoes svg { width: 32px; height: 32px; }
+/* Foto de capa no card e galeria na página do posto (fotos em img/postos/) */
+.posto-capa {
+  position: relative; height: 132px; margin: -20px -20px 10px; overflow: hidden;
+  border-radius: var(--raio) var(--raio) 0 0; border-bottom: 1px solid var(--linha);
+}
+.posto-capa img { display: block; width: 100%; height: 100%; max-width: none; object-fit: cover; object-position: 50% 60%; transition: transform .6s cubic-bezier(.2,.7,.2,1); }
+.posto:hover .posto-capa img { transform: scale(1.06); }
+.posto-capa b {
+  position: absolute; right: 10px; bottom: 10px; display: inline-flex; align-items: center; gap: 5px;
+  padding: 3px 9px; border-radius: 999px; background: rgba(12, 13, 14, .78); color: #FFFFFF; font-size: 0.8rem;
+}
+.posto-capa b svg { width: 14px; height: 14px; }
+.posto-capa-vazia {
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px;
+  background: var(--marinho-suave);
+}
+.posto-capa-vazia svg { width: 30px; height: 30px; color: var(--cinza); }
+.posto-capa-vazia span { font-size: 0.875rem; color: var(--cinza); }
+.galeria { position: relative; border-top: 1px solid var(--linha); }
+.galeria-trilho {
+  display: flex; gap: 10px; overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding: 0 20px;
+  padding: 16px 20px; scrollbar-width: none; overscroll-behavior-x: contain;
+}
+.galeria-trilho::-webkit-scrollbar { display: none; }
+.galeria-trilho figure { flex: 0 0 auto; margin: 0; scroll-snap-align: start; display: grid; gap: 6px; }
+.galeria-trilho a { display: block; border-radius: 12px; overflow: hidden; }
+.galeria-trilho img { display: block; height: clamp(220px, 34vh, 320px); width: auto; aspect-ratio: 3 / 4; object-fit: cover; transition: transform .3s; }
+.galeria-trilho a:hover img { transform: scale(1.03); }
+.galeria-trilho figcaption { font-size: 0.85rem; color: var(--cinza); }
+.galeria-seta {
+  position: absolute; top: calc(50% - 14px); transform: translateY(-50%); width: 44px; height: 44px; border-radius: 50%;
+  border: 0; background: var(--papel); color: var(--tinta); box-shadow: var(--sombra); display: grid; place-items: center; cursor: pointer;
+}
+.galeria-seta svg { width: 20px; height: 20px; }
+.galeria-anterior { left: 10px; }
+.galeria-proxima { right: 10px; }
+@media (hover: none) { .galeria-seta { display: none; } }
+.mapa-abas { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; padding: 12px 20px; border-top: 1px solid var(--linha); }
+.mapa-aba {
+  display: inline-flex; align-items: center; gap: 8px; min-height: 40px; padding: 8px 14px; border-radius: 999px; cursor: pointer;
+  border: 1px solid var(--linha); background: var(--papel); color: var(--tinta); font: 600 0.92rem var(--font-body);
+}
+.mapa-aba svg { width: 20px; height: 20px; }
+.mapa-aba[aria-selected="true"] { background: var(--amarelo); border-color: var(--amarelo); color: var(--sobre-amarelo); }
+.mapa-dica { margin-left: auto; font-size: 0.85rem; color: var(--cinza); }
+@media (max-width: 520px) { .mapa-dica { display: none; } }
+.detalhe-mapa { position: relative; height: min(56vh, 480px); min-height: 300px; background: var(--bg); border-top: 1px solid var(--linha); }
+.detalhe-mapa iframe { display: block; width: 100%; height: 100%; border: 0; }
+.mapa-aviso { position: absolute; inset: 0; display: grid; place-items: center; align-content: center; gap: 12px; padding: 24px; text-align: center; color: var(--cinza); }
+.mapa-aviso svg { width: 52px; height: 52px; }
+.mapa-aviso p { max-width: 36ch; }
+.vazio { padding: 28px; border-radius: var(--raio); border: 1px dashed var(--linha); background: var(--papel); color: var(--cinza); }
+.vazio button { margin-top: 12px; }
+
+/* Serviços */
+.servicos-grade { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 40px 32px; }
+@media (max-width: 900px) { .servicos-grade { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 560px) { .servicos-grade { grid-template-columns: 1fr; gap: 28px; } }
+/* Serviço "abastece" ao passar o mouse (ou ao cruzar o meio da tela no celular): o quadrado enche de
+   amarelo de baixo para cima, o ícone se redesenha e o título ganha o sublinhado. */
+.servico {
+  display: grid; gap: 14px; align-content: start; min-width: 0; padding: 14px; margin: -14px; border-radius: calc(var(--raio) + 2px);
+  transition: background-color .35s;
+}
+.servico-icone {
+  position: relative; overflow: hidden; isolation: isolate;
+  width: 52px; height: 52px; border-radius: 14px; background: var(--asfalto); color: var(--amarelo); display: grid; place-items: center;
+  box-shadow: inset 0 0 0 1px var(--linha);
+  transition: color .3s .1s, transform .45s cubic-bezier(.3,1.5,.5,1);
+}
+.servico-icone::before {
+  content: ""; position: absolute; inset: -6px -2px; z-index: -1; background: var(--amarelo);
+  border-radius: 40% 46% 0 0 / 7px 7px 0 0; transform: translateY(100%); transition: transform .6s cubic-bezier(.6,0,.2,1);
+}
+.servico-icone svg { width: 26px; height: 26px; }
+.servico-icone path { stroke-dasharray: 1; }
+.servico h3 {
+  font-family: var(--font-body); font-weight: 700; font-size: 1.2rem; line-height: 1.3; justify-self: start;
+  background: linear-gradient(var(--amarelo), var(--amarelo)) 0 100% / 0 3px no-repeat; transition: background-size .45s cubic-bezier(.6,0,.2,1) .1s;
+}
+.servico p { color: var(--cinza); margin-top: -6px; }
+.servico.ativo { background-color: var(--papel); }
+.servico.ativo .servico-icone { color: var(--sobre-amarelo); transform: translateY(-3px) rotate(-4deg); }
+.servico.ativo .servico-icone::before { transform: none; }
+.servico.ativo .servico-icone path { animation: desenhar-traco .8s cubic-bezier(.6,0,.2,1) .15s both; }
+.servico.ativo h3 { background-size: 100% 3px; }
+@media (hover: hover) {
+  .servico:hover { background-color: var(--papel); }
+  .servico:hover .servico-icone { color: var(--sobre-amarelo); transform: translateY(-3px) rotate(-4deg); }
+  .servico:hover .servico-icone::before { transform: none; }
+  .servico:hover .servico-icone path { animation: desenhar-traco .8s cubic-bezier(.6,0,.2,1) .15s both; }
+  .servico:hover h3 { background-size: 100% 3px; }
+}
+@keyframes desenhar-traco { from { stroke-dashoffset: 1; } }
+.aviso { display: flex; gap: 12px; align-items: flex-start; margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--linha); color: var(--cinza); max-width: 70ch; }
+.aviso svg { width: 22px; height: 22px; flex: none; margin-top: 2px; }
+
+/* Benefícios */
+.programas { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+@media (max-width: 900px) { .programas { grid-template-columns: 1fr; } }
+.programa { display: flex; flex-direction: column; gap: 8px; padding: 28px; border-radius: var(--raio); border: 1px solid var(--linha); background: var(--papel); min-width: 0; }
+.programa-bandeira { display: flex; align-items: center; gap: 10px; color: var(--cinza); font-size: 0.95rem; margin-bottom: 6px; }
+.programa-bandeira svg { width: 40px; height: 40px; flex: none; }
+.programa h3 { font-weight: 700; font-size: 1.45rem; letter-spacing: -0.01em; }
+.programa p { color: var(--cinza); flex: 1; }
+.programa-acoes { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 16px; margin-top: 10px; }
+.programa-acoes .btn { min-height: 44px; padding: 10px 18px; font-size: 0.95rem; }
+.programa-acoes a:not(.btn) { font-weight: 600; text-decoration-thickness: 2px; text-underline-offset: 5px; text-decoration-color: var(--amarelo-escuro); padding-block: 6px; }
+.programa-acoes a:not(.btn):hover { text-decoration-color: var(--tinta); }
+.vantagens { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px; margin-top: 48px; }
+@media (max-width: 700px) { .vantagens { grid-template-columns: 1fr; gap: 24px; } }
+.vantagem { display: grid; grid-template-columns: 44px 1fr; gap: 16px; }
+.vantagem svg { width: 28px; height: 28px; color: var(--marinho); margin-top: 2px; }
+.vantagem h3 { font-family: var(--font-body); font-weight: 700; font-size: 1.15rem; line-height: 1.3; }
+.vantagem p { color: var(--cinza); margin-top: 4px; }
+
+/* Dúvidas frequentes */
+#duvidas { padding-bottom: 0; }
+.faq-grade { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: clamp(24px, 5vw, 72px); align-items: start; }
+@media (max-width: 860px) { .faq-grade { grid-template-columns: 1fr; } }
+.faq-lista { display: grid; gap: 10px; min-width: 0; }
+.faq-lista details { border: 1px solid var(--linha); border-radius: var(--raio); background: var(--papel); transition: border-color .2s; }
+.faq-lista details[open] { border-color: var(--amarelo-escuro); }
+.faq-lista summary {
+  list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px;
+  padding: 18px 20px; font-weight: 700; font-size: 1.05rem; line-height: 1.35;
+}
+.faq-lista summary::-webkit-details-marker { display: none; }
+.faq-lista summary::after {
+  content: ""; flex: none; width: 28px; height: 28px; border-radius: 50%; background: var(--marinho-suave);
+  background-image: linear-gradient(var(--marinho), var(--marinho)), linear-gradient(var(--marinho), var(--marinho));
+  background-size: 12px 2px, 2px 12px; background-position: center; background-repeat: no-repeat; transition: transform .25s;
+}
+.faq-lista details[open] summary::after { transform: rotate(45deg); }
+.faq-lista summary:focus-visible { outline: 3px solid var(--amarelo-escuro); outline-offset: 2px; border-radius: var(--raio); }
+.faq-resposta { padding: 0 20px 18px; color: var(--cinza); max-width: 62ch; }
+
+/* Contato */
+.contato-painel {
+  display: grid; grid-template-columns: 1.1fr 1fr; overflow: hidden;
+  background: var(--asfalto); color: var(--sobre-asfalto); border-radius: calc(var(--raio) + 4px);
+}
+.contato-painel .contato-texto > p, .contato-painel .telefone span, .contato-painel .copiado { color: var(--sobre-asfalto-2); }
+.contato-painel .btn-contorno { background: transparent; color: var(--sobre-asfalto); border-color: rgba(255,255,255,.35); }
+.contato-painel .btn-contorno:hover { border-color: var(--sobre-asfalto); background: rgba(255,255,255,.08); }
+@media (max-width: 860px) { .contato-painel { grid-template-columns: 1fr; } }
+.contato-texto { position: relative; isolation: isolate; display: grid; gap: 16px; align-content: center; padding: clamp(28px, 5vw, 56px); min-width: 0; }
+/* Fundo vivo do painel: faixas azul e amarela que ondulam devagar, com grão de filme (WebGL). */
+.contato-fundo { position: absolute; inset: 0; z-index: -1; width: 100%; height: 100%; display: block; pointer-events: none; opacity: 0; transition: opacity 1.2s; }
+.contato-fundo.pronto { opacity: 1; }
+.contato-texto > p { color: var(--cinza); font-size: 1.1rem; max-width: 44ch; }
+.telefone { display: grid; gap: 2px; margin-top: 8px; }
+.telefone span { color: var(--cinza); font-size: 0.95rem; }
+.telefone strong { font-family: var(--font-display); font-weight: 700; font-size: clamp(2rem, 4.6vw, 3rem); line-height: 1.1; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; user-select: all; overflow-wrap: anywhere; }
+.contato-acoes { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 8px; }
+.copiado { color: var(--cinza); min-height: 1.6em; }
+.contato-foto { min-width: 0; min-height: 280px; }
+.contato-foto img { width: 100%; height: 100%; object-fit: cover; filter: saturate(0.6); }
+
+/* Rodapé */
+.rodape { background: var(--asfalto); color: var(--sobre-asfalto-2); padding-block: 48px calc(48px + env(safe-area-inset-bottom, 0px)); }
+.rodape-marca { display: grid; gap: 14px; }
+.rodape .logo img { height: 52px; width: auto; }
+.rodape-grade { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 28px; align-items: flex-start; }
+.rodape ul { display: flex; flex-wrap: wrap; gap: 8px 24px; list-style: none; margin: 0; padding: 0; }
+.rodape ul a { text-decoration: none; color: var(--sobre-asfalto); display: inline-block; padding-block: 6px; }
+.rodape ul a:hover { color: var(--amarelo); }
+.rodape-base a { color: var(--sobre-asfalto); text-decoration-color: var(--amarelo); text-underline-offset: 4px; }
+.rodape-base { margin-top: 32px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,.1); font-size: 0.92rem; display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: space-between; }
+
+/* ===== Camada de movimento (desligada para quem pede menos animação no aparelho) ===== */
+.progresso-rolagem {
+  position: absolute; left: 0; right: 0; bottom: -1px; height: 3px; background: var(--amarelo);
+  transform-origin: 0 50%; transform: scaleX(0); pointer-events: none;
+}
+/* Trilho da barra: a faixa tracejada de pista que a barra amarela vai cobrindo. */
+.topo::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: -1px; height: 3px; pointer-events: none;
+  background: repeating-linear-gradient(90deg, rgba(255,208,0,.28) 0 26px, transparent 26px 44px);
+}
+
+/* Título da abertura: as palavras sobem de dentro de uma máscara */
+.palavra { display: inline-block; overflow: hidden; vertical-align: bottom; padding-bottom: .1em; margin-bottom: -.1em; }
+.palavra > span { display: inline-block; animation: subir-palavra .9s cubic-bezier(.2,.7,.2,1) both; animation-delay: calc(var(--i) * 70ms + 120ms); }
+@keyframes subir-palavra { from { transform: translateY(110%); } }
+.abertura-texto, .localizador, .abertura-acoes { animation: surgir-baixo .7s cubic-bezier(.2,.7,.2,1) both; }
+.abertura-texto { animation-delay: .45s; }
+.localizador { animation-delay: .55s; }
+.abertura-acoes { animation-delay: .65s; }
+@keyframes surgir-baixo { from { opacity: 0; transform: translateY(18px); } }
+@media (min-width: 901px) {
+  .filme { animation: abrir-filme 1.2s cubic-bezier(.7,0,.2,1) .1s both; }
+  @keyframes abrir-filme { from { clip-path: inset(0 0 0 100%); } to { clip-path: inset(0 0 0 0); } }
+}
+
+/* Entradas na rolagem: só os elementos abaixo da primeira tela começam escondidos */
+.anima .revelar {
+  opacity: 0; transform: translateY(34px);
+  transition: opacity .55s cubic-bezier(.2,.7,.2,1), transform .55s cubic-bezier(.2,.7,.2,1), border-color .2s, box-shadow .2s;
+  transition-delay: var(--atraso, 0ms);
+}
+.anima .revelar.visivel { opacity: 1; transform: none; }
+.anima h2.revelar { opacity: 1; transform: translateY(45%); clip-path: inset(0 0 100% 0); transition-property: transform, clip-path; }
+.anima h2.revelar.visivel { transform: none; clip-path: inset(-20% 0 -30% 0); }
+.anima .revelar.revelar-foto { opacity: 1; transform: none; clip-path: inset(100% 0 0 0); transition: clip-path .9s cubic-bezier(.7,0,.2,1); }
+.anima .revelar.revelar-foto.visivel { clip-path: inset(0 0 0 0); }
+.rede-foto { overflow: hidden; border-radius: var(--raio); }
+
+
+/* Botão flutuante do WhatsApp no celular */
+.flutuante {
+  position: fixed; z-index: 40; display: none;
+  right: calc(16px + env(safe-area-inset-right, 0px)); bottom: calc(16px + env(safe-area-inset-bottom, 0px));
+  width: 56px; height: 56px; border-radius: 50%; background: var(--amarelo); color: var(--sobre-amarelo);
+  align-items: center; justify-content: center; box-shadow: 0 6px 18px rgba(0,0,0,.22); text-decoration: none;
+}
+.flutuante svg { width: 27px; height: 27px; }
+@media (max-width: 900px) { .flutuante { display: inline-flex; } }
+
+/* Ilha: pílula fixa que muda de tamanho conforme o que tem para mostrar (achar, procurando, posto mais perto). */
+.ilha {
+  position: fixed; z-index: 41; left: 50%; translate: -50% 0; bottom: calc(16px + env(safe-area-inset-bottom, 0px));
+  display: flex; align-items: center; overflow: hidden; max-width: calc(100% - 32px); min-height: 56px; padding: 6px;
+  background: #141517; color: #F4F7FA; border-radius: 28px; border: 1px solid rgba(255,255,255,.08);
+  box-shadow: 0 12px 32px rgba(0,0,0,.28);
+  transition: transform .5s cubic-bezier(.3,1.3,.5,1), opacity .3s;
+}
+.ilha.fora { transform: translateY(calc(100% + 32px)); opacity: 0; pointer-events: none; }
+@media (max-width: 900px) {
+  .ilha { left: calc(16px + env(safe-area-inset-left, 0px)); translate: none; max-width: calc(100% - 32px - 56px - 12px); }
+}
+.ilha-conteudo { display: flex; align-items: center; gap: 10px; min-width: 0; white-space: nowrap; }
+.ilha button, .ilha a {
+  display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 44px; min-width: 44px;
+  border: 0; border-radius: 22px; background: transparent; color: inherit; font: inherit; text-decoration: none; cursor: pointer;
+}
+.ilha button:focus-visible, .ilha a:focus-visible { outline: 3px solid var(--amarelo); outline-offset: -3px; }
+.ilha-achar { padding: 0 18px 0 6px; font-weight: 700; }
+.ilha-achar:hover { background: rgba(255,255,255,.07); }
+.ilha-bola { width: 36px; height: 36px; border-radius: 50%; background: var(--amarelo); color: #141414; display: grid; place-items: center; flex: none; }
+.ilha-bola svg { width: 20px; height: 20px; }
+.ilha-giro { width: 36px; height: 36px; flex: none; border-radius: 50%; border: 3px solid rgba(255,208,0,.25); border-top-color: var(--amarelo); animation: girar .8s linear infinite; }
+@keyframes girar { to { transform: rotate(1turn); } }
+.ilha-texto { padding-right: 14px; color: #D3D4D6; }
+.ilha-posto { display: grid !important; justify-items: start; gap: 0 !important; padding: 0 6px; text-align: left; min-width: 0; }
+.ilha-posto strong { font-size: 1rem; line-height: 1.2; overflow: hidden; text-overflow: ellipsis; max-width: 100%; }
+.ilha-posto small { font-size: 0.875rem; color: #B5B6B8; overflow: hidden; text-overflow: ellipsis; max-width: 100%; }
+.ilha-marca { width: 36px; height: 36px; flex: none; border-radius: 50%; background: #fff; display: grid; place-items: center; }
+.ilha-marca svg { width: 26px; height: 26px; }
+.ilha-rotas { display: flex; gap: 4px; flex: none; }
+.ilha-rotas a { background: rgba(255,255,255,.08); }
+.ilha-rotas a:hover { background: rgba(255,255,255,.16); }
+.ilha-rotas svg { width: 24px; height: 24px; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition: none !important; animation: none !important; }
+}
+</style>
+</head>
+<body>
+
+<!-- Logos e ícones usados em todo o site (bandeiras, apps de rota e interface) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <clipPath id="clip-pino"><path d="M12 1.5a7.5 7.5 0 0 0-7.5 7.5c0 5.6 7.5 13.5 7.5 13.5S19.5 14.6 19.5 9A7.5 7.5 0 0 0 12 1.5z"/></clipPath>
+    <clipPath id="clip-globo"><circle cx="12" cy="12" r="9.5"/></clipPath>
+  </defs>
+  <symbol id="logo-maps" viewBox="0 0 24 24">
+    <g clip-path="url(#clip-pino)">
+      <rect x="0" y="0" width="12" height="9" fill="#4285F4"/>
+      <rect x="12" y="0" width="12" height="9" fill="#EA4335"/>
+      <rect x="0" y="9" width="12" height="15" fill="#FBBC04"/>
+      <rect x="12" y="9" width="12" height="15" fill="#34A853"/>
+    </g>
+    <circle cx="12" cy="9" r="2.8" fill="#FFFFFF"/>
+  </symbol>
+  <symbol id="logo-waze" viewBox="0 0 24 24">
+    <path d="M12 3.2c-4.7 0-8.4 3.3-8.4 7.6 0 1.6-.4 2.9-1.5 3.7.9.9 2.4 1.6 4 1.9a9 9 0 0 0 5.9 2.1c4.7 0 8.4-3.4 8.4-7.7S16.7 3.2 12 3.2z" fill="#33CCFF" stroke="#1A1A1A" stroke-width="1.3" stroke-linejoin="round"/>
+    <circle cx="9.6" cy="9.8" r="1.05" fill="#1A1A1A"/>
+    <circle cx="14.9" cy="9.8" r="1.05" fill="#1A1A1A"/>
+    <path d="M9.1 13c1.6 1.6 4.5 1.6 6.1 0" fill="none" stroke="#1A1A1A" stroke-width="1.3" stroke-linecap="round"/>
+    <circle cx="8" cy="20" r="1.8" fill="#1A1A1A"/>
+    <circle cx="15.6" cy="20" r="1.8" fill="#1A1A1A"/>
+  </symbol>
+  <symbol id="logo-earth" viewBox="0 0 24 24">
+    <circle cx="12" cy="12" r="9.5" fill="#4285F4"/>
+    <g clip-path="url(#clip-globo)" fill="#34A853">
+      <path d="M2 8.5c2.4-.6 4.9.1 5.6 2 .6 1.6-.4 2.6.6 3.7 1.1 1.2 2.9 1.1 3.2 2.9.3 1.6-.8 2.8-1.4 4.4L2 22z"/>
+      <path d="M13.5 2c.3 1.6 1.4 2.5 3 2.6 1.9.2 2.4 1.9 1.5 3.3-.8 1.3.3 2.6 2 2.8l2 .2V2z"/>
+    </g>
+    <circle cx="12" cy="12" r="9.5" fill="none" stroke="#1A73E8" stroke-width="1"/>
+  </symbol>
+  <!-- Bandeiras: logos oficiais (fonte: Wikimedia). Os postos da rede têm licença de uso das bandeiras. Cópias em img/bandeiras/. -->
+  <symbol id="logo-shell" viewBox="0 0 150 139">
+    <path fill="#FFCD00" d="M75.01 132.31c-1.18 0-2.3-.36-3.24-1.04l-3.62-2.65H33.72l-3.18-25.32L7.61 86.61a67.5 67.5 0 0 1-.98-11.54C6.63 37.360 37.3 6.7 75.01 6.7c37.7 0 68.37 30.67 68.37 68.37 0 3.850-.33 7.730-.98 11.55l-22.92 16.69-3.19 25.32H81.87l-3.64 2.68c-.89.64-2.05 1-3.22 1"/>
+    <path fill="#DA291C" d="M68.47 135.84c1.92 1.39 4.2 2.1 6.53 2.1s4.63-.72 6.54-2.1l2.17-1.58h37.53l3.51-27.84 22.76-16.57C148.5 85 149 80.04 149 75.06c0-40.86-33.15-74-74-74S1 34.2 1 75.06c0 4.98.48 9.94 1.5 14.79l22.76 16.57 3.49 27.84h37.560zm-.98-14.53H40.18l-2.74-22.06-22.5-16.35c-.66-2.57-1-5.18-1-7.84 0-4.42.93-8.79 2.75-12.82l39.81 40.23-38.7-47.75c1.52-6.2 4.89-11.79 9.67-16.02l34.7 59.86-30.76-65.53c3.97-5.31 9.51-9.2 15.85-11.15l21.21 74.33-15.5-77.4a31.36 31.36 0 0 1 15.45-4.06c1.15 0 2.29.05 3.42.17L75 95.42l3.15-80.49c1.15-.12 2.28-.17 3.45-.17 5.390 0 10.72 1.39 15.44 4.06l-15.5 77.4 21.23-74.33a31.4 31.4 0 0 1 15.83 11.15L87.86 98.56l34.7-59.86c4.75 4.23 8.13 9.82 9.67 16.02l-38.7 47.76 39.81-40.23c1.8 4.03 2.71 8.4 2.71 12.82 0 2.66-.32 5.27-1 7.84l-22.46 16.35-2.76 22.06H82.52l-4.02 2.93c-1.03.73-2.25 1.16-3.5 1.16s-2.47-.42-3.48-1.160z"/>
+  </symbol>
+  <symbol id="logo-ipiranga" viewBox="-1 -3 39.7 40.3">
+    <path fill="#0043BC" d="M31.5108 6.01918L23.6725 13.5731C23.3094 13.9363 22.9873 14.0562 22.703 14.0562C22.2165 14.0562 21.8945 13.7342 21.7335 13.2066L19.5512 5.77253C19.5101 5.61151 19.469 5.4505 19.469 5.28606C19.469 4.7208 19.8321 4.31655 20.4796 4.31655H31.1442C31.5896 4.31655 31.9938 4.63858 31.9938 5.12504C31.9938 5.36828 31.8328 5.6903 31.5108 6.01576M36.074 0.404248C35.0634 0.284344 26.9442 0 23.0661 0C15.1901 0 9.33196 0.0411099 4.76533 4.80644C0 9.77732 0 16.3207 0 26.903V32.7612C0 33.6485 0.486468 34.2549 1.45255 34.2549C2.01781 34.2549 2.46317 34.0939 3.27167 33.2854L20.3186 16.8037C20.6029 16.5194 20.9661 16.3583 21.247 16.3583C21.8123 16.3583 22.2987 16.8037 22.2987 17.4478V33.0421C22.2987 33.7684 22.7441 34.2549 23.4293 34.2549H23.9534C26.0123 34.2549 30.0137 33.4053 33.3642 29.8527C37.4443 25.5704 37.6465 20.8839 37.6465 11.9973V2.02124C37.6465 1.13052 37.0401 0.527578 36.0706 0.404248"/>
+  </symbol>
+  <symbol id="logo-petrobras" viewBox="140 -8 219.3 191">
+    <path d="m149.7 48.604h199.27v-48.277h-199.27z" fill="#fdc82f"/>
+    <path d="m149.7 49.6h199.27v125.3h-199.27z" fill="#008542"/>
+    <path fill="#fff" d="m310.17 94.048c0 3.3623-2.9636 9.9724-11.995 9.9724h-15.988s4.4649-16.066 4.5509-16.473h15.694c7.4441 0 7.7386 5.0592 7.7386 6.5005m-82.258-0.97743c0 4.7099-3.7533 8.0045-8.9584 8.0045h-17.781l3.8367-13.614h16.614c3.2946 0 6.2894 2.1191 6.2894 5.6091m-8.14 31.929c-0.83928 1.4883-2.2572 6.0939-11.255 6.0939h-15.957s4.5848-15.863 4.5926-15.881h14.364c7.0322 0 7.431 1.9079 8.4006 3.5448 0.96439 1.6264 0.51868 5.0592-0.14603 6.2425m129.19-76.424h-199.3v24.162h38.352l-21.248 73.497h43.494c18.845 0 22.129-4.3997 25.953-7.6057 5.1061-4.2876 7.8455-14.482 5.5518-21.571-1.6238-5.0175-6.3676-8.0514-6.8863-8.2 5.888-2.7316 9.3129-8.7239 9.7378-9.6022 2.1842-4.5431 3.8758-12.772-1.5561-19.39-4.517-5.5049-13.29-7.0192-19.655-7.1287h46.567l-21.321 73.646h21.582l7.8846-27.923h12.326c2.7081 0 4.5144 0.51348 5.7368 1.2876 2.8202 1.7958 2.4736 5.0148 2.6273 6.6908l0.70636 20.536 20.039-6e-3s-0.90183-23.046-0.97743-24.735c-0.27106-5.9193-4.1912-8.5857-7.5353-8.5857 6.4197-1.7359 11.99-7.564 14.218-11.299 2.57-4.3111 4.5066-11.166 1.9653-17.974-3.6908-9.8784-13.194-11.52-19.838-11.638h41.581z"/>
+  </symbol>
+  <symbol id="logo-whatsapp" viewBox="0 0 24 24">
+    <circle cx="12" cy="12" r="11" fill="#25D366"/>
+    <path transform="translate(4.2 4.2) scale(.65)" fill="#FFFFFF" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.3-.4.8-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.2c0-.1-.2-.2-.4-.3z"/>
+  </symbol>
+  <!-- Ícones de interface, todos no mesmo traço -->
+  <symbol id="icone-esquerda" viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="icone-direita" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="icone-foto" viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M8 6l1.5-2h5L16 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><circle cx="12" cy="13" r="3.5" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+  <symbol id="icone-fechar" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  <symbol id="icone-abrir" viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="icone-pino" viewBox="0 0 24 24"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0C18.5 15.4 12 21 12 21z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.4" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+  <symbol id="icone-telefone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+  <symbol id="icone-copiar" viewBox="0 0 24 24"><rect x="9" y="9" width="11" height="11" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M5 15V6a2 2 0 0 1 2-2h8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+  <symbol id="icone-cartao" viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="13" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M3 10h18M7 15h4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+</svg>
+
+<header class="topo">
+  <div class="wrap topo-linha">
+    <!-- Logo oficial (arte preta recortada do arquivo enviado pela rede) sobre a etiqueta amarela, como no original. -->
+    <a class="logo logo-etiqueta" href="#inicio">
+      <img src="img/marca/rede-ype-preto-120.png" alt="Rede Ypê Combustíveis, página inicial" width="369" height="120">
+    </a>
+    <button class="menu-botao" type="button" id="menu-botao" aria-expanded="false" aria-controls="menu" aria-label="Abrir menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <nav class="menu" id="menu" aria-label="Principal">
+      <ul>
+        <li class="menu-marca" aria-hidden="true"></li>
+        <li><a href="#postos">Postos</a></li>
+        <li><a href="#rede">A rede</a></li>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#lojistas">Para lojistas</a></li>
+        <li><a href="#beneficios">Benefícios</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+      <div class="topo-direita">
+        <a class="topo-tel" href="tel:+5512974096149"><span class="topo-tel-icone"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></span><span><small>Central de atendimento</small><strong>(12) 97409-6149</strong></span></a>
+        <a class="btn btn-amarelo" href="https://wa.me/5512974096149" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.3-.4.8-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.2c0-.1-.2-.2-.4-.3z"/></svg>Falar no WhatsApp</a>
+      </div>
+    </nav>
+  </div>
+  <span class="progresso-rolagem" id="progresso-rolagem" aria-hidden="true"></span>
+</header>
+
+<main>
+  <section class="abertura" id="inicio">
+    <div class="wrap abertura-conteudo">
+      <div class="abertura-texto-bloco">
+        <!-- Título com a mesma frase e o mesmo desenho do cartaz da rede: a primeira linha forte, a segunda leve. -->
+        <h1><span class="h1-forte">Encontre o posto Ypê</span> <span class="h1-leve">mais perto de você!</span></h1>
+        <p class="abertura-texto">A Rede Ypê tem 15 postos Shell, Ipiranga e Petrobras em São José dos Campos, Jacareí, Taubaté e Caçapava.</p>
+        <form class="localizador" id="localizador" role="search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+          <label class="visually-hidden" for="busca-abertura">Bairro, rua ou cidade</label>
+          <input id="busca-abertura" type="search" placeholder="Bairro, rua ou cidade" autocomplete="off" enterkeyhint="search">
+          <button class="btn btn-amarelo" type="submit">Buscar</button>
+        </form>
+        <div class="abertura-acoes">
+          <button class="btn-localizar" type="button" id="perto-de-mim">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="7"/><circle cx="12" cy="12" r="2.5" fill="currentColor"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/></svg>
+            Usar minha localização
+          </button>
+          <a href="#postos">Ver todos os postos</a>
+        </div>
+        <div id="perto-resultado" aria-live="polite"></div>
+      </div>
+      <!-- Filme da abertura: fotos reais que se aproximam devagar e trocam sozinhas. Para outro posto, troque as fotos e o data-posto. -->
+      <div class="filme" id="filme" data-posto="posto-auto-posto-putim" role="region" aria-roledescription="carrossel" aria-label="Fotos do Auto Posto Putim">
+        <div class="filme-quadros">
+          <!-- Só a primeira foto entra no carregamento (é o maior elemento da tela); as outras chegam depois que a página abre. No celular vai a versão de 600 px, que fica sob a película escura. -->
+          <picture>
+            <source media="(max-width: 900px)" srcset="img/postos/putim-1-600.jpg">
+            <img class="filme-quadro ativo" src="img/postos/putim-1.jpg" alt="Cobertura e entrada do Auto Posto Putim" width="960" height="1280" fetchpriority="high">
+          </picture>
+          <img class="filme-quadro" data-src="img/postos/putim-2.jpg" alt="Pista de abastecimento do Auto Posto Putim" width="960" height="1280">
+          <img class="filme-quadro" data-src="img/postos/putim-3.jpg" alt="Pátio do Auto Posto Putim com espaço para caminhões" width="960" height="1280">
+          <img class="filme-quadro" data-src="img/postos/putim-4.jpg" alt="Auto Posto Putim visto da rua" width="960" height="1280">
+          <img class="filme-quadro" data-src="img/postos/putim-5.jpg" alt="Chegada ao Auto Posto Putim pelo cruzamento" width="960" height="1280">
+        </div>
+        <div class="filme-barras" id="filme-barras">
+          <button type="button" aria-label="Foto 1 de 5"><i></i></button>
+          <button type="button" aria-label="Foto 2 de 5"><i></i></button>
+          <button type="button" aria-label="Foto 3 de 5"><i></i></button>
+          <button type="button" aria-label="Foto 4 de 5"><i></i></button>
+          <button type="button" aria-label="Foto 5 de 5"><i></i></button>
+        </div>
+        <div class="filme-rodape">
+          <button class="filme-posto" type="button" id="filme-posto">
+            <svg aria-hidden="true"><use href="#logo-petrobras"/></svg>
+            <span><strong>Auto Posto Putim</strong><small>Zona Leste, São José dos Campos</small></span>
+            <svg class="filme-seta" aria-hidden="true"><use href="#icone-abrir"/></svg>
+          </button>
+          <button class="filme-pausa" type="button" id="filme-pausa" aria-label="Pausar as fotos">
+            <svg class="icone-pausa" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14M16 5v14" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>
+            <svg class="icone-tocar" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5l11 7-11 7z" fill="currentColor"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- A faixa curva do cartaz da rede fecha a abertura. -->
+    <svg class="faixa-cartaz" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true">
+      <path class="faixa-chao" d="M0 120 L0 96 C 380 92, 880 60, 1440 4 L1440 120 Z"/>
+      <path class="faixa-amarela" d="M0 96 C 380 92, 880 60, 1440 4 L1440 26 C 900 78, 400 108, 0 112 Z"/>
+      <path class="faixa-fio" d="M0 84 C 420 80, 900 46, 1440 -8" fill="none"/>
+    </svg>
+  </section>
+
+
+  <section class="secao secao-branca" id="postos" aria-labelledby="postos-titulo">
+    <div class="wrap">
+      <div class="secao-cabeca">
+        <h2 id="postos-titulo">Nossos postos</h2>
+        <p>Busque pelo bairro ou escolha a região. No card do posto, toque no Google Maps ou no Waze para abrir a rota.</p>
+      </div>
+
+      <div class="filtros">
+        <div class="chips" role="group" aria-label="Região">
+          <button class="chip" type="button" data-zona="todas" aria-pressed="true">Todas</button>
+          <span class="chips-grupo">São José dos Campos</span>
+          <button class="chip" type="button" data-zona="sul" aria-pressed="false">Zona Sul</button>
+          <button class="chip" type="button" data-zona="norte" aria-pressed="false">Zona Norte</button>
+          <button class="chip" type="button" data-zona="leste" aria-pressed="false">Zona Leste</button>
+          <button class="chip" type="button" data-zona="oeste" aria-pressed="false">Zona Oeste</button>
+          <span class="chips-grupo">Cidades vizinhas</span>
+          <button class="chip" type="button" data-zona="jacarei" aria-pressed="false">Jacareí</button>
+          <button class="chip" type="button" data-zona="taubate" aria-pressed="false">Taubaté</button>
+          <button class="chip" type="button" data-zona="cacapava" aria-pressed="false">Caçapava</button>
+        </div>
+        <div class="filtros-linha">
+          <div class="campo">
+            <label for="busca-posto">Buscar</label>
+            <input id="busca-posto" type="search" placeholder="Nome, bairro ou rua" autocomplete="off">
+          </div>
+          <!-- A bandeira é filtro de quem já sabe o que quer (programa de fidelidade): fica recolhida até pedirem. -->
+          <button class="filtros-mais" type="button" id="filtros-mais" aria-expanded="false" aria-controls="campo-bandeira">
+            Filtrar por bandeira
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="campo campo-bandeira" id="campo-bandeira" hidden>
+            <span class="campo-rotulo" id="rotulo-bandeira">Bandeira</span>
+            <div class="chips-bandeira" role="group" aria-labelledby="rotulo-bandeira">
+              <button class="chip-logo" type="button" data-bandeira="todas" aria-pressed="true">Todas</button>
+              <button class="chip-logo" type="button" data-bandeira="shell" aria-pressed="false" aria-label="Shell" title="Shell"><svg aria-hidden="true"><use href="#logo-shell"/></svg></button>
+              <button class="chip-logo" type="button" data-bandeira="ipiranga" aria-pressed="false" aria-label="Ipiranga" title="Ipiranga"><svg aria-hidden="true"><use href="#logo-ipiranga"/></svg></button>
+              <button class="chip-logo" type="button" data-bandeira="petrobras" aria-pressed="false" aria-label="Petrobras" title="Petrobras"><svg aria-hidden="true"><use href="#logo-petrobras"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p class="contagem" id="contagem" aria-live="polite"><strong>15</strong> postos encontrados</p>
+
+      <ul class="lista-postos" id="lista-postos">
+        <li class="posto" data-zona="sul" data-bandeira="shell" data-lat="-23.2319549" data-lng="-45.9010723" data-q="Av. Guadalupe, 659, Jardim América, São José dos Campos - SP, 12235-000">
+          <div class="posto-topo"><svg class="bandeira" role="img" aria-label="Bandeira Shell"><title>Shell</title><use href="#logo-shell"/></svg><span class="zona">Zona Sul<small>São José dos Campos</small></span></div>
+          <h3>Auto Posto Ipê</h3>
+          <p class="endereco">Av. Guadalupe, 659 – Jd. América</p>
+          <div class="rotas"></div>
+        </li>
+        <li class="posto" data-zona="sul" data-bandeira="ipiranga" data-lat="-23.231564" data-lng="-45.9012208" data-q="Av. Guadalupe, 660, Jardim América, São José dos Campos - SP, 12235-000">
+          <div class="posto-topo"><svg class="bandeira" role="img" aria-label="Bandeira Ipiranga"><title>Ipiranga</title><use href="#logo-ipiranga"/></svg><span class="zona">Zona Sul<small>São José dos Campos</small></span></div>
+          <h3>Cunha’s Auto Posto</h3>
+          <p class="endereco">Av. Guadalupe, 660 – Jd. América</p>
+          <div class="rotas"></div>
+        </li>
+        <li class="posto" data-zona="sul" data-bandeira="petrobras" data-lat="-23.2502208" data-lng="-45.8971075" data-q="Rua Gisele Martins, 401, Jardim Morumbi, São José dos Campos - SP, 12236-500">
+          <div class="posto-topo"><svg class="bandeira" role="img" aria-label="Bandeira Petrobras"><title>Petrobras</title><use href="#logo-petrobras"/></svg><span class="zona">Zona Sul<small>São José dos Campos</small></span></div>
+          <h3>Auto Posto Bosque dos Ipês</h3>
+          <p class="endereco">Rua Gisele Martins, 401 – Jd. Morumbi</p>
+          <div class="rotas"></div>
+        </li>
+        <li class="posto" data-zona="sul" data-bandeira="petrobras" data-lat="-23.237655" data-lng="-45.901003" data-q="Rua Sumatra, 315, Jardim Paraíso, São José dos Campos - SP, 12235-410">
+          <div class="posto-topo"><svg class="bandeira" role="img" aria-label="Bandeira Petrobras"><title>Petrobras</title><use href="#logo-petrobras"/></svg><span class="zona">Zona Sul<small>São José dos Campos</small></span></div>
+          <h3>HP Comércio de Combustíveis</h3>
+          <p class="endereco">Rua Sumatra, 315 – Jd. Paraíso</p>
+          <div class="rotas"></div>
+        </li>
+        <li class="posto" data-zona="norte" data-bandeira="petrobras" data-lat="-23.1672509" data-lng="-45.8929724" data-q="Travessa Constantino Pintos, 44, Vila Rossi, São José dos Campos - SP, 12211-110">
+          <div class="posto-topo"><svg class="bandeira" role="img" aria-label="Bandeira Petrobras"><title>Petrobras</title><use href="#logo-petrobras"/></svg><span class="zona">Zona Norte<small>São José dos Campos</small></span></div>
+          <h3>Auto Posto Vila Rossi</h3>
+          <p class="endereco">Tv. Constantino Pintos, 44 – Vila Rossi</p>
+          <div class="rotas"></div>
+        </li>
+        <li class="posto" data-zona="norte" data-bandeira="shell" data-lat="-23.1743473" data-lng="-45.8831385" data-q="Av. Eng. Sebastião Gualberto, 700, Vila Maria, São José dos Campos - SP, 12209-320">
+          <div class="posto-topo"><svg class="bandeira" role="img" aria-label="Bandeira Shell"><title>Shell</title><use href="#logo-shell"/></svg><span class="zona">Zona Norte<small>São José dos Campos</small></span></div>
+          <h3>Auto Posto Vila Maria</h3>
+          <p class="endereco">Av. Eng. Sebastião Gualberto, 700 – Vila Maria</p>
+          <div class="rotas"></div>
+        </li>
+        <li class="posto" data-zona="oeste" data-bandeira="ipiranga" data-lat="-23.2339898" data-lng="-45.9166104" data-q="Av. Dep. Benedito Matarazzo, 4229, Jardim das Indústrias, São José dos Campos - SP, 12246-840">
+          <div class="posto-topo"><svg class="bandeira" role="img" aria-label="Bandeira Ipiranga"><title>Ipiranga</title><use href="#logo-ipiranga"/></svg><span class="zona">Zona Oeste<small>São José dos Campos</small></span></div>
+          <h3>Auto Posto da Gruta</h3>
+          <p class="endereco">Av. Dep. Benedito Matarazzo, 4229 – Jd. das Indústrias</p>
+          <div class="rotas"></div>
+        </li>
+        <li class="posto" data-zona="leste" data-bandeira="shell" data-lat="-23.1714632" data-lng="-45.8418464" data-q="Rua Professora Maria Siqueira Nathan, 117, Vila Tesouro, São José dos Campos - SP, 12221-521">
+          <div class="posto-topo"><svg class="bandeira" role="img" aria-label="Bandeira Shell"><title>Shell</title><use href="#logo-shell"/></svg><span class="zona">Zona Leste<small>São José dos Campos</small></span></div>
+          <h3>Auto Posto Vila Tesouro</h3>
+          <p class="endereco">Rua Profª Maria Siqueira Nathan, 117 – Vila Tesouro</p>
+          <div class="rotas"></div>
+        </li>
+        <li class="posto" data-zona="leste" data-bandeira="petrobras" data-lat="-23.1764633" data-lng="-45.8291515" data-q="Av. Pedro Friggi, 1001, Jardim Morotama, São José dos Campos - SP, 12223-430">
+          <div class="posto-topo"><svg class="bandeira" role="img" aria-label="Bandeira Petrobras"><title>Petrobras</title><use href="#logo-petrobras"/></svg><span class="zona">Zona Leste<small>São José dos Campos</small></span></div>
+          <h3>Posto Super Jet Ski</h3>
+          <p class="endereco">Av. Pedro Friggi, 1001 – Jd. Morotama</p>
+          <div class="rotas"></div>
+        </li>
+        <li class="posto" data-zona="leste" data-bandeira="petrobras" data-lat="-23.170985" data-lng="-45.8004141" data-q="Rua Rodolfo Mayer, 10, Jardim Santa Inês II, São José dos Campos - SP, 12248-181">
+          <div class="posto-topo"><svg class="bandeira" role="img" aria-label="Bandeira Petrobras"><title>Petrobras</title><use href="#logo-petrobras"/></svg><span class="zona">Zona Leste<small>São José dos Campos</small></span></div>
+          <h3>Auto Posto Santa Inês</h3>
+          <p class="endereco">Rua Rodolfo Mayer, 10 – Jd. Santa Inês II</p>
+          <div class="rotas"></div>
+        </li>
+        <li class="posto" data-zona="leste" data-bandeira="petrobras" data-lat="-23.1849351" data-lng="-45.8106073" data-q="Estrada Dom José Antônio do Couto, 2780, São José dos Campos - SP, 12226-551">
+          <div class="posto-topo"><svg class="bandeira" role="img" aria-label="Bandeira Petrobras"><title>Petrobras</title><use href="#logo-petrobras"/></svg><span class="zona">Zona Leste<small>São José dos Campos</small></span></div>
+          <h3>Auto Posto Cajuru</h3>
+          <p class="endereco">Estr. Dom José Antônio do Couto, 2780 – Campos de São José</p>
+          <div class="rotas"></div>
+        </li>
+        <li class="posto" data-zona="leste" data-bandeira="petrobras" data-lat="-23.2471069" data-lng="-45.8282608" data-q="Av. João Rodolfo Castelli, 1220, Putim, São José dos Campos - SP, 12228-000"
+            data-fotos="img/postos/putim-1.jpg|Cobertura e entrada do posto|img/postos/putim-2.jpg|Pista de abastecimento|img/postos/putim-3.jpg|Pátio com espaço para caminhões|img/postos/putim-4.jpg|O posto visto da rua|img/postos/putim-5.jpg|Chegando pelo cruzamento">
+          <div class="posto-topo"><svg class="bandeira" role="img" aria-label="Bandeira Petrobras"><title>Petrobras</title><use href="#logo-petrobras"/></svg><span class="zona">Zona Leste<small>São José dos Campos</small></span></div>
+          <h3>Auto Posto Putim</h3>
+          <p class="endereco">Av. João Rodolfo Castelli, 1220 – Putim</p>
+          <div class="rotas"></div>
+        </li>
+        <li class="posto" data-zona="jacarei" data-bandeira="shell" data-lat="-23.3133621" data-lng="-45.9849949" data-q="Av. Maria Augusta Fagundes Gomes, 61, Jacareí - SP, 12322-300">
+          <div class="posto-topo"><svg class="bandeira" role="img" aria-label="Bandeira Shell"><title>Shell</title><use href="#logo-shell"/></svg><span class="zona">Jacareí</span></div>
+          <h3>Auto Posto Jd. São Paulo II</h3>
+          <p class="endereco">Av. Maria Augusta Fagundes Gomes, 61 – Res. São Paulo</p>
+          <div class="rotas"></div>
+        </li>
+        <li class="posto" data-zona="taubate" data-bandeira="shell" data-lat="-23.0535522" data-lng="-45.5774649" data-q="Estrada do Barreiro, 1972, São Gonçalo, Taubaté - SP, 12092-000">
+          <div class="posto-topo"><svg class="bandeira" role="img" aria-label="Bandeira Shell"><title>Shell</title><use href="#logo-shell"/></svg><span class="zona">Taubaté</span></div>
+          <h3>Centro Automotivo Barreiro</h3>
+          <p class="endereco">Estr. do Barreiro, 1972 – São Gonçalo</p>
+          <div class="rotas"></div>
+        </li>
+        <li class="posto" data-zona="cacapava" data-bandeira="petrobras" data-lat="-23.1042147" data-lng="-45.7104666" data-q="Av. Brasil, 352, Vila Antônio Augusto Luiz, Caçapava - SP, 12287-020">
+          <div class="posto-topo"><svg class="bandeira" role="img" aria-label="Bandeira Petrobras"><title>Petrobras</title><use href="#logo-petrobras"/></svg><span class="zona">Caçapava</span></div>
+          <h3>Auto Posto Avenida Brasil</h3>
+          <p class="endereco">Av. Brasil, 352 – Vila Antônio Augusto Luiz</p>
+          <div class="rotas"></div>
+        </li>
+      </ul>
+      <div class="vazio" id="vazio" hidden>
+        <p>Nenhum posto combina com esse filtro. Tente outra região, outra bandeira ou apague a busca.</p>
+        <button class="chip" type="button" id="limpar-filtros">Mostrar todos os postos</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="secao" id="rede" aria-labelledby="rede-titulo">
+    <div class="wrap rede-grade">
+      <div class="rede-texto">
+        <!-- O lema oficial é o título da apresentação. Texto montado só com dados confirmados; trocar pela história completa quando a rede enviar. -->
+        <h2 id="rede-titulo" class="rede-lema">Rede Ypê. <span>Sempre com você.</span></h2>
+        <p>São 15 postos em quatro cidades do Vale do Paraíba. Doze ficam em São José dos Campos, do Jardim América, na Av. Guadalupe, até o Putim, na Av. João Rodolfo Castelli. Os outros três estão em Jacareí, Taubaté e Caçapava.</p>
+        <p>Cada posto leva a bandeira de uma distribuidora, Shell, Ipiranga ou Petrobras. A rede tem frota própria, e todos os postos atendem pela mesma central: (12) 97409-6149.</p>
+      </div>
+      <figure class="rede-foto">
+        <img src="img/postos/putim-4.jpg" alt="Auto Posto Putim visto do outro lado da Av. João Rodolfo Castelli" width="960" height="1280" loading="lazy">
+        <figcaption>Auto Posto Putim, Av. João Rodolfo Castelli, 1220</figcaption>
+      </figure>
+    </div>
+    <div class="wrap" id="servicos">
+      <h3 class="servicos-titulo">No posto você encontra</h3>
+      <div class="servicos-grade">
+        <div class="servico">
+          <span class="servico-icone"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21V5a2 2 0 0 1 2-2h7a2 2 0 0 1 2 2v16M3 21h13M7 7h5v4H7zM15 10h2a2 2 0 0 1 2 2v4.5a1.5 1.5 0 0 0 3 0V8l-3-3"/></svg></span>
+          <h3>Abastecimento</h3><p>Gasolina, etanol e diesel, conforme o posto e a bandeira.</p>
+        </div>
+        <div class="servico">
+          <span class="servico-icone"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 8h14l-1.2 12H6.2L5 8zM9 10V6.5a3 3 0 0 1 6 0V10"/></svg></span>
+          <h3>Loja de conveniência</h3><p>Café, lanches, bebidas e itens do dia a dia.</p>
+        </div>
+        <div class="servico">
+          <span class="servico-icone"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5s5.5 6.2 5.5 10.2a5.5 5.5 0 0 1-11 0C6.5 9.7 12 3.5 12 3.5z"/><path d="M9.5 14.5a2.5 2.5 0 0 0 2.5 2.5"/></svg></span>
+          <h3>Troca de óleo</h3><p>Troca de óleo e filtros com o carro parado poucos minutos.</p>
+        </div>
+        <div class="servico">
+          <span class="servico-icone"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 16l1.6-4.5h10.8L19 16M4 16h16v3.5H4zM7 19.5V21M17 19.5V21M8 4c0 1 .9 1.6.9 2.5M12 3c0 1 .9 1.6.9 2.5M16 4c0 1 .9 1.6.9 2.5"/></svg></span>
+          <h3>Lava-rápido</h3><p>Lavagem do carro enquanto você resolve outras coisas.</p>
+        </div>
+        <div class="servico">
+          <span class="servico-icone"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 17a8.5 8.5 0 1 1 15 0"/><path d="M12 13l3.5-3.5M8 20h8"/></svg></span>
+          <h3>Calibragem de pneus</h3><p>Calibrador na pista para conferir a pressão dos pneus.</p>
+        </div>
+        <div class="servico">
+          <span class="servico-icone"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21V8a4 4 0 0 1 4-4h1.5a4 4 0 0 1 4 4M9.5 9h8M11 13v1M14 13v1M17 13v1M12.5 17v1M15.5 17v1M18.5 17v1"/></svg></span>
+          <h3>Ducha</h3><p>Ducha para tirar a poeira e o barro do carro.</p>
+        </div>
+      </div>
+      <p class="aviso">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg>
+        <span>Os serviços mudam de um posto para outro. Antes de ir, confirme com a central pelo (12) 97409-6149.</span>
+      </p>
+    </div>
+  </section>
+
+  <!-- A rota Ypê: a faixa amarela se desenha com a rolagem e acende cada região na ordem da Via Dutra, de Jacareí a Taubaté. -->
+  <section class="rota" id="rota" aria-labelledby="rota-titulo">
+    <div class="rota-palco">
+      <div class="wrap">
+        <div class="rota-cabeca">
+          <h2 id="rota-titulo">De Jacareí a Taubaté</h2>
+          <p>Siga a estrada e veja onde a Rede Ypê está. Toque numa região para ver os postos dela.</p>
+        </div>
+        <div class="rota-mapa" id="rota-mapa">
+          <svg class="rota-svg" id="rota-svg" viewBox="0 0 1200 520" aria-hidden="true">
+            <path class="rota-asfalto" d=""/>
+            <path class="rota-tracejado" d=""/>
+            <path class="rota-faixa" d=""/>
+            <circle class="rota-ponta" r="11" cx="-50" cy="-50"/>
+          </svg>
+          <div class="rota-paradas" id="rota-paradas"></div>
+        </div>
+        <div class="rota-fim" id="rota-fim">
+          <a class="btn btn-amarelo" href="#postos">Encontrar meu posto</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Espaço comercial do Putim. Texto preliminar, só com o que a rede confirmou: não citar número de lojas,
+       metragem, data, aluguel, fluxo ou marcas até haver informação oficial. -->
+  <section class="secao putim" id="lojistas" aria-labelledby="lojistas-titulo">
+    <div class="wrap">
+      <div class="putim-grade">
+        <div class="putim-texto">
+          <h2 id="lojistas-titulo">Seu negócio pode fazer parte desse novo espaço.</h2>
+          <p>A região do Putim está recebendo um novo espaço comercial, pensado para reunir diferentes negócios e ampliar as opções de conveniência para quem circula pela região.</p>
+          <p>Se você tem interesse em conhecer as oportunidades para instalação de uma loja, entre em contato com nossa equipe para saber mais.</p>
+          <div class="putim-acoes">
+            <a class="btn btn-amarelo" href="#interesse">Tenho interesse em abrir uma loja</a>
+            <a class="btn btn-contorno" href="#putim-obra">Conhecer o empreendimento</a>
+          </div>
+          <div class="putim-local">
+            <svg aria-hidden="true"><use href="#icone-pino"/></svg>
+            <strong>Região do Auto Posto Putim</strong>
+            <small>Av. João Rodolfo Castelli, 1220, Putim, São José dos Campos</small>
+            <a href="https://www.google.com/maps/search/?api=1&amp;query=-23.2471069,-45.8282608" target="_blank" rel="noopener">Ver no mapa</a>
+          </div>
+          <p class="putim-nota">Os detalhes do espaço, como tamanho das lojas e prazos, serão divulgados pela Rede Ypê quando estiverem confirmados. Quem deixar o contato abaixo recebe as informações primeiro pela nossa equipe.</p>
+        </div>
+        <!-- Fotos reais da obra tiradas em outubro de 2026. Trocar pela galeria oficial quando houver. -->
+        <figure class="putim-fotos" id="putim-obra" tabindex="-1">
+          <img src="img/putim-comercial/obra-1.jpg" alt="Prédio do novo espaço comercial em obra, com a fachada de vidro já instalada" width="960" height="1280" loading="lazy">
+          <img src="img/putim-comercial/obra-2.jpg" alt="Terreno da obra visto de dentro, com a rua do bairro ao fundo" width="960" height="1280" loading="lazy">
+          <img src="img/putim-comercial/obra-4.jpg" alt="Lateral do terreno em obra ao lado do prédio" width="960" height="1280" loading="lazy">
+          <figcaption>A obra na região do Putim, em outubro de 2026.</figcaption>
+        </figure>
+      </div>
+
+      <!-- Envio pela Netlify Forms (o site já é hospedado lá). Sem JavaScript, o navegador envia e abre a página de obrigado. -->
+      <form action='obrigado.html' class='interesse' id='interesse' method='POST' name='lojistas' novalidate>
+        <input type="hidden" name="form-name" value="lojistas">
+        <p class="isca" aria-hidden="true"><label>Não preencha este campo <input name="site-empresa" tabindex="-1" autocomplete="off"></label></p>
+        <h3>Quero saber das lojas</h3>
+        <p>Deixe seus dados e a equipe da Rede Ypê fala com você sobre as oportunidades. Os campos marcados com * são obrigatórios.</p>
+        <div class="interesse-grade">
+          <div>
+            <label for="li-nome">Nome *</label>
+            <input id="li-nome" name="nome" type="text" autocomplete="name" required aria-describedby="li-nome-erro">
+            <span class="campo-erro" id="li-nome-erro"></span>
+          </div>
+          <div>
+            <label for="li-empresa">Empresa ou marca *</label>
+            <input id="li-empresa" name="empresa" type="text" autocomplete="organization" required aria-describedby="li-empresa-erro">
+            <span class="campo-erro" id="li-empresa-erro"></span>
+          </div>
+          <div>
+            <label for="li-segmento">Segmento *</label>
+            <select id="li-segmento" name="segmento" required aria-describedby="li-segmento-erro">
+              <option value="">Escolha</option>
+              <option>Alimentação</option>
+              <option>Mercado e conveniência</option>
+              <option>Farmácia e saúde</option>
+              <option>Serviços automotivos</option>
+              <option>Moda e acessórios</option>
+              <option>Beleza e bem-estar</option>
+              <option>Serviços</option>
+              <option>Outro</option>
+            </select>
+            <span class="campo-erro" id="li-segmento-erro"></span>
+          </div>
+          <div>
+            <label for="li-email">E-mail *</label>
+            <input id="li-email" name="email" type="email" autocomplete="email" inputmode="email" required aria-describedby="li-email-erro">
+            <span class="campo-erro" id="li-email-erro"></span>
+          </div>
+          <div>
+            <label for="li-telefone">Telefone ou WhatsApp *</label>
+            <input id="li-telefone" name="telefone" type="tel" autocomplete="tel" inputmode="tel" placeholder="(12) 90000-0000" required minlength="10" aria-describedby="li-telefone-erro">
+            <span class="campo-erro" id="li-telefone-erro"></span>
+          </div>
+          <div class="campo-inteiro">
+            <label for="li-mensagem">Mensagem <small>(opcional)</small></label>
+            <textarea id="li-mensagem" name="mensagem" rows="4" placeholder="Conte o que você quer abrir, se quiser"></textarea>
+          </div>
+          <div class="campo-inteiro">
+            <label class="consentimento" for="li-aceite">
+              <input id="li-aceite" name="aceite" type="checkbox" value="sim" required aria-describedby="li-aceite-erro">
+              <span>Autorizo a Rede Ypê a usar estes dados só para falar comigo sobre o espaço comercial, como explica a <a href='politica-de-privacidade.html#lojistas'>política de privacidade</a>. *</span>
+            </label>
+            <span class="campo-erro" id="li-aceite-erro"></span>
+          </div>
+        </div>
+        <div class="interesse-enviar">
+          <button class="btn btn-amarelo" type="submit">Enviar meu interesse</button>
+          <p class="interesse-status" id="interesse-status" role="status" aria-live="polite"></p>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <section class="secao secao-branca" id="beneficios" aria-labelledby="beneficios-titulo">
+    <div class="wrap">
+      <div class="secao-cabeca">
+        <h2 id="beneficios-titulo">Benefícios</h2>
+        <p>Nos postos Ypê você usa o programa de fidelidade da bandeira do posto e conta com a mesma central de atendimento em toda a rede.</p>
+      </div>
+      <div class="programas">
+        <article class="programa">
+          <span class="programa-bandeira"><svg aria-hidden="true"><use href="#logo-shell"/></svg>5 postos Shell</span>
+          <h3>Shell Box</h3>
+          <p>Use o app da Shell para pagar e juntar vantagens nos 5 postos Shell da rede.</p>
+          <div class="programa-acoes">
+            <a class="btn btn-amarelo" href="https://www.shell.com.br/motoristas/app-shell-box.html" target="_blank" rel="noopener">Cadastrar ou entrar<svg aria-hidden="true"><use href="#icone-abrir"/></svg></a>
+            <a href="#postos" data-bandeira-link="shell">Ver os postos Shell</a>
+          </div>
+        </article>
+        <article class="programa">
+          <span class="programa-bandeira"><svg aria-hidden="true"><use href="#logo-ipiranga"/></svg>2 postos Ipiranga</span>
+          <h3>Km de Vantagens</h3>
+          <p>Junte pontos no programa da Ipiranga nos 2 postos Ipiranga da rede.</p>
+          <div class="programa-acoes">
+            <a class="btn btn-amarelo" href="https://www.ipiranga.com.br/wps/portal/pt-br/ipiranga/km-de-vantagens" target="_blank" rel="noopener">Cadastrar ou entrar<svg aria-hidden="true"><use href="#icone-abrir"/></svg></a>
+            <a href="#postos" data-bandeira-link="ipiranga">Ver os postos Ipiranga</a>
+          </div>
+        </article>
+        <article class="programa">
+          <span class="programa-bandeira"><svg aria-hidden="true"><use href="#logo-petrobras"/></svg>8 postos Petrobras</span>
+          <h3>Petrobras Premmia</h3>
+          <p>Acumule pontos no programa da Petrobras nos 8 postos Petrobras da rede.</p>
+          <div class="programa-acoes">
+            <a class="btn btn-amarelo" href="https://www.postospetrobras.com.br/ganhe-mais-com/premmia" target="_blank" rel="noopener">Cadastrar ou entrar<svg aria-hidden="true"><use href="#icone-abrir"/></svg></a>
+            <a href="#postos" data-bandeira-link="petrobras">Ver os postos Petrobras</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="secao" id="duvidas" aria-labelledby="duvidas-titulo">
+    <div class="wrap faq-grade">
+      <div class="secao-cabeca">
+        <h2 id="duvidas-titulo">Dúvidas frequentes</h2>
+        <p>Não achou o que procurava? Fale com a central pelo (12) 97409-6149.</p>
+      </div>
+      <div class="faq-lista">
+        <details>
+          <summary>Quais bandeiras os postos Ypê têm?</summary>
+          <div class="faq-resposta"><p>A rede tem postos de três bandeiras: 5 Shell, 2 Ipiranga e 8 Petrobras. Cada card na lista de postos mostra o símbolo da bandeira daquele posto.</p></div>
+        </details>
+        <details>
+          <summary>Em quais cidades estão os postos?</summary>
+          <div class="faq-resposta"><p>São 12 postos em São José dos Campos, nas zonas Sul, Norte, Leste e Oeste, e mais 1 em Jacareí, 1 em Taubaté e 1 em Caçapava.</p></div>
+        </details>
+        <details>
+          <summary>Posso usar o programa de fidelidade da bandeira?</summary>
+          <div class="faq-resposta"><p>Sim. Nos postos Shell você usa o Shell Box, nos Ipiranga o Km de Vantagens e nos Petrobras o Petrobras Premmia. O cadastro é feito no site ou no app de cada programa.</p></div>
+        </details>
+        <details>
+          <summary>Todos os postos têm loja, troca de óleo e lava-rápido?</summary>
+          <div class="faq-resposta"><p>Não. Os serviços mudam de um posto para outro. Antes de ir, confirme com a central o que o posto que você escolheu oferece.</p></div>
+        </details>
+        <details>
+          <summary>Como chego até o posto?</summary>
+          <div class="faq-resposta"><p>Na lista de postos, toque no símbolo do Google Maps ou do Waze no card do posto. O app abre com a rota a partir de onde você está.</p></div>
+        </details>
+      </div>
+    </div>
+  </section>
+  <script type="application/ld+json">
+  {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
+    {"@type": "Question", "name": "Quais bandeiras os postos Ypê têm?", "acceptedAnswer": {"@type": "Answer", "text": "A rede tem postos de três bandeiras: 5 Shell, 2 Ipiranga e 8 Petrobras."}},
+    {"@type": "Question", "name": "Em quais cidades estão os postos?", "acceptedAnswer": {"@type": "Answer", "text": "São 12 postos em São José dos Campos, nas zonas Sul, Norte, Leste e Oeste, e mais 1 em Jacareí, 1 em Taubaté e 1 em Caçapava."}},
+    {"@type": "Question", "name": "Posso usar o programa de fidelidade da bandeira?", "acceptedAnswer": {"@type": "Answer", "text": "Sim. Nos postos Shell você usa o Shell Box, nos Ipiranga o Km de Vantagens e nos Petrobras o Petrobras Premmia."}},
+    {"@type": "Question", "name": "Todos os postos têm loja, troca de óleo e lava-rápido?", "acceptedAnswer": {"@type": "Answer", "text": "Não. Os serviços mudam de um posto para outro. Confirme com a central pelo (12) 97409-6149."}},
+    {"@type": "Question", "name": "Como chego até o posto?", "acceptedAnswer": {"@type": "Answer", "text": "Na lista de postos, toque no símbolo do Google Maps ou do Waze no card do posto para abrir a rota."}}
+  ]}
+  </script>
+
+  <section class="secao" id="contato" aria-labelledby="contato-titulo">
+    <div class="wrap">
+      <div class="contato-painel">
+        <div class="contato-texto">
+          <canvas class="contato-fundo" id="contato-fundo" aria-hidden="true"></canvas>
+          <h2 id="contato-titulo">Fale com a Rede Ypê</h2>
+          <p>A central de atendimento ajuda com qualquer posto da rede: endereço, serviços, dúvidas e reclamações.</p>
+          <div class="telefone">
+            <span>Central de atendimento</span>
+            <strong id="numero">(12) 97409-6149</strong>
+          </div>
+          <div class="contato-acoes">
+            <a class="btn btn-amarelo" href="https://wa.me/5512974096149" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.3-.4.8-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.2c0-.1-.2-.2-.4-.3z"/></svg>
+              Chamar no WhatsApp
+            </a>
+            <a class="btn btn-contorno" href="tel:+5512974096149"><svg aria-hidden="true"><use href="#icone-telefone"/></svg>Ligar</a>
+            <button class="btn btn-contorno" type="button" id="copiar"><svg aria-hidden="true"><use href="#icone-copiar"/></svg>Copiar</button>
+          </div>
+          <p class="copiado" id="copiado" aria-live="polite"></p>
+        </div>
+        <div class="contato-foto">
+          <img src="img/postos/putim-5.jpg" alt="Cruzamento na chegada ao Auto Posto Putim" width="960" height="1280" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="rodape">
+  <div class="wrap">
+    <div class="rodape-grade">
+      <div class="rodape-marca">
+        <a class="logo" href="#inicio"><img src="img/marca/rede-ype-branco-120.png" alt="Rede Ypê Combustíveis, voltar ao topo" width="369" height="120" loading="lazy"></a>
+        <p class="lema">Rede Ypê. <span>Sempre com você.</span></p>
+      </div>
+      <nav aria-label="Rodapé">
+        <ul>
+          <li><a href="#postos">Postos</a></li>
+          <li><a href="#rede">A rede</a></li>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#lojistas">Para lojistas</a></li>
+          <li><a href="#beneficios">Benefícios</a></li>
+          <li><a href="#duvidas">Dúvidas</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="rodape-base">
+      <span>Rede Ypê Combustíveis, São José dos Campos – SP</span>
+      <span>Central de atendimento: (12) 97409-6149</span>
+      <a href='politica-de-privacidade.html'>Política de privacidade</a>
+    </div>
+  </div>
+</footer>
+
+<dialog class="detalhe" id="detalhe" aria-labelledby="detalhe-nome">
+  <div class="detalhe-caixa">
+    <div class="detalhe-alca" aria-hidden="true"></div>
+    <header class="detalhe-topo">
+      <svg class="detalhe-bandeira" id="detalhe-bandeira" role="img" aria-label=""><use href="#logo-shell"/></svg>
+      <div>
+        <p class="detalhe-zona" id="detalhe-zona"></p>
+        <h2 id="detalhe-nome"></h2>
+      </div>
+      <button class="detalhe-fechar" type="button" id="detalhe-fechar" aria-label="Fechar"><svg aria-hidden="true"><use href="#icone-fechar"/></svg></button>
+    </header>
+    <div class="detalhe-corpo">
+      <div class="detalhe-info">
+        <div class="detalhe-dados">
+          <div class="detalhe-linha">
+            <svg aria-hidden="true"><use href="#icone-pino"/></svg>
+            <address id="detalhe-endereco"></address>
+            <button class="icone-botao" type="button" id="detalhe-copiar" aria-label="Copiar endereço" title="Copiar endereço"><svg aria-hidden="true"><use href="#icone-copiar"/></svg></button>
+          </div>
+          <div class="detalhe-linha">
+            <svg aria-hidden="true"><use href="#icone-cartao"/></svg>
+            <p id="detalhe-programa"></p>
+            <span></span>
+          </div>
+          <div class="detalhe-linha">
+            <svg aria-hidden="true"><use href="#icone-telefone"/></svg>
+            <p>Central <strong>(12) 97409-6149</strong></p>
+            <span></span>
+          </div>
+          <p class="detalhe-recado" id="detalhe-recado" aria-live="polite"></p>
+        </div>
+        <nav class="detalhe-acoes" aria-label="Ir até o posto">
+          <a id="detalhe-maps" href="#" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#logo-maps"/></svg>Rota</a>
+          <a id="detalhe-waze" href="#" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#logo-waze"/></svg>Waze</a>
+          <a id="detalhe-earth" href="#" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#logo-earth"/></svg>3D</a>
+          <a href="https://wa.me/5512974096149" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#logo-whatsapp"/></svg>Central</a>
+        </nav>
+      </div>
+      <div class="galeria" id="galeria" hidden>
+        <div class="galeria-trilho" id="galeria-trilho" tabindex="0" aria-label="Fotos do posto"></div>
+        <button class="galeria-seta galeria-anterior" type="button" id="galeria-anterior" aria-label="Foto anterior"><svg aria-hidden="true"><use href="#icone-esquerda"/></svg></button>
+        <button class="galeria-seta galeria-proxima" type="button" id="galeria-proxima" aria-label="Próxima foto"><svg aria-hidden="true"><use href="#icone-direita"/></svg></button>
+      </div>
+      <div class="mapa-abas" role="tablist" aria-label="Como ver o lugar">
+        <button class="mapa-aba" type="button" role="tab" data-vista="360" aria-selected="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><ellipse cx="12" cy="12" rx="9" ry="4"/><path d="M12 3v2M12 19v2M7 8.5l1.5 1.5M17 8.5L15.5 10"/><circle cx="12" cy="12" r="1.6" fill="currentColor"/></svg>
+          Vista 360° da rua
+        </button>
+        <button class="mapa-aba" type="button" role="tab" data-vista="satelite" aria-selected="false">
+          <svg aria-hidden="true"><use href="#logo-earth"/></svg>
+          Satélite
+        </button>
+        <span class="mapa-dica">Arraste para olhar em volta</span>
+      </div>
+      <div class="detalhe-mapa" id="detalhe-mapa"></div>
+    </div>
+  </div>
+</dialog>
+
+<a class="flutuante" href="https://wa.me/5512974096149" target="_blank" rel="noopener" aria-label="Falar com a central no WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.3-.4.8-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.2c0-.1-.2-.2-.4-.3z"/></svg>
+</a>
+
+<div class="ilha fora" id="ilha" role="region" aria-label="Posto mais perto">
+  <div class="ilha-conteudo" id="ilha-conteudo" aria-live="polite"></div>
+</div>
+
+<script>
+(function () {
+  // Menu do celular
+  var botao = document.getElementById('menu-botao');
+  var menu = document.getElementById('menu');
+  function fecharMenu() { menu.classList.remove('aberto'); botao.setAttribute('aria-expanded', 'false'); botao.setAttribute('aria-label', 'Abrir menu'); }
+  botao.addEventListener('click', function () {
+    var aberto = menu.classList.toggle('aberto');
+    botao.setAttribute('aria-expanded', String(aberto));
+    botao.setAttribute('aria-label', aberto ? 'Fechar menu' : 'Abrir menu');
+  });
+  menu.addEventListener('click', function (e) { if (e.target.closest('a')) fecharMenu(); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') fecharMenu(); });
+
+  // Topo: afina depois do primeiro pedaço de rolagem; a pílula vai até o link sob o mouse e,
+  // fora dele, volta para o link da seção que está no meio da tela.
+  (function () {
+    var topo = document.querySelector('.topo');
+    var marca = menu.querySelector('.menu-marca');
+    var links = Array.prototype.slice.call(menu.querySelectorAll('ul a'));
+    var atual = null;
+    function marcar() { topo.classList.toggle('rolou', window.scrollY > 24); }
+    window.addEventListener('scroll', marcar, { passive: true });
+    marcar();
+    function moverPara(a) {
+      if (!a) { marca.style.opacity = '0'; return; }
+      marca.style.width = a.offsetWidth + 'px';
+      marca.style.transform = 'translateX(' + a.offsetLeft + 'px)';
+      marca.style.opacity = '1';
+    }
+    links.forEach(function (a) {
+      a.addEventListener('mouseenter', function () { moverPara(a); });
+      a.addEventListener('focus', function () { moverPara(a); });
+    });
+    menu.querySelector('ul').addEventListener('mouseleave', function () { moverPara(atual); });
+    window.addEventListener('resize', function () { moverPara(atual); });
+    if (!('IntersectionObserver' in window)) return;
+    // Serviços fica dentro de "A rede": entre as seções que cruzam o meio, vale a menor (a mais interna).
+    var secoes = links.map(function (a) { return document.getElementById(a.getAttribute('href').slice(1)); }).filter(Boolean);
+    var noMeio = new Set();
+    var espiao = new IntersectionObserver(function (entradas) {
+      entradas.forEach(function (e) { if (e.isIntersecting) noMeio.add(e.target); else noMeio.delete(e.target); });
+      var alvo = null;
+      noMeio.forEach(function (s) { if (!alvo || s.offsetHeight < alvo.offsetHeight) alvo = s; });
+      links.forEach(function (a) {
+        var ativo = !!alvo && a.getAttribute('href') === '#' + alvo.id;
+        if (ativo) a.setAttribute('aria-current', 'true'); else a.removeAttribute('aria-current');
+        if (ativo) atual = a;
+      });
+      if (!alvo) atual = null;
+      if (!menu.querySelector('ul a:hover')) moverPara(atual);
+    }, { rootMargin: '-45% 0px -54% 0px' });
+    secoes.forEach(function (s) { espiao.observe(s); });
+  })();
+
+  // Filme da abertura: cada foto se aproxima devagar enquanto a barrinha dela enche; quando a barra
+  // termina, entra a próxima. Pausar congela as duas animações. Sem animação, fica a primeira foto parada.
+  (function () {
+    var filme = document.getElementById('filme');
+    if (!filme) return;
+    var quadros = Array.prototype.slice.call(filme.querySelectorAll('.filme-quadro'));
+    var barras = Array.prototype.slice.call(filme.querySelectorAll('.filme-barras button'));
+    var pausa = document.getElementById('filme-pausa');
+    var atual = 0;
+    var semMovimento = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    // As fotos 2 a 5 só começam a baixar depois que a página abriu, para não disputar com a primeira.
+    function carregarResto() {
+      var celular = window.matchMedia('(max-width: 900px)').matches;
+      quadros.forEach(function (q) {
+        if (q.dataset.src) { q.src = celular ? q.dataset.src.replace('.jpg', '-600.jpg') : q.dataset.src; q.removeAttribute('data-src'); }
+      });
+    }
+    if (document.readyState === 'complete') carregarResto(); else window.addEventListener('load', carregarResto);
+
+    function mostrar(n) {
+      var antigo = quadros[atual];
+      atual = (n + quadros.length) % quadros.length;
+      if (antigo !== quadros[atual]) {
+        // Segura o zoom em que a foto antiga estava enquanto ela some, para não dar um pulo.
+        antigo.style.transform = getComputedStyle(antigo).transform;
+        antigo.classList.remove('ativo');
+        setTimeout(function () { antigo.style.transform = ''; }, 1300);
+      }
+      quadros[atual].classList.remove('ativo');
+      void quadros[atual].offsetWidth; // reinicia a animação
+      quadros[atual].classList.add('ativo');
+      barras.forEach(function (b, i) {
+        b.classList.toggle('feita', i < atual);
+        b.classList.remove('atual');
+        b.setAttribute('aria-current', i === atual ? 'true' : 'false');
+      });
+      if (!semMovimento) { void barras[atual].offsetWidth; barras[atual].classList.add('atual'); }
+    }
+
+    filme.addEventListener('animationend', function (e) {
+      if (e.animationName === 'encher') mostrar(atual + 1);
+    });
+    barras.forEach(function (b, i) { b.addEventListener('click', function () { mostrar(i); }); });
+    pausa.addEventListener('click', function () {
+      var pausado = filme.classList.toggle('pausado');
+      pausa.setAttribute('aria-label', pausado ? 'Continuar as fotos' : 'Pausar as fotos');
+    });
+    document.getElementById('filme-posto').addEventListener('click', function () {
+      var li = document.querySelector('.posto[data-id="' + filme.dataset.posto + '"]');
+      if (li) abrirDetalhe(li, this);
+    });
+    // Fora da tela o filme espera, para não gastar bateria nem pular fotos sem ninguém ver.
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(function (ent) { filme.classList.toggle('fora', !ent[0].isIntersecting); }).observe(filme);
+    }
+    mostrar(0);
+  })();
+
+  // Rotas: no celular o Google Maps e o Waze abrem o app já traçando o caminho da localização
+  // atual até o posto; o Google Earth mostra o posto visto de cima. No computador abrem no navegador.
+  function logo(id) { return '<svg aria-hidden="true"><use href="#' + id + '"/></svg>'; }
+  function linkMaps(li) { return 'https://www.google.com/maps/dir/?api=1&destination=' + encodeURIComponent(li.dataset.nome + ', ' + li.dataset.q) + '&travelmode=driving'; }
+  function linkWaze(li) { return 'https://waze.com/ul?q=' + encodeURIComponent(li.dataset.q) + '&navigate=yes'; }
+  function linkEarth(li) { return 'https://earth.google.com/web/search/' + encodeURIComponent(li.dataset.nome + ', ' + li.dataset.q); }
+  function slug(s) { return s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''); }
+  var postos = Array.prototype.slice.call(document.querySelectorAll('.posto'));
+  postos.forEach(function (li) {
+    var h3 = li.querySelector('h3');
+    var nome = h3.textContent;
+    li.dataset.nome = nome;
+    li.dataset.id = 'posto-' + slug(nome);
+    h3.innerHTML = '<button class="posto-abrir" type="button" aria-haspopup="dialog">' + nome + '</button>';
+    li.querySelector('.rotas').innerHTML =
+      '<a href="' + linkMaps(li) + '" target="_blank" rel="noopener" aria-label="Rota até ' + nome + ' no Google Maps" title="Google Maps">' + logo('logo-maps') + '</a>' +
+      '<a href="' + linkWaze(li) + '" target="_blank" rel="noopener" aria-label="Rota até ' + nome + ' no Waze" title="Waze">' + logo('logo-waze') + '</a>' +
+      '<span class="posto-mais" aria-hidden="true">' + logo('icone-abrir') + '</span>';
+    h3.querySelector('button').addEventListener('click', function () { abrirDetalhe(li, this); });
+    // Todo card ganha uma faixa de capa da mesma altura: a foto do posto, ou um aviso enquanto as fotos não chegam.
+    var fotos = lerFotos(li);
+    li.insertAdjacentHTML('afterbegin', fotos.length
+      ? '<div class="posto-capa"><img src="' + fotos[0].src + '" alt="' + fotos[0].legenda + ', ' + nome + '" loading="lazy" width="960" height="1280"><b>' + logo('icone-foto') + fotos.length + '</b></div>'
+      : '<div class="posto-capa posto-capa-vazia">' + logo('icone-foto') + '<span>Fotos em breve</span></div>');
+  });
+
+  // data-fotos: caminho|legenda|caminho|legenda...
+  function lerFotos(li) {
+    var partes = (li.dataset.fotos || '').split('|').filter(Boolean), fotos = [];
+    for (var i = 0; i + 1 < partes.length; i += 2) fotos.push({ src: partes[i].trim(), legenda: partes[i + 1].trim() });
+    return fotos;
+  }
+
+  // Página do posto: informações, botões de rota e a vista de satélite que dá para arrastar e aproximar.
+  var detalhe = document.getElementById('detalhe');
+  var mapa = document.getElementById('detalhe-mapa');
+  var recado = document.getElementById('detalhe-recado');
+  var NOMES = { shell: 'Shell', ipiranga: 'Ipiranga', petrobras: 'Petrobras' };
+  var PROGRAMAS = { shell: 'Shell Box', ipiranga: 'Km de Vantagens', petrobras: 'Petrobras Premmia' };
+  var emQuadro = (function () { try { return window.top !== window.self; } catch (e) { return true; } })();
+  var postoAberto = null, focoAnterior = null;
+  var galeria = document.getElementById('galeria');
+  var trilho = document.getElementById('galeria-trilho');
+  function rolarGaleria(direcao) {
+    var foto = trilho.querySelector('figure');
+    if (foto) trilho.scrollBy({ left: direcao * (foto.offsetWidth + 10), behavior: reduzir ? 'auto' : 'smooth' });
+  }
+  document.getElementById('galeria-anterior').addEventListener('click', function () { rolarGaleria(-1); });
+  document.getElementById('galeria-proxima').addEventListener('click', function () { rolarGaleria(1); });
+
+  // Vista do lugar: 360° da rua (Street View, a pessoa gira e anda pela rua) ou satélite (vista de cima).
+  var abasVista = Array.prototype.slice.call(document.querySelectorAll('.mapa-aba'));
+  function mostrarVista(li, vista) {
+    abasVista.forEach(function (a) { a.setAttribute('aria-selected', String(a.dataset.vista === vista)); });
+    if (emQuadro) {
+      // A prévia dentro do Claude não permite mapas incorporados; no site publicado a vista aparece aqui.
+      mapa.innerHTML = '<div class="mapa-aviso">' + logo('logo-earth') +
+        '<p>A vista 360° e o satélite aparecem aqui no site publicado. Enquanto isso, veja o posto em 3D no Google Earth.</p>' +
+        '<a class="btn btn-contorno" href="' + linkEarth(li) + '" target="_blank" rel="noopener">' + logo('logo-earth') + 'Abrir em 3D</a></div>';
+      return;
+    }
+    var lat = li.dataset.lat, lng = li.dataset.lng, src, titulo;
+    if (vista === '360' && lat) {
+      src = 'https://www.google.com/maps/embed?pb=!6m6!1m5!2m2!1d' + lat + '!2d' + lng + '!4f0!5f1';
+      titulo = 'Vista 360° da rua de ' + li.dataset.nome;
+    } else {
+      src = 'https://maps.google.com/maps?q=' + (lat ? lat + ',' + lng : encodeURIComponent(li.dataset.nome + ', ' + li.dataset.q)) + '&t=k&z=18&output=embed';
+      titulo = 'Vista de satélite de ' + li.dataset.nome;
+    }
+    mapa.innerHTML = '<iframe title="' + titulo + '" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade" src="' + src + '"></iframe>';
+  }
+  abasVista.forEach(function (a) { a.addEventListener('click', function () { if (postoAberto) mostrarVista(postoAberto, a.dataset.vista); }); });
+
+  function abrirDetalhe(li, origem) {
+    postoAberto = li; focoAnterior = origem || null;
+    var b = li.dataset.bandeira;
+    var selo = document.getElementById('detalhe-bandeira');
+    selo.querySelector('use').setAttribute('href', '#logo-' + b);
+    selo.setAttribute('aria-label', 'Bandeira ' + NOMES[b]);
+    var zona = li.querySelector('.zona'), cidade = zona.querySelector('small');
+    document.getElementById('detalhe-zona').textContent = cidade ? zona.firstChild.textContent + ', ' + cidade.textContent : zona.textContent;
+    document.getElementById('detalhe-nome').textContent = li.dataset.nome;
+    document.getElementById('detalhe-endereco').textContent = li.dataset.q;
+    document.getElementById('detalhe-programa').innerHTML = 'Programa da bandeira: <strong>' + PROGRAMAS[b] + '</strong>';
+    document.getElementById('detalhe-maps').href = linkMaps(li);
+    document.getElementById('detalhe-waze').href = linkWaze(li);
+    document.getElementById('detalhe-earth').href = linkEarth(li);
+    recado.textContent = '';
+    var fotos = lerFotos(li);
+    galeria.hidden = !fotos.length;
+    trilho.innerHTML = fotos.map(function (f) {
+      return '<figure><a href="' + f.src + '" target="_blank" rel="noopener"><img src="' + f.src + '" alt="' + f.legenda + '" width="960" height="1280"></a><figcaption>' + f.legenda + '</figcaption></figure>';
+    }).join('');
+    trilho.scrollLeft = 0;
+    mostrarVista(li, li.dataset.lat ? '360' : 'satelite');
+    detalhe.classList.remove('fechando');
+    if (!detalhe.open) detalhe.showModal();
+    try { history.replaceState(null, '', '#' + li.dataset.id); } catch (e) {}
+  }
+
+  function fecharDetalhe() {
+    if (!detalhe.open || detalhe.classList.contains('fechando')) return;
+    function terminar() {
+      detalhe.classList.remove('fechando');
+      detalhe.close();
+      mapa.innerHTML = '';
+      try { history.replaceState(null, '', '#postos'); } catch (e) {}
+      if (focoAnterior) focoAnterior.focus();
+    }
+    if (reduzir) { terminar(); return; }
+    detalhe.classList.add('fechando');
+    var feito = false;
+    function uma() { if (!feito) { feito = true; terminar(); } }
+    detalhe.querySelector('.detalhe-caixa').addEventListener('animationend', uma, { once: true });
+    setTimeout(uma, 320);
+  }
+
+  document.getElementById('detalhe-fechar').addEventListener('click', fecharDetalhe);
+
+  // No celular, arrastar o topo do painel para baixo fecha a página do posto (como nos apps).
+  (function () {
+    var caixa = detalhe.querySelector('.detalhe-caixa');
+    var alca = detalhe.querySelector('.detalhe-alca');
+    var topo = detalhe.querySelector('.detalhe-topo');
+    var inicioY = null, deslocamento = 0;
+    function comecar(e) {
+      if (window.innerWidth > 760 || e.target.closest('button')) return;
+      inicioY = e.clientY; deslocamento = 0;
+      caixa.style.transition = 'none';
+      e.currentTarget.setPointerCapture(e.pointerId);
+    }
+    function mover(e) {
+      if (inicioY === null) return;
+      deslocamento = Math.max(0, e.clientY - inicioY);
+      caixa.style.transform = 'translateY(' + deslocamento + 'px)';
+    }
+    function soltar() {
+      if (inicioY === null) return;
+      inicioY = null;
+      if (deslocamento > 110) {
+        caixa.style.transition = '';
+        fecharDetalhe();
+        setTimeout(function () { caixa.style.transform = ''; }, 400);
+      } else {
+        caixa.style.transition = 'transform .25s cubic-bezier(.2,.7,.2,1)';
+        caixa.style.transform = '';
+      }
+    }
+    [alca, topo].forEach(function (el) {
+      el.addEventListener('pointerdown', comecar);
+      el.addEventListener('pointermove', mover);
+      el.addEventListener('pointerup', soltar);
+      el.addEventListener('pointercancel', soltar);
+    });
+  })();
+  detalhe.addEventListener('cancel', function (e) { e.preventDefault(); fecharDetalhe(); });
+  detalhe.addEventListener('click', function (e) { if (e.target === detalhe) fecharDetalhe(); });
+  document.getElementById('detalhe-copiar').addEventListener('click', function () {
+    var texto = postoAberto ? postoAberto.dataset.q : '';
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(texto).then(function () { recado.textContent = 'Endereço copiado.'; }, function () { recado.textContent = texto; });
+    } else { recado.textContent = texto; }
+  });
+  postos.forEach(function (li) { if (location.hash === '#' + li.dataset.id) abrirDetalhe(li); });
+
+  // Filtros
+  function normalizar(s) { return s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase(); }
+  postos.forEach(function (li) { li.dataset.busca = normalizar(li.textContent + ' ' + li.dataset.q); });
+  var estado = { zona: 'todas', bandeira: 'todas', busca: '' };
+  var chips = Array.prototype.slice.call(document.querySelectorAll('.chip[data-zona]'));
+  var chipsBandeira = Array.prototype.slice.call(document.querySelectorAll('.chip-logo[data-bandeira]'));
+  var busca = document.getElementById('busca-posto');
+  var botaoBandeiras = document.getElementById('filtros-mais');
+  var campoBandeira = document.getElementById('campo-bandeira');
+  var contagem = document.getElementById('contagem');
+  var vazio = document.getElementById('vazio');
+
+  var reduzir = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var suave = 'cubic-bezier(.2,.7,.2,1)';
+  var geracao = 0;
+
+  function combina(li, termo) {
+    return (estado.zona === 'todas' || li.dataset.zona === estado.zona) &&
+           (estado.bandeira === 'todas' || li.dataset.bandeira === estado.bandeira) &&
+           (!termo || li.dataset.busca.indexOf(termo) !== -1);
+  }
+
+  // Os postos que saem encolhem e somem, os que ficam deslizam para o novo lugar e os que entram aparecem em sequência.
+  function aplicar(animar) {
+    var termo = normalizar(estado.busca.trim());
+    postos.forEach(function (li) { li.getAnimations().forEach(function (a) { a.cancel(); }); });
+    var total = postos.filter(function (li) { return combina(li, termo); }).length;
+    chips.forEach(function (c) { c.setAttribute('aria-pressed', String(c.dataset.zona === estado.zona)); });
+    chipsBandeira.forEach(function (c) { c.setAttribute('aria-pressed', String(c.dataset.bandeira === estado.bandeira)); });
+    if (estado.bandeira !== 'todas') mostrarBandeiras(true);
+    contagem.innerHTML = '<strong>' + total + '</strong> ' + (total === 1 ? 'posto encontrado' : 'postos encontrados');
+
+    function trocar() {
+      postos.forEach(function (li) { li.hidden = !combina(li, termo); });
+      vazio.hidden = total !== 0;
+    }
+    if (!animar || reduzir || !Element.prototype.animate) { geracao++; trocar(); return; }
+
+    var visiveis = postos.filter(function (li) { return !li.hidden; });
+    var antes = new Map();
+    visiveis.forEach(function (li) { antes.set(li, li.getBoundingClientRect()); });
+    var saindo = visiveis.filter(function (li) { return !combina(li, termo); });
+    var entrando = postos.filter(function (li) { return li.hidden && combina(li, termo); });
+
+    var esta = ++geracao;
+    var saida = Promise.all(saindo.map(function (li) {
+      return li.animate([{ opacity: 1, transform: 'scale(1)' }, { opacity: 0, transform: 'scale(.9)' }],
+        { duration: 200, easing: 'ease-in', fill: 'forwards' }).finished;
+    }));
+    // Se o navegador pausar a animação (aba em segundo plano), os postos trocam assim mesmo.
+    Promise.race([saida, new Promise(function (ok) { setTimeout(ok, 260); })]).then(function () {
+      if (esta !== geracao) return;
+      saindo.forEach(function (li) { li.getAnimations().forEach(function (a) { a.cancel(); }); });
+      trocar();
+      postos.forEach(function (li) {
+        if (li.hidden || !antes.has(li)) return;
+        var a = antes.get(li), b = li.getBoundingClientRect();
+        var dx = a.left - b.left, dy = a.top - b.top;
+        if (dx || dy) li.animate([{ transform: 'translate(' + dx + 'px,' + dy + 'px)' }, { transform: 'none' }], { duration: 380, easing: suave });
+      });
+      entrando.forEach(function (li, i) {
+        li.animate([{ opacity: 0, transform: 'translateY(16px) scale(.96)' }, { opacity: 1, transform: 'none' }],
+          { duration: 340, delay: 60 + i * 45, easing: suave, fill: 'backwards' });
+      });
+    }).catch(function () { /* um novo filtro interrompeu este */ });
+  }
+
+  // Filtro de bandeira recolhido: abre pelo botão ou sozinho quando um link de programa escolhe a bandeira.
+  function mostrarBandeiras(abrir) {
+    campoBandeira.hidden = !abrir;
+    botaoBandeiras.setAttribute('aria-expanded', String(abrir));
+  }
+  botaoBandeiras.addEventListener('click', function () {
+    var abrir = campoBandeira.hidden;
+    mostrarBandeiras(abrir);
+    if (!abrir && estado.bandeira !== 'todas') { estado.bandeira = 'todas'; aplicar(true); }
+  });
+  chips.forEach(function (c) { c.addEventListener('click', function () { estado.zona = c.dataset.zona; aplicar(true); }); });
+  chipsBandeira.forEach(function (c) { c.addEventListener('click', function () { estado.bandeira = c.dataset.bandeira; aplicar(true); }); });
+  busca.addEventListener('input', function () { estado.busca = busca.value; aplicar(false); });
+  document.getElementById('limpar-filtros').addEventListener('click', function () {
+    estado = { zona: 'todas', bandeira: 'todas', busca: '' }; busca.value = ''; aplicar(true);
+  });
+  document.querySelectorAll('[data-bandeira-link]').forEach(function (a) {
+    a.addEventListener('click', function () { estado.bandeira = a.dataset.bandeiraLink; estado.zona = 'todas'; estado.busca = ''; busca.value = ''; aplicar(true); });
+  });
+
+  // Formulário de interesse dos lojistas: valida no aparelho, envia para a Netlify Forms e mostra o resultado
+  // ali mesmo. Se o envio falhar (sem internet, ou fora da Netlify), diz isso e oferece o WhatsApp da central.
+  (function () {
+    var form = document.getElementById('interesse');
+    if (!form) return;
+    var status = document.getElementById('interesse-status');
+    var enviar = form.querySelector('button[type="submit"]');
+    var mensagens = {
+      nome: 'Escreva o seu nome.',
+      empresa: 'Escreva o nome da empresa ou da marca.',
+      segmento: 'Escolha o segmento do seu negócio.',
+      email: 'Escreva um e-mail válido, como nome@empresa.com.br.',
+      telefone: 'Escreva o telefone com DDD, como (12) 90000-0000.',
+      aceite: 'Marque a autorização para podermos responder.'
+    };
+    function conferir(campo) {
+      var erro = document.getElementById(campo.id + '-erro');
+      if (!erro) return true;
+      var valor = campo.type === 'checkbox' ? campo.checked : campo.value.trim();
+      var ok = campo.type === 'checkbox' ? valor : (valor !== '' && campo.checkValidity());
+      if (ok && campo.name === 'telefone') ok = valor.replace(/\D/g, '').length >= 10;
+      erro.textContent = ok ? '' : mensagens[campo.name];
+      if (ok) campo.removeAttribute('aria-invalid'); else campo.setAttribute('aria-invalid', 'true');
+      return ok;
+    }
+    var campos = Array.prototype.slice.call(form.querySelectorAll('[required]'));
+    campos.forEach(function (c) {
+      c.addEventListener('blur', function () { if (c.value || c.hasAttribute('aria-invalid')) conferir(c); });
+      c.addEventListener('change', function () { if (c.hasAttribute('aria-invalid')) conferir(c); });
+    });
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var primeiroErro = null;
+      campos.forEach(function (c) { if (!conferir(c) && !primeiroErro) primeiroErro = c; });
+      if (primeiroErro) { primeiroErro.focus(); status.className = 'interesse-status falhou'; status.textContent = 'Confira os campos marcados.'; return; }
+      enviar.setAttribute('aria-busy', 'true'); enviar.disabled = true;
+      status.className = 'interesse-status'; status.textContent = 'Enviando…';
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(new FormData(form)).toString()
+      }).then(function (r) {
+        if (!r.ok) throw new Error(r.status);
+        form.innerHTML = '<div class="interesse-feito" tabindex="-1">' +
+          '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M7.5 12.5l3 3 6-6.5"/></svg>' +
+          '<h3>Recebemos o seu interesse.</h3><p>A equipe da Rede Ypê vai falar com você pelo e-mail ou telefone que você informou.</p></div>';
+        form.querySelector('.interesse-feito').focus();
+      }).catch(function () {
+        enviar.removeAttribute('aria-busy'); enviar.disabled = false;
+        status.className = 'interesse-status falhou';
+        status.innerHTML = 'Não conseguimos enviar agora. Tente de novo em instantes ou <a href="https://wa.me/5512974096149?text=' +
+          encodeURIComponent('Olá! Tenho interesse no novo espaço comercial do Putim.') + '" target="_blank" rel="noopener">fale com a central pelo WhatsApp</a>.';
+      });
+    });
+  })();
+
+  // Copiar o número da central
+  var copiar = document.getElementById('copiar');
+  var aviso = document.getElementById('copiado');
+  var numero = document.getElementById('numero');
+  copiar.addEventListener('click', function () {
+    function selecionar() {
+      var r = document.createRange(); r.selectNodeContents(numero);
+      var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+      aviso.textContent = 'Número selecionado. Use Ctrl+C ou toque em Copiar.';
+    }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText('(12) 97409-6149').then(function () { aviso.textContent = 'Número copiado.'; }, selecionar);
+    } else { selecionar(); }
+  });
+
+  // A rota Ypê: a faixa amarela acompanha a rolagem e acende as regiões na ordem da Dutra.
+  // Sem animação (ou sem JavaScript) a estrada aparece inteira e todas as regiões acesas.
+  (function () {
+    var secao = document.getElementById('rota');
+    var mapaRota = document.getElementById('rota-mapa');
+    var svg = document.getElementById('rota-svg');
+    var asfalto = svg.querySelector('.rota-asfalto'), tracejado = svg.querySelector('.rota-tracejado');
+    var faixa = svg.querySelector('.rota-faixa'), ponta = svg.querySelector('.rota-ponta');
+    var caixaParadas = document.getElementById('rota-paradas'), fim = document.getElementById('rota-fim');
+    var SJC = 'São José dos Campos';
+    var REGIOES = [['jacarei', 'Jacareí', ''], ['oeste', 'Zona Oeste', SJC], ['sul', 'Zona Sul', SJC], ['norte', 'Zona Norte', SJC], ['leste', 'Zona Leste', SJC], ['cacapava', 'Caçapava', ''], ['taubate', 'Taubaté', '']];
+    var MARCOS = [0.04, 0.19, 0.35, 0.51, 0.67, 0.82, 0.97];
+    var TRACADOS = {
+      largo: { vb: '0 0 1200 520', d: 'M20 380 C160 380 200 150 340 150 S520 390 660 380 S820 130 960 140 S1120 360 1180 360' },
+      estreito: { vb: '0 0 400 720', d: 'M70 20 C70 90 150 110 150 180 S70 270 70 340 S150 430 150 500 S70 610 70 700' }
+    };
+    // No celular as paradas ficam em alturas iguais, com os cartões sempre à direita da estrada.
+    var ALTURAS = [0.02, 0.18, 0.34, 0.5, 0.66, 0.82, 0.98];
+    function comprimentoNaAltura(y) {
+      var passos = 240;
+      for (var k = 0; k <= passos; k++) {
+        var L = comprimento * k / passos;
+        if (faixa.getPointAtLength(L).y >= y) return L;
+      }
+      return comprimento;
+    }
+    var estreito = window.matchMedia('(max-width: 700px)');
+    var animar = !reduzir && 'IntersectionObserver' in window;
+    var comprimento = 0, vb = [0, 0, 1200, 520], paradas = [], faixaCidade = null;
+
+    REGIOES.forEach(function (r) {
+      var lista = postos.filter(function (li) { return li.dataset.zona === r[0]; });
+      var bandeiras = lista.map(function (li) { return li.dataset.bandeira; }).filter(function (b, i, a) { return a.indexOf(b) === i; });
+      var b = document.createElement('button');
+      b.type = 'button'; b.className = 'parada';
+      b.setAttribute('aria-label', r[1] + (r[2] ? ', ' + r[2] : '') + ': ' + lista.length + (lista.length === 1 ? ' posto' : ' postos') + '. Ver na lista');
+      b.innerHTML = '<span class="parada-pino"></span><span class="parada-cartao">' + (r[2] ? '<em>SJC</em>' : '') + '<strong>' + r[1] + '</strong><small>' +
+        lista.length + (lista.length === 1 ? ' posto' : ' postos') + '</small><span class="parada-logos">' +
+        bandeiras.map(function (x) { return logo('logo-' + x); }).join('') + '</span></span>';
+      b.addEventListener('click', function () {
+        var chip = document.querySelector('.chip[data-zona="' + r[0] + '"]');
+        if (chip) chip.click();
+        document.getElementById('postos').scrollIntoView({ behavior: reduzir ? 'auto' : 'smooth' });
+      });
+      caixaParadas.appendChild(b);
+      paradas.push(b);
+    });
+
+    function montar() {
+      var t = estreito.matches ? TRACADOS.estreito : TRACADOS.largo;
+      svg.setAttribute('viewBox', t.vb);
+      vb = t.vb.split(' ').map(Number);
+      [asfalto, tracejado, faixa].forEach(function (p) { p.setAttribute('d', t.d); });
+      comprimento = faixa.getTotalLength();
+      faixa.style.strokeDasharray = comprimento + ' ' + comprimento;
+      paradas.forEach(function (b, i) {
+        var L = estreito.matches ? comprimentoNaAltura(20 + (vb[3] - 40) * ALTURAS[i]) : comprimento * MARCOS[i];
+        var pt = faixa.getPointAtLength(L);
+        b.marco = L / comprimento;
+        b.style.left = (pt.x / vb[2] * 100) + '%';
+        b.style.top = (pt.y / vb[3] * 100) + '%';
+        b.classList.toggle('embaixo', !estreito.matches && pt.y > vb[3] / 2);
+      });
+      // Faixa com o nome da cidade, da Zona Oeste até a Zona Leste (só no computador).
+      if (!faixaCidade) {
+        faixaCidade = document.createElement('span');
+        faixaCidade.className = 'rota-cidade';
+        faixaCidade.textContent = SJC;
+        caixaParadas.appendChild(faixaCidade);
+      }
+      var de = parseFloat(paradas[1].style.left), ate = parseFloat(paradas[4].style.left);
+      faixaCidade.style.left = de + '%';
+      faixaCidade.style.width = (ate - de) + '%';
+      faixaCidade.style.top = '-7%';
+      atualizar();
+    }
+
+    function progresso() {
+      if (!animar) return 1;
+      var r = secao.getBoundingClientRect();
+      var curso = secao.offsetHeight - window.innerHeight;
+      // Começa a desenhar um pouco antes de a seção encostar no topo e termina com 70% do caminho.
+      var inicio = window.innerHeight * 0.35;
+      return Math.min(1, Math.max(0, (inicio - r.top) / (curso * 0.7 + inicio)));
+    }
+
+    function atualizar() {
+      var p = progresso();
+      faixa.style.strokeDashoffset = String(comprimento * (1 - p));
+      var pt = faixa.getPointAtLength(comprimento * p);
+      ponta.setAttribute('cx', pt.x); ponta.setAttribute('cy', pt.y);
+      paradas.forEach(function (b) { b.classList.toggle('acesa', p >= b.marco - 0.005); });
+      fim.classList.toggle('visivel', p >= 0.97);
+    }
+
+    if (animar) secao.classList.add('animada');
+    montar();
+    var pedido = false;
+    window.addEventListener('scroll', function () {
+      if (pedido) return;
+      pedido = true;
+      requestAnimationFrame(function () { pedido = false; atualizar(); });
+    }, { passive: true });
+    window.addEventListener('resize', montar);
+    if (estreito.addEventListener) estreito.addEventListener('change', montar);
+  })();
+
+  // ===== Camada de movimento =====
+  (function () {
+    if (reduzir) return;
+
+    // Palavras do título sobem uma a uma.
+    var h1 = document.querySelector('.abertura h1');
+    var n = 0;
+    Array.prototype.forEach.call(h1.querySelectorAll('.h1-forte, .h1-leve'), function (parte) {
+      parte.innerHTML = parte.textContent.trim().split(/\s+/).map(function (p) {
+        return '<span class="palavra"><span style="--i:' + (n++) + '">' + p + '</span></span>';
+      }).join(' ');
+    });
+
+    // Entradas na rolagem. O que já está na primeira tela não é escondido.
+    if ('IntersectionObserver' in window) {
+      document.documentElement.classList.add('anima');
+      var revelador = new IntersectionObserver(function (ent) {
+        ent.forEach(function (e) {
+          if (!e.isIntersecting) return;
+          var el = e.target;
+          el.classList.add('visivel');
+          revelador.unobserve(el);
+          // Depois de entrar, o elemento volta ao estilo normal (hover e inclinação ficam rápidos de novo).
+          setTimeout(function () { el.classList.remove('revelar', 'visivel', 'revelar-foto'); }, 1500 + (parseInt(el.style.getPropertyValue('--atraso'), 10) || 0));
+        });
+      }, { rootMargin: '0px 0px -8% 0px' });
+      // Só os títulos e a foto da rede entram com movimento; cards e listas aparecem prontos para usar.
+      var alvos = document.querySelectorAll('.secao-cabeca h2, .rota-cabeca h2, .rede-foto');
+      Array.prototype.forEach.call(alvos, function (el) {
+        if (el.getBoundingClientRect().top < window.innerHeight) return;
+        var irmaos = Array.prototype.indexOf.call(el.parentNode.children, el);
+        el.style.setProperty('--atraso', (irmaos % 3) * 90 + 'ms');
+        el.classList.add('revelar');
+        if (el.classList.contains('rede-foto')) el.classList.add('revelar-foto');
+        revelador.observe(el);
+      });
+    }
+
+    // Barra de progresso no topo e paralaxe da foto da rede.
+    var barra = document.getElementById('progresso-rolagem');
+    var fotoRede = document.querySelector('.rede-foto');
+    function rolagem() {
+      var total = document.documentElement.scrollHeight - window.innerHeight;
+      barra.style.transform = 'scaleX(' + (total > 0 ? Math.min(1, window.scrollY / total) : 0) + ')';
+      var r = fotoRede.getBoundingClientRect();
+      if (r.bottom > 0 && r.top < window.innerHeight) {
+        var p = (r.top + r.height / 2) / (window.innerHeight + r.height) - 0.5;
+        fotoRede.style.setProperty('--paralaxe', (p * -60).toFixed(1) + 'px');
+      }
+    }
+    var pedidoRolagem = false;
+    window.addEventListener('scroll', function () {
+      if (pedidoRolagem) return;
+      pedidoRolagem = true;
+      requestAnimationFrame(function () { pedidoRolagem = false; rolagem(); });
+    }, { passive: true });
+    rolagem();
+
+  })();
+
+  // ===== Buscador da abertura e "posto mais perto de mim" =====
+  (function () {
+    var form = document.getElementById('localizador');
+    var campo = document.getElementById('busca-abertura');
+    var botao = document.getElementById('perto-de-mim');
+    var resultado = document.getElementById('perto-resultado');
+    var lista = document.getElementById('lista-postos');
+    var secaoPostos = document.getElementById('postos');
+    function irParaPostos() { secaoPostos.scrollIntoView({ behavior: reduzir ? 'auto' : 'smooth' }); }
+
+    // Buscar pelo texto: usa a mesma busca da lista de postos.
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      busca.value = campo.value;
+      estado.busca = campo.value; estado.zona = 'todas'; estado.bandeira = 'todas';
+      aplicar(true);
+      irParaPostos();
+    });
+
+    function distanciaKm(a, b, c, d) {
+      var r = Math.PI / 180, dLat = (c - a) * r, dLng = (d - b) * r;
+      var h = Math.sin(dLat / 2) * Math.sin(dLat / 2) + Math.cos(a * r) * Math.cos(c * r) * Math.sin(dLng / 2) * Math.sin(dLng / 2);
+      return 12742 * Math.asin(Math.sqrt(h));
+    }
+    function formatar(km) {
+      if (km < 1) return Math.max(50, Math.round(km * 1000 / 50) * 50) + ' m';
+      return km.toLocaleString('pt-BR', { maximumFractionDigits: km < 10 ? 1 : 0 }) + ' km';
+    }
+    function aviso(texto) {
+      resultado.innerHTML = '<div class="perto perto-erro"><p>' + texto + '</p></div>';
+    }
+
+    // Ordena os cards do mais perto ao mais longe, com o deslize da lista.
+    function ordenar(origem) {
+      var antes = new Map();
+      postos.forEach(function (li) { if (!li.hidden) antes.set(li, li.getBoundingClientRect()); });
+      postos.slice().sort(function (a, b) { return a.km - b.km; }).forEach(function (li) { lista.appendChild(li); });
+      postos.forEach(function (li) {
+        var capa = li.querySelector('.posto-capa');
+        var chip = capa.querySelector('.posto-distancia');
+        if (!chip) { chip = document.createElement('span'); chip.className = 'posto-distancia'; capa.appendChild(chip); }
+        chip.innerHTML = logo('icone-pino') + formatar(li.km);
+        if (reduzir || !antes.has(li)) return;
+        var a = antes.get(li), b = li.getBoundingClientRect();
+        if (a.top !== b.top || a.left !== b.left) {
+          li.animate([{ transform: 'translate(' + (a.left - b.left) + 'px,' + (a.top - b.top) + 'px)' }, { transform: 'none' }], { duration: 450, easing: suave });
+        }
+      });
+      contagem.insertAdjacentHTML('beforeend', ', do mais perto ao mais longe de você');
+    }
+
+    // Ilha: some enquanto a abertura (que já tem o botão de localização) está na tela. Cada troca de
+    // conteúdo estica ou encolhe a pílula do tamanho antigo ao novo, com um leve passar do ponto.
+    var ilha = document.getElementById('ilha');
+    var ilhaConteudo = document.getElementById('ilha-conteudo');
+    var abertura = document.querySelector('.abertura');
+    var voltarIlha;
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(function (e) { ilha.classList.toggle('fora', e[0].isIntersecting); }).observe(abertura);
+    } else {
+      ilha.classList.remove('fora');
+    }
+    function trocarIlha(html) {
+      var w0 = ilha.offsetWidth, h0 = ilha.offsetHeight;
+      var primeira = !ilhaConteudo.firstChild;
+      ilhaConteudo.innerHTML = html;
+      if (primeira || reduzir || !ilha.animate) return;
+      var w1 = ilha.offsetWidth, h1 = ilha.offsetHeight;
+      ilha.animate([{ width: w0 + 'px', height: h0 + 'px' }, { width: w1 + 'px', height: h1 + 'px' }], { duration: 520, easing: 'cubic-bezier(.3,1.35,.5,1)' });
+      ilhaConteudo.animate([{ opacity: 0, filter: 'blur(4px)', transform: 'scale(.94)' }, { opacity: 1, filter: 'blur(0)', transform: 'none' }], { duration: 360, delay: 140, easing: suave, fill: 'backwards' });
+    }
+    function ilhaAchar() {
+      trocarIlha('<button type="button" class="ilha-achar" id="ilha-achar"><span class="ilha-bola">' + logo('icone-pino') + '</span>Posto mais perto</button>');
+      document.getElementById('ilha-achar').addEventListener('click', function () { botao.click(); });
+    }
+    function ilhaAviso(texto) {
+      trocarIlha('<span class="ilha-giro" aria-hidden="true"' + (texto ? ' style="animation:none;border-color:#FFD000"' : '') + '></span><span class="ilha-texto">' + (texto || 'Procurando você…') + '</span>');
+    }
+    function ilhaPosto(li) {
+      var zona = li.querySelector('.zona'), cidade = zona.querySelector('small');
+      trocarIlha(
+        '<span class="ilha-marca">' + logo('logo-' + li.dataset.bandeira) + '</span>' +
+        '<button type="button" class="ilha-posto" id="ilha-ver" aria-label="Ver ' + li.dataset.nome + '"><strong>' + li.dataset.nome.replace(/^(auto )?posto\s+/i, '') + '</strong>' +
+          '<small>' + formatar(li.km) + ' · ' + (cidade ? cidade.textContent : zona.textContent) + '</small></button>' +
+        '<span class="ilha-rotas">' +
+          '<a href="' + linkMaps(li) + '" target="_blank" rel="noopener" aria-label="Rota no Google Maps" title="Google Maps">' + logo('logo-maps') + '</a>' +
+          '<a href="' + linkWaze(li) + '" target="_blank" rel="noopener" aria-label="Rota no Waze" title="Waze">' + logo('logo-waze') + '</a>' +
+        '</span>');
+      document.getElementById('ilha-ver').addEventListener('click', function () { abrirDetalhe(li, this); });
+    }
+    ilhaAchar();
+
+    botao.addEventListener('click', function () {
+      if (!navigator.geolocation) { aviso('Este navegador não consegue informar sua localização. Digite seu bairro na busca acima.'); return; }
+      botao.setAttribute('aria-busy', 'true');
+      resultado.innerHTML = '';
+      clearTimeout(voltarIlha);
+      ilhaAviso();
+      navigator.geolocation.getCurrentPosition(function (pos) {
+        botao.removeAttribute('aria-busy');
+        var lat = pos.coords.latitude, lng = pos.coords.longitude;
+        postos.forEach(function (li) { li.km = distanciaKm(lat, lng, Number(li.dataset.lat), Number(li.dataset.lng)); });
+        var maisPerto = postos.slice().sort(function (a, b) { return a.km - b.km; })[0];
+        estado.busca = ''; busca.value = ''; estado.zona = 'todas'; estado.bandeira = 'todas';
+        aplicar(false);
+        ordenar();
+        var zona = maisPerto.querySelector('.zona'), cidade = zona.querySelector('small');
+        resultado.innerHTML = '<div class="perto">' + logo('logo-' + maisPerto.dataset.bandeira) +
+          '<small>Mais perto de você, a ' + formatar(maisPerto.km) + '</small>' +
+          '<strong>' + maisPerto.dataset.nome + '</strong>' +
+          '<div class="perto-acoes">' +
+            '<a href="' + linkMaps(maisPerto) + '" target="_blank" rel="noopener" aria-label="Rota no Google Maps" title="Google Maps">' + logo('logo-maps') + '</a>' +
+            '<a href="' + linkWaze(maisPerto) + '" target="_blank" rel="noopener" aria-label="Rota no Waze" title="Waze">' + logo('logo-waze') + '</a>' +
+            '<button type="button" id="perto-ver" aria-label="Ver o posto" title="Ver o posto">' + logo('icone-abrir') + '</button>' +
+          '</div>' +
+          '<small>' + (cidade ? zona.firstChild.textContent + ', ' + cidade.textContent : zona.textContent) + '</small></div>';
+        document.getElementById('perto-ver').addEventListener('click', function () { abrirDetalhe(maisPerto, this); });
+        ilhaPosto(maisPerto);
+      }, function (erro) {
+        botao.removeAttribute('aria-busy');
+        ilhaAviso(erro.code === 1 ? 'Localização bloqueada' : 'Não achamos você');
+        voltarIlha = setTimeout(ilhaAchar, 3500);
+        aviso(erro.code === 1
+          ? 'Você não liberou a localização. Digite seu bairro ou cidade na busca acima.'
+          : 'Não conseguimos achar sua localização agora. Tente de novo ou digite seu bairro na busca.');
+      }, { enableHighAccuracy: true, timeout: 12000, maximumAge: 300000 });
+    });
+  })();
+
+  // Serviços: o traço do ícone se redesenha (pathLength=1 deixa o dasharray igual para todo desenho).
+  // Sem mouse, o serviço que cruza o meio da tela é o que "abastece"; tocar também ativa.
+  (function () {
+    var servicos = Array.prototype.slice.call(document.querySelectorAll('.servico'));
+    servicos.forEach(function (s) {
+      Array.prototype.forEach.call(s.querySelectorAll('.servico-icone path'), function (p) { p.setAttribute('pathLength', '1'); });
+    });
+    if (window.matchMedia('(hover: hover)').matches) return;
+    function ativar(alvo) { servicos.forEach(function (s) { s.classList.toggle('ativo', s === alvo); }); }
+    servicos.forEach(function (s) { s.addEventListener('click', function () { ativar(s); }); });
+    if (!('IntersectionObserver' in window)) return;
+    var observador = new IntersectionObserver(function (entradas) {
+      entradas.forEach(function (e) {
+        if (e.isIntersecting) ativar(e.target);
+        else e.target.classList.remove('ativo');
+      });
+    }, { rootMargin: '-42% 0px -42% 0px' });
+    servicos.forEach(function (s) { observador.observe(s); });
+  })();
+
+  // Fundo do painel de contato: um shader curto em WebGL (faixa grafite e faixa amarela). Só roda enquanto o painel está na tela;
+  // sem WebGL fica o azul do painel, e quem pede menos animação recebe um quadro parado.
+  (function () {
+    var tela = document.getElementById('contato-fundo');
+    var gl = tela && (tela.getContext('webgl', { antialias: false, alpha: false }) || tela.getContext('experimental-webgl'));
+    if (!gl) return;
+    var vert = 'attribute vec2 p;void main(){gl_Position=vec4(p,0.,1.);}';
+    var frag = [
+      'precision mediump float;uniform vec2 r;uniform float t;uniform vec3 base;',
+      'void main(){',
+      ' vec2 uv=gl_FragCoord.xy/r;',
+      ' float w=sin(uv.x*3.2+uv.y*1.4+t*.35)*.09+sin(uv.x*6.1-t*.22)*.035;',
+      ' float am=smoothstep(.2,0.,abs(uv.y-.1-uv.x*.22-w));',
+      ' float az=smoothstep(.42,0.,abs(uv.y-.62+uv.x*.18-w*1.6));',
+      ' vec3 c=mix(base,base+vec3(.075,.075,.08),az*.8);',
+      ' c=mix(c,vec3(1.,.816,0.),am*am*.34);',
+      ' float g=fract(sin(dot(gl_FragCoord.xy+fract(t)*91.,vec2(12.9898,78.233)))*43758.5453);',
+      ' gl_FragColor=vec4(c+(g-.5)*.06,1.);',
+      '}'
+    ].join('\n');
+    function sombra(tipo, codigo) { var s = gl.createShader(tipo); gl.shaderSource(s, codigo); gl.compileShader(s); return s; }
+    var prog = gl.createProgram();
+    gl.attachShader(prog, sombra(gl.VERTEX_SHADER, vert));
+    gl.attachShader(prog, sombra(gl.FRAGMENT_SHADER, frag));
+    gl.linkProgram(prog);
+    if (!gl.getProgramParameter(prog, gl.LINK_STATUS)) return;
+    gl.useProgram(prog);
+    gl.bindBuffer(gl.ARRAY_BUFFER, gl.createBuffer());
+    gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1, -1, 3, -1, -1, 3]), gl.STATIC_DRAW);
+    var pos = gl.getAttribLocation(prog, 'p');
+    gl.enableVertexAttribArray(pos);
+    gl.vertexAttribPointer(pos, 2, gl.FLOAT, false, 0, 0);
+    var uR = gl.getUniformLocation(prog, 'r'), uT = gl.getUniformLocation(prog, 't'), uBase = gl.getUniformLocation(prog, 'base');
+    var cor = getComputedStyle(tela.parentNode.parentNode).backgroundColor.match(/\d+/g) || [18, 19, 21];
+    gl.uniform3f(uBase, cor[0] / 255, cor[1] / 255, cor[2] / 255);
+    function medir() {
+      // Metade da resolução: o grão fica com cara de filme e a placa de vídeo quase não trabalha.
+      var escala = Math.min(window.devicePixelRatio || 1, 2) * 0.5;
+      tela.width = Math.max(1, Math.round(tela.clientWidth * escala));
+      tela.height = Math.max(1, Math.round(tela.clientHeight * escala));
+      gl.viewport(0, 0, tela.width, tela.height);
+      gl.uniform2f(uR, tela.width, tela.height);
+    }
+    function quadro(ms) {
+      gl.uniform1f(uT, ms / 1000);
+      gl.drawArrays(gl.TRIANGLES, 0, 3);
+    }
+    var rodando = false, pedido;
+    function laco(ms) { quadro(ms); if (rodando) pedido = requestAnimationFrame(laco); }
+    medir(); quadro(12000);
+    tela.classList.add('pronto');
+    window.addEventListener('resize', function () { medir(); if (!rodando) quadro(12000); });
+    if (reduzir || !('IntersectionObserver' in window)) return;
+    new IntersectionObserver(function (e) {
+      rodando = e[0].isIntersecting;
+      cancelAnimationFrame(pedido);
+      if (rodando) pedido = requestAnimationFrame(laco);
+    }).observe(tela);
+  })();
+
+  // Números do resumo como o contador de uma bomba de combustível: cada dígito é uma fita de 0 a 9
+  // que gira algumas voltas e para no valor certo, com um leve borrão de movimento e um brilho ao parar.
+  // O número final já está no HTML, então quem não tem animação vê o valor certo.
+  var resumo = document.querySelector('.resumo');
+  if (resumo && !reduzir && 'IntersectionObserver' in window && Element.prototype.animate) {
+    var VOLTAS = 2;
+    var celulas = Array.prototype.slice.call(resumo.children);
+    celulas.forEach(function (cel) {
+      var num = cel.querySelector('strong');
+      var valor = num.textContent.trim();
+      num.setAttribute('aria-label', valor);
+      num.innerHTML = valor.split('').map(function (d) {
+        var fita = '';
+        for (var v = 0; v < VOLTAS; v++) for (var k = 0; k < 10; k++) fita += '<span>' + k + '</span>';
+        for (var k2 = 0; k2 <= Number(d); k2++) fita += '<span>' + k2 + '</span>';
+        fita += '<span>' + ((Number(d) + 1) % 10) + '</span>'; // folga para o leve "passar e voltar" do final
+        return '<span class="odo" aria-hidden="true"><span class="odo-fita">' + fita + '</span></span>';
+      }).join('');
+      cel.style.setProperty('--barra', '0');
+    });
+    var observador = new IntersectionObserver(function (entradas) {
+      if (!entradas[0].isIntersecting) return;
+      observador.disconnect();
+      celulas.forEach(function (cel, i) {
+        var fitas = Array.prototype.slice.call(cel.querySelectorAll('.odo-fita'));
+        var fim = 0;
+        fitas.forEach(function (fita, coluna) {
+          var passos = fita.children.length - 2;
+          var duracao = 1700 + coluna * 350, atraso = 150 + i * 160;
+          fim = Math.max(fim, duracao + atraso);
+          fita.animate([
+            { transform: 'translateY(0)', filter: 'blur(0)' },
+            { filter: 'blur(1.6px)', offset: 0.35 },
+            { filter: 'blur(0.8px)', offset: 0.75 },
+            { transform: 'translateY(' + (-passos * 1.15) + 'em)', filter: 'blur(0)' }
+          ], { duration: duracao, delay: atraso, easing: 'cubic-bezier(.12,.75,.2,1.03)', fill: 'both' });
+        });
+        setTimeout(function () { cel.style.setProperty('--barra', '1'); }, 150 + i * 160);
+        setTimeout(function () { cel.classList.add('parou'); }, fim);
+      });
+    }, { threshold: 0.15 });
+    observador.observe(resumo);
+  }
+})();
+</script>
+</body>
 </html>

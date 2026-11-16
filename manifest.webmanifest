@@ -1,0 +1,14 @@
+{
+  "name": "Rede Ypê Combustíveis",
+  "short_name": "Rede Ypê",
+  "description": "15 postos Shell, Ipiranga e Petrobras em São José dos Campos e região.",
+  "lang": "pt-BR",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#121315",
+  "theme_color": "#121315",
+  "icons": [
+    { "src": "img/icones/icone-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "img/icones/icone-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
