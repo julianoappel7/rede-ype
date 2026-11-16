@@ -683,64 +683,15 @@ p { margin: 0; }
   padding: 2px 7px; border-radius: 999px; margin-left: auto;
 }
 
-/* Barra de contagem + alternador Cards / Tabela Completa */
+/* Barra de contagem + selo Postos em Cards Detalhados */
 .barra-contagem {
   display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 18px;
 }
 .barra-contagem .contagem { margin-bottom: 0; }
-.alternador-vista {
-  display: inline-flex; background: var(--marinho-suave); padding: 4px; border-radius: 999px; gap: 4px;
+.selo-vista-cards {
+  display: inline-flex; align-items: center; min-height: 38px; padding: 6px 16px; border-radius: 999px;
+  background: var(--asfalto); color: var(--amarelo); font: 600 0.9rem var(--font-body);
 }
-.btn-vista {
-  min-height: 40px; padding: 6px 16px; border-radius: 999px; border: 0; background: transparent;
-  color: var(--tinta); font: 600 0.9rem var(--font-body); cursor: pointer; transition: background-color .2s, color .2s;
-}
-.btn-vista[aria-pressed="true"] {
-  background: var(--asfalto); color: var(--amarelo); box-shadow: 0 2px 8px rgba(0,0,0,.15);
-}
-
-/* Tabela Completa fiel à imagem de referência */
-.tabela-relacao-wrap {
-  border-radius: var(--raio); border: 1px solid var(--linha); background: var(--papel);
-  overflow: hidden; box-shadow: var(--sombra); margin-bottom: 24px;
-}
-.tabela-relacao-topo {
-  background: linear-gradient(90deg, #092C66 0%, #0D3C84 50%, #092C66 100%);
-  color: #FFFFFF; padding: 16px 20px; text-align: center;
-}
-.tabela-relacao-topo h3 {
-  font-family: var(--font-display); font-size: clamp(1.05rem, 2.2vw, 1.4rem); font-weight: 900;
-  text-transform: uppercase; letter-spacing: 0.03em; margin: 0;
-}
-.tabela-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
-.tabela-relacao {
-  width: 100%; border-collapse: collapse; font-size: 0.86rem; text-align: left; min-width: 980px;
-}
-.tabela-relacao thead th {
-  background: var(--amarelo); color: #121314; font-family: var(--font-display); font-weight: 800;
-  font-size: 0.74rem; text-transform: uppercase; letter-spacing: 0.03em; padding: 12px 10px;
-  border-bottom: 2px solid #D9B000; border-right: 1px solid rgba(0,0,0,.08); text-align: center; vertical-align: middle;
-}
-.tabela-relacao thead th:nth-child(2), .tabela-relacao thead th:nth-child(4) { text-align: left; }
-.tabela-relacao tbody td {
-  padding: 11px 10px; border-bottom: 1px solid var(--linha); border-right: 1px solid var(--linha);
-  vertical-align: middle; text-align: center;
-}
-.tabela-relacao tbody td:nth-child(2) { text-align: left; font-weight: 700; color: var(--tinta); }
-.tabela-relacao tbody td:nth-child(4) { text-align: left; color: var(--cinza); font-size: 0.82rem; line-height: 1.35; }
-.tabela-relacao tbody tr:hover { background: var(--amarelo-suave); }
-.tabela-relacao tbody tr.linha-gruta { background: rgba(27, 122, 75, 0.08); }
-.tabela-relacao .selo-sim, .tabela-relacao .selo-nao {
-  display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px;
-  border-radius: 50%; font-size: 0.82rem; font-weight: 800;
-}
-.tabela-relacao .selo-sim { background: #1B7A4B; color: #FFFFFF; }
-.tabela-relacao .selo-nao { background: #D92D20; color: #FFFFFF; }
-.tabela-legenda {
-  display: flex; flex-wrap: wrap; gap: 10px 16px; align-items: center; padding: 14px 18px;
-  background: var(--bg); border-top: 1px solid var(--linha); font-size: 0.8rem; font-weight: 600; color: var(--tinta);
-}
-.tabela-legenda span { display: inline-flex; align-items: center; gap: 6px; }
 
 /* Bloco de serviços e combustíveis dentro do modal #detalhe */
 .detalhe-servicos-bloco {
@@ -1301,52 +1252,7 @@ html:has(.detalhe[open]) { overflow: hidden; }
 
       <div class="barra-contagem">
         <p class="contagem" id="contagem" aria-live="polite"><strong>15</strong> postos encontrados</p>
-        <div class="alternador-vista" role="group" aria-label="Modo de visualização dos postos">
-          <button class="btn-vista" type="button" id="vista-cards" aria-pressed="true">Postos em Cards Detalhados</button>
-          <button class="btn-vista" type="button" id="vista-tabela" aria-pressed="false">Tabela Completa (Relação de Serviços)</button>
-        </div>
-      </div>
-
-      <!-- Tabela Completa de Relação dos Postos, Bandeira, Combustíveis e Serviços (Fiel à Imagem de Referência) -->
-      <div class="tabela-relacao-wrap" id="tabela-relacao-wrap" hidden>
-        <div class="tabela-relacao-topo">
-          <h3>Relação dos Postos, Bandeira, Combustíveis e Serviços</h3>
-        </div>
-        <div class="tabela-scroll">
-          <table class="tabela-relacao">
-            <thead>
-              <tr>
-                <th>#</th>
-                <th>Posto</th>
-                <th>Bandeira</th>
-                <th>Endereço</th>
-                <th>🏪<br>Conveniência</th>
-                <th>⛽<br>Gasolina Comum</th>
-                <th>⚡<br>Gasolina Aditivada</th>
-                <th>🚛<br>Diesel S10</th>
-                <th>🚛<br>Diesel S500</th>
-                <th>🚗<br>Lavagem (Terceirizada)</th>
-                <th>🛢️<br>Troca de Óleo</th>
-                <th>🛞<br>Calibrador</th>
-                <th>🕒<br>Horário</th>
-              </tr>
-            </thead>
-            <tbody id="tabela-relacao-corpo"></tbody>
-          </table>
-        </div>
-        <div class="tabela-legenda">
-          <span><b class="selo-sim" style="width:18px;height:18px;font-size:0.7rem">✔</b> Disponível</span>
-          <span><b class="selo-nao" style="width:18px;height:18px;font-size:0.7rem">✖</b> Não possui</span>
-          <span>🏪 Conveniência (somente Gruta)</span>
-          <span>⛽ Gasolina Comum (todos os postos)</span>
-          <span>🔴 V-Power (Shell)</span>
-          <span>🔵 Ipmax (Ipiranga)</span>
-          <span>🟢 Grid (Petrobras)</span>
-          <span>🚛 Diesel S10 e Diesel S500 (todos os postos)</span>
-          <span>🚗 Lavagem (terceirizada)</span>
-          <span>🛢️ Troca de Óleo (todos os postos)</span>
-          <span>🛞 Calibrador de Pneu (todos os postos)</span>
-        </div>
+        <span class="selo-vista-cards">Postos em Cards Detalhados</span>
       </div>
 
       <ul class="lista-postos" id="lista-postos">
@@ -2034,66 +1940,6 @@ html:has(.detalhe[open]) { overflow: hidden; }
       : '<div class="posto-capa posto-capa-vazia">' + logo('icone-foto') + '<span>Fotos em breve</span></div>');
   });
 
-  // Monta a Tabela Completa (Relação dos Postos, Bandeira, Combustíveis e Serviços) fiel à imagem de referência
-  var corpoTabela = document.getElementById('tabela-relacao-corpo');
-  function montarTabela() {
-    if (!corpoTabela) return;
-    var visiveis = postos.filter(function (li) { return !li.hidden; });
-    corpoTabela.innerHTML = visiveis.map(function (li, i) {
-      var b = li.dataset.bandeira;
-      var adit = li.dataset.aditivada || '';
-      var classeAdit = b === 'shell' ? 'aditivada-shell' : b === 'ipiranga' ? 'aditivada-ipiranga' : 'aditivada-petrobras';
-      var temConv = li.dataset.conveniencia === 'sim';
-      var temLav = li.dataset.lavagem === 'sim';
-      var temOleo = li.dataset.trocaOleo === 'sim';
-      var temCalib = li.dataset.calibrador === 'sim';
-      var sim = '<span class="selo-sim" title="Disponível">✔</span>';
-      var nao = '<span class="selo-nao" title="Não possui">✖</span>';
-      return '<tr class="' + (temConv ? 'linha-gruta' : '') + '" data-posto-id="' + li.dataset.id + '" style="cursor:pointer">' +
-        '<td><strong>' + (i + 1) + '</strong></td>' +
-        '<td>' + li.dataset.nome + '</td>' +
-        '<td><div style="display:inline-flex;align-items:center;gap:6px;font-weight:700"><svg style="width:26px;height:26px" aria-hidden="true"><use href="#logo-' + b + '"/></svg>' + NOMES[b] + '</div></td>' +
-        '<td>' + li.dataset.q + '</td>' +
-        '<td>' + (temConv ? sim : nao) + '</td>' +
-        '<td>' + sim + '</td>' +
-        '<td><span class="posto-tag ' + classeAdit + '">' + adit + '</span></td>' +
-        '<td>' + sim + '</td>' +
-        '<td>' + sim + '</td>' +
-        '<td>' + (temLav ? sim : nao) + '</td>' +
-        '<td>' + (temOleo ? sim : nao) + '</td>' +
-        '<td>' + (temCalib ? sim : nao) + '</td>' +
-        '<td><strong>' + (li.dataset.horario || '') + '</strong></td>' +
-      '</tr>';
-    }).join('');
-    Array.prototype.forEach.call(corpoTabela.querySelectorAll('tr'), function (tr) {
-      tr.addEventListener('click', function () {
-        var alvo = document.querySelector('.posto[data-id="' + tr.getAttribute('data-posto-id') + '"]');
-        if (alvo) abrirDetalhe(alvo, tr);
-      });
-    });
-  }
-
-  // Alternador entre Visualização em Cards e Tabela Completa
-  var btnVistaCards = document.getElementById('vista-cards');
-  var btnVistaTabela = document.getElementById('vista-tabela');
-  var wrapTabela = document.getElementById('tabela-relacao-wrap');
-  var ulListaPostos = document.getElementById('lista-postos');
-  if (btnVistaCards && btnVistaTabela) {
-    btnVistaCards.addEventListener('click', function () {
-      btnVistaCards.setAttribute('aria-pressed', 'true');
-      btnVistaTabela.setAttribute('aria-pressed', 'false');
-      wrapTabela.hidden = true;
-      ulListaPostos.hidden = false;
-    });
-    btnVistaTabela.addEventListener('click', function () {
-      btnVistaTabela.setAttribute('aria-pressed', 'true');
-      btnVistaCards.setAttribute('aria-pressed', 'false');
-      montarTabela();
-      wrapTabela.hidden = false;
-      ulListaPostos.hidden = true;
-    });
-  }
-
   // data-fotos: caminho|legenda|caminho|legenda...
   function lerFotos(li) {
     var partes = (li.dataset.fotos || '').split('|').filter(Boolean), fotos = [];
@@ -2310,7 +2156,6 @@ html:has(.detalhe[open]) { overflow: hidden; }
     function trocar() {
       postos.forEach(function (li) { li.hidden = !combina(li, termo); });
       vazio.hidden = total !== 0;
-      montarTabela();
     }
     if (!animar || reduzir || !Element.prototype.animate) { geracao++; trocar(); return; }
 
@@ -2363,7 +2208,6 @@ html:has(.detalhe[open]) { overflow: hidden; }
   document.querySelectorAll('[data-bandeira-link]').forEach(function (a) {
     a.addEventListener('click', function () { estado.bandeira = a.dataset.bandeiraLink; estado.zona = 'todas'; estado.servico = 'todos'; estado.busca = ''; busca.value = ''; aplicar(true); });
   });
-  montarTabela();
 
   // Formulário de interesse dos lojistas: valida no aparelho, envia para a Netlify Forms e mostra o resultado
   // ali mesmo. Se o envio falhar (sem internet, ou fora da Netlify), diz isso e oferece o WhatsApp da central.
@@ -2652,7 +2496,6 @@ html:has(.detalhe[open]) { overflow: hidden; }
         }
       });
       contagem.insertAdjacentHTML('beforeend', ', do mais perto ao mais longe de você');
-      montarTabela();
     }
 
     // Ilha: some enquanto a abertura (que já tem o botão de localização) está na tela. Cada troca de
