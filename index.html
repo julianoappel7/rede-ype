@@ -653,6 +653,109 @@ p { margin: 0; }
 .posto-mais svg { width: 20px; height: 20px; }
 .posto:hover .posto-mais { background: var(--amarelo); color: var(--sobre-amarelo); transform: translate(2px, -2px); }
 
+/* Descrições, combustíveis, serviços e horário dentro de cada card de posto */
+.posto-desc {
+  font-size: 0.88rem; line-height: 1.45; color: var(--tinta); background: var(--bg);
+  padding: 8px 11px; border-radius: 8px; border-left: 3px solid var(--amarelo); margin-top: 4px;
+}
+.posto-secao-rotulo {
+  font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em;
+  color: var(--cinza); margin-top: 8px; margin-bottom: 2px; display: block;
+}
+.posto-tags { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 2px; }
+.posto-tag {
+  display: inline-flex; align-items: center; gap: 4px; padding: 3px 8px; border-radius: 6px;
+  font-size: 0.78rem; font-weight: 600; line-height: 1.25; border: 1px solid var(--linha); background: var(--bg); color: var(--tinta);
+}
+.posto-tag.ok { background: rgba(27, 122, 75, 0.10); border-color: rgba(27, 122, 75, 0.30); color: var(--sucesso); }
+.posto-tag.aditivada-shell { background: rgba(218, 41, 28, 0.10); border-color: rgba(218, 41, 28, 0.30); color: #B42318; font-weight: 700; }
+.posto-tag.aditivada-ipiranga { background: rgba(0, 67, 188, 0.10); border-color: rgba(0, 67, 188, 0.30); color: #0043BC; font-weight: 700; }
+.posto-tag.aditivada-petrobras { background: rgba(0, 133, 66, 0.12); border-color: rgba(0, 133, 66, 0.35); color: #006837; font-weight: 700; }
+.posto-tag.destaque-gruta { background: var(--amarelo-suave); border-color: var(--amarelo-escuro); color: var(--sobre-amarelo); font-weight: 700; }
+.posto-tag.nao { opacity: 0.62; color: var(--cinza); background: transparent; border-style: dashed; }
+.posto-horario {
+  display: flex; align-items: center; gap: 6px; margin-top: 8px; padding-top: 8px;
+  border-top: 1px dashed var(--linha); font-size: 0.82rem; font-weight: 600; color: var(--cinza);
+}
+.posto-horario strong { color: var(--tinta); }
+.posto-horario .selo-24h {
+  background: var(--amarelo); color: var(--sobre-amarelo); font-weight: 800; font-size: 0.75rem;
+  padding: 2px 7px; border-radius: 999px; margin-left: auto;
+}
+
+/* Barra de contagem + alternador Cards / Tabela Completa */
+.barra-contagem {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 18px;
+}
+.barra-contagem .contagem { margin-bottom: 0; }
+.alternador-vista {
+  display: inline-flex; background: var(--marinho-suave); padding: 4px; border-radius: 999px; gap: 4px;
+}
+.btn-vista {
+  min-height: 40px; padding: 6px 16px; border-radius: 999px; border: 0; background: transparent;
+  color: var(--tinta); font: 600 0.9rem var(--font-body); cursor: pointer; transition: background-color .2s, color .2s;
+}
+.btn-vista[aria-pressed="true"] {
+  background: var(--asfalto); color: var(--amarelo); box-shadow: 0 2px 8px rgba(0,0,0,.15);
+}
+
+/* Tabela Completa fiel à imagem de referência */
+.tabela-relacao-wrap {
+  border-radius: var(--raio); border: 1px solid var(--linha); background: var(--papel);
+  overflow: hidden; box-shadow: var(--sombra); margin-bottom: 24px;
+}
+.tabela-relacao-topo {
+  background: linear-gradient(90deg, #092C66 0%, #0D3C84 50%, #092C66 100%);
+  color: #FFFFFF; padding: 16px 20px; text-align: center;
+}
+.tabela-relacao-topo h3 {
+  font-family: var(--font-display); font-size: clamp(1.05rem, 2.2vw, 1.4rem); font-weight: 900;
+  text-transform: uppercase; letter-spacing: 0.03em; margin: 0;
+}
+.tabela-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.tabela-relacao {
+  width: 100%; border-collapse: collapse; font-size: 0.86rem; text-align: left; min-width: 980px;
+}
+.tabela-relacao thead th {
+  background: var(--amarelo); color: #121314; font-family: var(--font-display); font-weight: 800;
+  font-size: 0.74rem; text-transform: uppercase; letter-spacing: 0.03em; padding: 12px 10px;
+  border-bottom: 2px solid #D9B000; border-right: 1px solid rgba(0,0,0,.08); text-align: center; vertical-align: middle;
+}
+.tabela-relacao thead th:nth-child(2), .tabela-relacao thead th:nth-child(4) { text-align: left; }
+.tabela-relacao tbody td {
+  padding: 11px 10px; border-bottom: 1px solid var(--linha); border-right: 1px solid var(--linha);
+  vertical-align: middle; text-align: center;
+}
+.tabela-relacao tbody td:nth-child(2) { text-align: left; font-weight: 700; color: var(--tinta); }
+.tabela-relacao tbody td:nth-child(4) { text-align: left; color: var(--cinza); font-size: 0.82rem; line-height: 1.35; }
+.tabela-relacao tbody tr:hover { background: var(--amarelo-suave); }
+.tabela-relacao tbody tr.linha-gruta { background: rgba(27, 122, 75, 0.08); }
+.tabela-relacao .selo-sim, .tabela-relacao .selo-nao {
+  display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px;
+  border-radius: 50%; font-size: 0.82rem; font-weight: 800;
+}
+.tabela-relacao .selo-sim { background: #1B7A4B; color: #FFFFFF; }
+.tabela-relacao .selo-nao { background: #D92D20; color: #FFFFFF; }
+.tabela-legenda {
+  display: flex; flex-wrap: wrap; gap: 10px 16px; align-items: center; padding: 14px 18px;
+  background: var(--bg); border-top: 1px solid var(--linha); font-size: 0.8rem; font-weight: 600; color: var(--tinta);
+}
+.tabela-legenda span { display: inline-flex; align-items: center; gap: 6px; }
+
+/* Bloco de serviços e combustíveis dentro do modal #detalhe */
+.detalhe-servicos-bloco {
+  padding: 14px 20px 18px; border-top: 1px solid var(--linha); background: var(--bg);
+  display: grid; gap: 12px;
+}
+.detalhe-servicos-grade {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 8px;
+}
+.detalhe-item-card {
+  display: flex; align-items: center; justify-content: space-between; gap: 8px;
+  padding: 8px 12px; border-radius: 10px; background: var(--papel); border: 1px solid var(--linha);
+  font-size: 0.86rem; font-weight: 600;
+}
+
 /* Filtro de bandeira com os símbolos */
 .campo-rotulo { font-size: 0.92rem; font-weight: 600; }
 .chips-bandeira { display: flex; flex-wrap: wrap; gap: 8px; }
@@ -1142,13 +1245,13 @@ html:has(.detalhe[open]) { overflow: hidden; }
   <section class="secao secao-branca" id="postos" aria-labelledby="postos-titulo">
     <div class="wrap">
       <div class="secao-cabeca">
-        <h2 id="postos-titulo">Nossos postos</h2>
-        <p>Busque pelo bairro ou escolha a região. No card do posto, toque no Google Maps ou no Waze para abrir a rota.</p>
+        <h2 id="postos-titulo">Nossos postos, combustíveis e serviços</h2>
+        <p>Confira abaixo o que tem em cada posto (troca de óleo, conveniência, tipos de diesel, gasolina aditivada, lavagem e calibrador de pneu). Busque pelo bairro, filtre por serviço ou toque no Google Maps e Waze para abrir a rota.</p>
       </div>
 
       <div class="filtros">
         <div class="chips" role="group" aria-label="Região">
-          <button class="chip" type="button" data-zona="todas" aria-pressed="true">Todas</button>
+          <button class="chip" type="button" data-zona="todas" aria-pressed="true">Todas as regiões</button>
           <span class="chips-grupo">São José dos Campos</span>
           <button class="chip" type="button" data-zona="sul" aria-pressed="false">Zona Sul</button>
           <button class="chip" type="button" data-zona="norte" aria-pressed="false">Zona Norte</button>
@@ -1159,10 +1262,25 @@ html:has(.detalhe[open]) { overflow: hidden; }
           <button class="chip" type="button" data-zona="taubate" aria-pressed="false">Taubaté</button>
           <button class="chip" type="button" data-zona="cacapava" aria-pressed="false">Caçapava</button>
         </div>
+
+        <div class="chips" role="group" aria-label="Conferir Serviços e Combustíveis no Posto">
+          <span class="chips-grupo">Conferir o que tem no posto (Serviços e Combustíveis)</span>
+          <button class="chip" type="button" data-servico="todos" aria-pressed="true">Todos (15)</button>
+          <button class="chip" type="button" data-servico="troca-oleo" aria-pressed="false">🛢️ Troca de Óleo</button>
+          <button class="chip" type="button" data-servico="lavagem" aria-pressed="false">🚗 Lavagem (Terceirizada)</button>
+          <button class="chip" type="button" data-servico="conveniencia" aria-pressed="false">🏪 Conveniência (Gruta)</button>
+          <button class="chip" type="button" data-servico="calibrador" aria-pressed="false">🛞 Calibrador de Pneu</button>
+          <button class="chip" type="button" data-servico="diesel" aria-pressed="false">🚛 Diesel S10 e S500</button>
+          <button class="chip" type="button" data-servico="v-power" aria-pressed="false">⚡ Shell V-Power</button>
+          <button class="chip" type="button" data-servico="ipmax" aria-pressed="false">⚡ Ipiranga Ipmax</button>
+          <button class="chip" type="button" data-servico="grid" aria-pressed="false">⚡ Petrobras Grid</button>
+          <button class="chip" type="button" data-servico="24h" aria-pressed="false">🕒 Atendimento 24h</button>
+        </div>
+
         <div class="filtros-linha">
           <div class="campo">
             <label for="busca-posto">Buscar</label>
-            <input id="busca-posto" type="search" placeholder="Nome, bairro ou rua" autocomplete="off">
+            <input id="busca-posto" type="search" placeholder="Nome do posto, bairro, rua ou serviço (ex.: troca de óleo, diesel, conveniência)" autocomplete="off">
           </div>
           <!-- A bandeira é filtro de quem já sabe o que quer (programa de fidelidade): fica recolhida até pedirem. -->
           <button class="filtros-mais" type="button" id="filtros-mais" aria-expanded="false" aria-controls="campo-bandeira">
@@ -1181,95 +1299,188 @@ html:has(.detalhe[open]) { overflow: hidden; }
         </div>
       </div>
 
-      <p class="contagem" id="contagem" aria-live="polite"><strong>15</strong> postos encontrados</p>
+      <div class="barra-contagem">
+        <p class="contagem" id="contagem" aria-live="polite"><strong>15</strong> postos encontrados</p>
+        <div class="alternador-vista" role="group" aria-label="Modo de visualização dos postos">
+          <button class="btn-vista" type="button" id="vista-cards" aria-pressed="true">Postos em Cards Detalhados</button>
+          <button class="btn-vista" type="button" id="vista-tabela" aria-pressed="false">Tabela Completa (Relação de Serviços)</button>
+        </div>
+      </div>
+
+      <!-- Tabela Completa de Relação dos Postos, Bandeira, Combustíveis e Serviços (Fiel à Imagem de Referência) -->
+      <div class="tabela-relacao-wrap" id="tabela-relacao-wrap" hidden>
+        <div class="tabela-relacao-topo">
+          <h3>Relação dos Postos, Bandeira, Combustíveis e Serviços</h3>
+        </div>
+        <div class="tabela-scroll">
+          <table class="tabela-relacao">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Posto</th>
+                <th>Bandeira</th>
+                <th>Endereço</th>
+                <th>🏪<br>Conveniência</th>
+                <th>⛽<br>Gasolina Comum</th>
+                <th>⚡<br>Gasolina Aditivada</th>
+                <th>🚛<br>Diesel S10</th>
+                <th>🚛<br>Diesel S500</th>
+                <th>🚗<br>Lavagem (Terceirizada)</th>
+                <th>🛢️<br>Troca de Óleo</th>
+                <th>🛞<br>Calibrador</th>
+                <th>🕒<br>Horário</th>
+              </tr>
+            </thead>
+            <tbody id="tabela-relacao-corpo"></tbody>
+          </table>
+        </div>
+        <div class="tabela-legenda">
+          <span><b class="selo-sim" style="width:18px;height:18px;font-size:0.7rem">✔</b> Disponível</span>
+          <span><b class="selo-nao" style="width:18px;height:18px;font-size:0.7rem">✖</b> Não possui</span>
+          <span>🏪 Conveniência (somente Gruta)</span>
+          <span>⛽ Gasolina Comum (todos os postos)</span>
+          <span>🔴 V-Power (Shell)</span>
+          <span>🔵 Ipmax (Ipiranga)</span>
+          <span>🟢 Grid (Petrobras)</span>
+          <span>🚛 Diesel S10 e Diesel S500 (todos os postos)</span>
+          <span>🚗 Lavagem (terceirizada)</span>
+          <span>🛢️ Troca de Óleo (todos os postos)</span>
+          <span>🛞 Calibrador de Pneu (todos os postos)</span>
+        </div>
+      </div>
 
       <ul class="lista-postos" id="lista-postos">
-        <li class="posto" data-zona="sul" data-bandeira="shell" data-lat="-23.2319549" data-lng="-45.9010723" data-q="Av. Guadalupe, 659, Jardim América, São José dos Campos - SP, 12235-000">
+        <li class="posto" data-zona="sul" data-bandeira="shell" data-lat="-23.2319549" data-lng="-45.9010723" data-q="Av. Guadalupe, 659, Jardim América, São José dos Campos - SP, 12235-000"
+            data-aditivada="V-Power" data-conveniencia="nao" data-lavagem="sim" data-troca-oleo="sim" data-calibrador="sim" data-diesel="S10 e S500" data-24h="nao"
+            data-horario="Seg a Sáb 06h00 às 22h00 | Dom 06h00 às 19h00"
+            data-descricao="Posto bandeira Shell com Gasolina Comum e V-Power, Diesel S10 e S500, Troca de Óleo, Lavagem Terceirizada e Calibrador de Pneu.">
           <div class="posto-topo"><svg class="bandeira" role="img" aria-label="Bandeira Shell"><title>Shell</title><use href="#logo-shell"/></svg><span class="zona">Zona Sul<small>São José dos Campos</small></span></div>
           <h3>Auto Posto Ipê</h3>
           <p class="endereco">Av. Guadalupe, 659 – Jd. América</p>
           <div class="rotas"></div>
         </li>
-        <li class="posto" data-zona="sul" data-bandeira="ipiranga" data-lat="-23.231564" data-lng="-45.9012208" data-q="Av. Guadalupe, 660, Jardim América, São José dos Campos - SP, 12235-000">
+        <li class="posto" data-zona="sul" data-bandeira="ipiranga" data-lat="-23.231564" data-lng="-45.9012208" data-q="Av. Guadalupe, 660, Jardim América, São José dos Campos - SP, 12235-000"
+            data-aditivada="Ipmax" data-conveniencia="nao" data-lavagem="nao" data-troca-oleo="sim" data-calibrador="sim" data-diesel="S10 e S500" data-24h="sim"
+            data-horario="Seg a Sáb 24h"
+            data-descricao="Atendimento 24h (Seg a Sáb) com bandeira Ipiranga: Gasolina Comum e Ipmax, Diesel S10 e S500, Troca de Óleo e Calibrador de Pneu.">
           <div class="posto-topo"><svg class="bandeira" role="img" aria-label="Bandeira Ipiranga"><title>Ipiranga</title><use href="#logo-ipiranga"/></svg><span class="zona">Zona Sul<small>São José dos Campos</small></span></div>
           <h3>Cunha’s Auto Posto</h3>
           <p class="endereco">Av. Guadalupe, 660 – Jd. América</p>
           <div class="rotas"></div>
         </li>
-        <li class="posto" data-zona="sul" data-bandeira="petrobras" data-lat="-23.2502208" data-lng="-45.8971075" data-q="Rua Gisele Martins, 401, Jardim Morumbi, São José dos Campos - SP, 12236-500">
+        <li class="posto" data-zona="sul" data-bandeira="petrobras" data-lat="-23.2502208" data-lng="-45.8971075" data-q="Rua Gisele Martins, 401, Jardim Morumbi, São José dos Campos - SP, 12236-500"
+            data-aditivada="Grid" data-conveniencia="nao" data-lavagem="nao" data-troca-oleo="sim" data-calibrador="sim" data-diesel="S10 e S500" data-24h="nao"
+            data-horario="Seg a Sáb 06h00 às 22h00 | Dom 06h00 às 19h00"
+            data-descricao="Posto bandeira Petrobras no Jd. Morumbi com Gasolina Comum e Grid, Diesel S10 e S500, Troca de Óleo e Calibrador de Pneu.">
           <div class="posto-topo"><svg class="bandeira" role="img" aria-label="Bandeira Petrobras"><title>Petrobras</title><use href="#logo-petrobras"/></svg><span class="zona">Zona Sul<small>São José dos Campos</small></span></div>
           <h3>Auto Posto Bosque dos Ipês</h3>
           <p class="endereco">Rua Gisele Martins, 401 – Jd. Morumbi</p>
           <div class="rotas"></div>
         </li>
-        <li class="posto" data-zona="sul" data-bandeira="petrobras" data-lat="-23.237655" data-lng="-45.901003" data-q="Rua Sumatra, 315, Jardim Paraíso, São José dos Campos - SP, 12235-410">
+        <li class="posto" data-zona="sul" data-bandeira="petrobras" data-lat="-23.237655" data-lng="-45.901003" data-q="Rua Sumatra, 315, Jardim Paraíso, São José dos Campos - SP, 12235-410"
+            data-aditivada="Grid" data-conveniencia="nao" data-lavagem="sim" data-troca-oleo="sim" data-calibrador="sim" data-diesel="S10 e S500" data-24h="nao"
+            data-horario="Seg a Sáb 06h00 às 22h00 | Dom 06h00 às 19h00"
+            data-descricao="Posto Petrobras com Gasolina Comum e Grid, Diesel S10 e S500, Troca de Óleo, Lavagem Terceirizada e Calibrador de Pneu.">
           <div class="posto-topo"><svg class="bandeira" role="img" aria-label="Bandeira Petrobras"><title>Petrobras</title><use href="#logo-petrobras"/></svg><span class="zona">Zona Sul<small>São José dos Campos</small></span></div>
           <h3>HP Comércio de Combustíveis</h3>
           <p class="endereco">Rua Sumatra, 315 – Jd. Paraíso</p>
           <div class="rotas"></div>
         </li>
-        <li class="posto" data-zona="norte" data-bandeira="petrobras" data-lat="-23.1672509" data-lng="-45.8929724" data-q="Travessa Constantino Pintos, 44, Vila Rossi, São José dos Campos - SP, 12211-110">
+        <li class="posto" data-zona="norte" data-bandeira="petrobras" data-lat="-23.1672509" data-lng="-45.8929724" data-q="Travessa Constantino Pintos, 44, Vila Rossi, São José dos Campos - SP, 12211-110"
+            data-aditivada="Grid" data-conveniencia="nao" data-lavagem="sim" data-troca-oleo="sim" data-calibrador="sim" data-diesel="S10 e S500" data-24h="nao"
+            data-horario="Seg a Sáb 06h00 às 22h00 | Dom 06h00 às 19h00"
+            data-descricao="Posto Petrobras na Vila Rossi com Gasolina Comum e Grid, Diesel S10 e S500, Troca de Óleo, Lavagem Terceirizada e Calibrador de Pneu.">
           <div class="posto-topo"><svg class="bandeira" role="img" aria-label="Bandeira Petrobras"><title>Petrobras</title><use href="#logo-petrobras"/></svg><span class="zona">Zona Norte<small>São José dos Campos</small></span></div>
           <h3>Auto Posto Vila Rossi</h3>
           <p class="endereco">Tv. Constantino Pintos, 44 – Vila Rossi</p>
           <div class="rotas"></div>
         </li>
-        <li class="posto" data-zona="norte" data-bandeira="shell" data-lat="-23.1743473" data-lng="-45.8831385" data-q="Av. Eng. Sebastião Gualberto, 700, Vila Maria, São José dos Campos - SP, 12209-320">
+        <li class="posto" data-zona="norte" data-bandeira="shell" data-lat="-23.1743473" data-lng="-45.8831385" data-q="Av. Eng. Sebastião Gualberto, 700, Vila Maria, São José dos Campos - SP, 12209-320"
+            data-aditivada="V-Power" data-conveniencia="nao" data-lavagem="sim" data-troca-oleo="sim" data-calibrador="sim" data-diesel="S10 e S500" data-24h="nao"
+            data-horario="Seg a Sáb 06h00 às 22h00 | Dom 06h00 às 19h00"
+            data-descricao="Posto bandeira Shell na Vila Maria com Gasolina Comum e V-Power, Diesel S10 e S500, Troca de Óleo, Lavagem Terceirizada e Calibrador de Pneu.">
           <div class="posto-topo"><svg class="bandeira" role="img" aria-label="Bandeira Shell"><title>Shell</title><use href="#logo-shell"/></svg><span class="zona">Zona Norte<small>São José dos Campos</small></span></div>
           <h3>Auto Posto Vila Maria</h3>
           <p class="endereco">Av. Eng. Sebastião Gualberto, 700 – Vila Maria</p>
           <div class="rotas"></div>
         </li>
-        <li class="posto" data-zona="oeste" data-bandeira="ipiranga" data-lat="-23.2339898" data-lng="-45.9166104" data-q="Av. Dep. Benedito Matarazzo, 4229, Jardim das Indústrias, São José dos Campos - SP, 12246-840">
+        <li class="posto" data-zona="oeste" data-bandeira="ipiranga" data-lat="-23.2339898" data-lng="-45.9166104" data-q="Av. Dep. Benedito Matarazzo, 4229, Jardim das Indústrias, São José dos Campos - SP, 12246-840"
+            data-aditivada="Ipmax" data-conveniencia="sim" data-lavagem="nao" data-troca-oleo="sim" data-calibrador="sim" data-diesel="S10 e S500" data-24h="nao"
+            data-horario="Seg a Sáb 06h00 às 22h00 | Dom 06h00 às 19h00"
+            data-descricao="Posto modelo da Gruta com Loja de Conveniência exclusiva, bandeira Ipiranga (Gasolina Comum e Ipmax), Diesel S10 e S500, Troca de Óleo e Calibrador de Pneu.">
           <div class="posto-topo"><svg class="bandeira" role="img" aria-label="Bandeira Ipiranga"><title>Ipiranga</title><use href="#logo-ipiranga"/></svg><span class="zona">Zona Oeste<small>São José dos Campos</small></span></div>
           <h3>Auto Posto da Gruta</h3>
           <p class="endereco">Av. Dep. Benedito Matarazzo, 4229 – Jd. das Indústrias</p>
           <div class="rotas"></div>
         </li>
-        <li class="posto" data-zona="leste" data-bandeira="shell" data-lat="-23.1714632" data-lng="-45.8418464" data-q="Rua Professora Maria Siqueira Nathan, 117, Vila Tesouro, São José dos Campos - SP, 12221-521">
+        <li class="posto" data-zona="leste" data-bandeira="shell" data-lat="-23.1714632" data-lng="-45.8418464" data-q="Rua Professora Maria Siqueira Nathan, 117, Vila Tesouro, São José dos Campos - SP, 12221-521"
+            data-aditivada="V-Power" data-conveniencia="nao" data-lavagem="sim" data-troca-oleo="sim" data-calibrador="sim" data-diesel="S10 e S500" data-24h="nao"
+            data-horario="Seg a Sáb 06h00 às 22h00 | Dom 06h00 às 19h00"
+            data-descricao="Posto bandeira Shell na Vila Tesouro com Gasolina Comum e V-Power, Diesel S10 e S500, Troca de Óleo, Lavagem Terceirizada e Calibrador de Pneu.">
           <div class="posto-topo"><svg class="bandeira" role="img" aria-label="Bandeira Shell"><title>Shell</title><use href="#logo-shell"/></svg><span class="zona">Zona Leste<small>São José dos Campos</small></span></div>
           <h3>Auto Posto Vila Tesouro</h3>
           <p class="endereco">Rua Profª Maria Siqueira Nathan, 117 – Vila Tesouro</p>
           <div class="rotas"></div>
         </li>
-        <li class="posto" data-zona="leste" data-bandeira="petrobras" data-lat="-23.1764633" data-lng="-45.8291515" data-q="Av. Pedro Friggi, 1001, Jardim Morotama, São José dos Campos - SP, 12223-430">
+        <li class="posto" data-zona="leste" data-bandeira="petrobras" data-lat="-23.1764633" data-lng="-45.8291515" data-q="Av. Pedro Friggi, 1001, Jardim Morotama, São José dos Campos - SP, 12223-430"
+            data-aditivada="Grid" data-conveniencia="nao" data-lavagem="sim" data-troca-oleo="sim" data-calibrador="sim" data-diesel="S10 e S500" data-24h="nao"
+            data-horario="Seg a Sáb 06h00 às 22h00 | Dom 06h00 às 19h00"
+            data-descricao="Posto Petrobras no Jardim Motorama com Gasolina Comum e Grid, Diesel S10 e S500, Troca de Óleo, Lavagem Terceirizada e Calibrador de Pneu.">
           <div class="posto-topo"><svg class="bandeira" role="img" aria-label="Bandeira Petrobras"><title>Petrobras</title><use href="#logo-petrobras"/></svg><span class="zona">Zona Leste<small>São José dos Campos</small></span></div>
           <h3>Posto Super Jet Ski</h3>
           <p class="endereco">Av. Pedro Friggi, 1001 – Jd. Morotama</p>
           <div class="rotas"></div>
         </li>
-        <li class="posto" data-zona="leste" data-bandeira="petrobras" data-lat="-23.170985" data-lng="-45.8004141" data-q="Rua Rodolfo Mayer, 10, Jardim Santa Inês II, São José dos Campos - SP, 12248-181">
+        <li class="posto" data-zona="leste" data-bandeira="petrobras" data-lat="-23.170985" data-lng="-45.8004141" data-q="Rua Rodolfo Mayer, 10, Jardim Santa Inês II, São José dos Campos - SP, 12248-181"
+            data-aditivada="Grid" data-conveniencia="nao" data-lavagem="nao" data-troca-oleo="sim" data-calibrador="sim" data-diesel="S10 e S500" data-24h="nao"
+            data-horario="Seg a Sáb 06h00 às 22h00 | Dom 06h00 às 19h00"
+            data-descricao="Posto Petrobras no Jd. Santa Inês II com Gasolina Comum e Grid, Diesel S10 e S500, Troca de Óleo e Calibrador de Pneu.">
           <div class="posto-topo"><svg class="bandeira" role="img" aria-label="Bandeira Petrobras"><title>Petrobras</title><use href="#logo-petrobras"/></svg><span class="zona">Zona Leste<small>São José dos Campos</small></span></div>
           <h3>Auto Posto Santa Inês</h3>
           <p class="endereco">Rua Rodolfo Mayer, 10 – Jd. Santa Inês II</p>
           <div class="rotas"></div>
         </li>
-        <li class="posto" data-zona="leste" data-bandeira="petrobras" data-lat="-23.1849351" data-lng="-45.8106073" data-q="Estrada Dom José Antônio do Couto, 2780, São José dos Campos - SP, 12226-551">
+        <li class="posto" data-zona="leste" data-bandeira="petrobras" data-lat="-23.1849351" data-lng="-45.8106073" data-q="Estrada Dom José Antônio do Couto, 2780, São José dos Campos - SP, 12226-551"
+            data-aditivada="Grid" data-conveniencia="nao" data-lavagem="nao" data-troca-oleo="sim" data-calibrador="sim" data-diesel="S10 e S500" data-24h="nao"
+            data-horario="Seg a Sáb 06h00 às 22h00 | Dom 06h00 às 19h00"
+            data-descricao="Posto Petrobras na região do Cajuru / Campos de São José com Gasolina Comum e Grid, Diesel S10 e S500, Troca de Óleo e Calibrador de Pneu.">
           <div class="posto-topo"><svg class="bandeira" role="img" aria-label="Bandeira Petrobras"><title>Petrobras</title><use href="#logo-petrobras"/></svg><span class="zona">Zona Leste<small>São José dos Campos</small></span></div>
           <h3>Auto Posto Cajuru</h3>
           <p class="endereco">Estr. Dom José Antônio do Couto, 2780 – Campos de São José</p>
           <div class="rotas"></div>
         </li>
         <li class="posto" data-zona="leste" data-bandeira="petrobras" data-lat="-23.2471069" data-lng="-45.8282608" data-q="Av. João Rodolfo Castelli, 1220, Putim, São José dos Campos - SP, 12228-000"
+            data-aditivada="Grid" data-conveniencia="nao" data-lavagem="nao" data-troca-oleo="sim" data-calibrador="sim" data-diesel="S10 e S500" data-24h="nao"
+            data-horario="Seg a Sáb 06h00 às 22h00 | Dom 06h00 às 19h00"
+            data-descricao="Posto Petrobras no Putim com amplo pátio, Gasolina Comum e Grid, Diesel S10 e S500, Troca de Óleo e Calibrador de Pneu."
             data-fotos="img/postos/putim-1.jpg|Cobertura e entrada do posto|img/postos/putim-2.jpg|Pista de abastecimento|img/postos/putim-3.jpg|Pátio com espaço para caminhões|img/postos/putim-4.jpg|O posto visto da rua|img/postos/putim-5.jpg|Chegando pelo cruzamento">
           <div class="posto-topo"><svg class="bandeira" role="img" aria-label="Bandeira Petrobras"><title>Petrobras</title><use href="#logo-petrobras"/></svg><span class="zona">Zona Leste<small>São José dos Campos</small></span></div>
           <h3>Auto Posto Putim</h3>
           <p class="endereco">Av. João Rodolfo Castelli, 1220 – Putim</p>
           <div class="rotas"></div>
         </li>
-        <li class="posto" data-zona="jacarei" data-bandeira="shell" data-lat="-23.3133621" data-lng="-45.9849949" data-q="Av. Maria Augusta Fagundes Gomes, 61, Jacareí - SP, 12322-300">
+        <li class="posto" data-zona="jacarei" data-bandeira="shell" data-lat="-23.3133621" data-lng="-45.9849949" data-q="Av. Maria Augusta Fagundes Gomes, 61, Jacareí - SP, 12322-300"
+            data-aditivada="V-Power" data-conveniencia="nao" data-lavagem="nao" data-troca-oleo="sim" data-calibrador="sim" data-diesel="S10 e S500" data-24h="nao"
+            data-horario="Seg a Sáb 06h00 às 22h00 | Dom 06h00 às 19h00"
+            data-descricao="Unidade Jacareí com bandeira Shell: Gasolina Comum e V-Power, Diesel S10 e S500, Troca de Óleo e Calibrador de Pneu.">
           <div class="posto-topo"><svg class="bandeira" role="img" aria-label="Bandeira Shell"><title>Shell</title><use href="#logo-shell"/></svg><span class="zona">Jacareí</span></div>
           <h3>Auto Posto Jd. São Paulo II</h3>
           <p class="endereco">Av. Maria Augusta Fagundes Gomes, 61 – Res. São Paulo</p>
           <div class="rotas"></div>
         </li>
-        <li class="posto" data-zona="taubate" data-bandeira="shell" data-lat="-23.0535522" data-lng="-45.5774649" data-q="Estrada do Barreiro, 1972, São Gonçalo, Taubaté - SP, 12092-000">
+        <li class="posto" data-zona="taubate" data-bandeira="shell" data-lat="-23.0535522" data-lng="-45.5774649" data-q="Estrada do Barreiro, 1972, São Gonçalo, Taubaté - SP, 12092-000"
+            data-aditivada="V-Power" data-conveniencia="nao" data-lavagem="nao" data-troca-oleo="sim" data-calibrador="sim" data-diesel="S10 e S500" data-24h="nao"
+            data-horario="Seg a Sáb 06h00 às 22h00 | Dom 06h00 às 19h00"
+            data-descricao="Unidade Taubaté com bandeira Shell: Gasolina Comum e V-Power, Diesel S10 e S500, Troca de Óleo e Calibrador de Pneu.">
           <div class="posto-topo"><svg class="bandeira" role="img" aria-label="Bandeira Shell"><title>Shell</title><use href="#logo-shell"/></svg><span class="zona">Taubaté</span></div>
           <h3>Centro Automotivo Barreiro</h3>
           <p class="endereco">Estr. do Barreiro, 1972 – São Gonçalo</p>
           <div class="rotas"></div>
         </li>
-        <li class="posto" data-zona="cacapava" data-bandeira="petrobras" data-lat="-23.1042147" data-lng="-45.7104666" data-q="Av. Brasil, 352, Vila Antônio Augusto Luiz, Caçapava - SP, 12287-020">
+        <li class="posto" data-zona="cacapava" data-bandeira="petrobras" data-lat="-23.1042147" data-lng="-45.7104666" data-q="Av. Brasil, 352, Vila Antônio Augusto Luiz, Caçapava - SP, 12287-020"
+            data-aditivada="Grid" data-conveniencia="nao" data-lavagem="sim" data-troca-oleo="sim" data-calibrador="sim" data-diesel="S10 e S500" data-24h="nao"
+            data-horario="Seg a Sáb 06h00 às 22h00 | Dom 06h00 às 19h00"
+            data-descricao="Unidade Caçapava com bandeira Petrobras: Gasolina Comum e Grid, Diesel S10 e S500, Troca de Óleo, Lavagem Terceirizada e Calibrador de Pneu.">
           <div class="posto-topo"><svg class="bandeira" role="img" aria-label="Bandeira Petrobras"><title>Petrobras</title><use href="#logo-petrobras"/></svg><span class="zona">Caçapava</span></div>
           <h3>Auto Posto Avenida Brasil</h3>
           <p class="endereco">Av. Brasil, 352 – Vila Antônio Augusto Luiz</p>
@@ -1277,7 +1488,7 @@ html:has(.detalhe[open]) { overflow: hidden; }
         </li>
       </ul>
       <div class="vazio" id="vazio" hidden>
-        <p>Nenhum posto combina com esse filtro. Tente outra região, outra bandeira ou apague a busca.</p>
+        <p>Nenhum posto combina com esse filtro. Tente outra região, outro serviço, outra bandeira ou apague a busca.</p>
         <button class="chip" type="button" id="limpar-filtros">Mostrar todos os postos</button>
       </div>
     </div>
@@ -1619,6 +1830,7 @@ html:has(.detalhe[open]) { overflow: hidden; }
           <a href="https://wa.me/5512974096149" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#logo-whatsapp"/></svg>Central</a>
         </nav>
       </div>
+      <div class="detalhe-servicos-bloco" id="detalhe-servicos-bloco"></div>
       <div class="galeria" id="galeria" hidden>
         <div class="galeria-trilho" id="galeria-trilho" tabindex="0" aria-label="Fotos do posto"></div>
         <button class="galeria-seta galeria-anterior" type="button" id="galeria-anterior" aria-label="Foto anterior"><svg aria-hidden="true"><use href="#icone-esquerda"/></svg></button>
@@ -1769,13 +1981,48 @@ html:has(.detalhe[open]) { overflow: hidden; }
   function linkEarth(li) { return 'https://earth.google.com/web/search/' + encodeURIComponent(li.dataset.nome + ', ' + li.dataset.q); }
   function slug(s) { return s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''); }
   var postos = Array.prototype.slice.call(document.querySelectorAll('.posto'));
-  postos.forEach(function (li) {
+  postos.forEach(function (li, idx) {
     var h3 = li.querySelector('h3');
     var nome = h3.textContent;
     li.dataset.nome = nome;
+    li.dataset.ordem = String(idx + 1);
     li.dataset.id = 'posto-' + slug(nome);
     h3.innerHTML = '<button class="posto-abrir" type="button" aria-haspopup="dialog">' + nome + '</button>';
-    li.querySelector('.rotas').innerHTML =
+
+    // Insere a descrição, os combustíveis (Gasolina Comum, Aditivada, Diesel S10 e S500), os serviços (Troca de Óleo, Calibrador, Lavagem, Conveniência) e o horário no card
+    var aditivada = li.dataset.aditivada || 'Aditivada';
+    var band = li.dataset.bandeira;
+    var classeAdit = band === 'shell' ? 'aditivada-shell' : band === 'ipiranga' ? 'aditivada-ipiranga' : 'aditivada-petrobras';
+    var temConv = li.dataset.conveniencia === 'sim';
+    var temLav = li.dataset.lavagem === 'sim';
+    var temOleo = li.dataset.trocaOleo === 'sim';
+    var temCalib = li.dataset.calibrador === 'sim';
+    var horario = li.dataset.horario || 'Seg a Sáb 06h00 às 22h00 | Dom 06h00 às 19h00';
+    var eh24h = li.dataset['24h'] === 'sim';
+    var desc = li.dataset.descricao || '';
+
+    var blocoDetalhes =
+      (desc ? '<p class="posto-desc">' + desc + '</p>' : '') +
+      '<span class="posto-secao-rotulo">Combustíveis disponíveis</span>' +
+      '<div class="posto-tags">' +
+        '<span class="posto-tag ok">⛽ Gas. Comum ✔️</span>' +
+        '<span class="posto-tag ' + classeAdit + '">⚡ ' + aditivada + ' ✔️</span>' +
+        '<span class="posto-tag ok">🚛 Diesel S10 ✔️</span>' +
+        '<span class="posto-tag ok">🚛 Diesel S500 ✔️</span>' +
+      '</div>' +
+      '<span class="posto-secao-rotulo">Serviços e conveniência no posto</span>' +
+      '<div class="posto-tags">' +
+        (temOleo ? '<span class="posto-tag ok">🛢️ Troca de Óleo ✔️</span>' : '<span class="posto-tag nao">🛢️ Troca de Óleo ✖</span>') +
+        (temCalib ? '<span class="posto-tag ok">🛞 Calibrador ✔️</span>' : '<span class="posto-tag nao">🛞 Calibrador ✖</span>') +
+        (temLav ? '<span class="posto-tag ok">🚗 Lavagem (Terceirizada) ✔️</span>' : '<span class="posto-tag nao">🚗 Lavagem ✖</span>') +
+        (temConv ? '<span class="posto-tag destaque-gruta">🏪 Conveniência (Gruta) ✔️</span>' : '<span class="posto-tag nao">🏪 Conveniência ✖</span>') +
+      '</div>' +
+      '<div class="posto-horario">🕒 <span>Horário: <strong>' + horario + '</strong></span>' + (eh24h ? '<span class="selo-24h">24 HORAS</span>' : '') + '</div>';
+
+    var rotasDiv = li.querySelector('.rotas');
+    rotasDiv.insertAdjacentHTML('beforebegin', blocoDetalhes);
+
+    rotasDiv.innerHTML =
       '<a href="' + linkMaps(li) + '" target="_blank" rel="noopener" aria-label="Rota até ' + nome + ' no Google Maps" title="Google Maps">' + logo('logo-maps') + '</a>' +
       '<a href="' + linkWaze(li) + '" target="_blank" rel="noopener" aria-label="Rota até ' + nome + ' no Waze" title="Waze">' + logo('logo-waze') + '</a>' +
       '<span class="posto-mais" aria-hidden="true">' + logo('icone-abrir') + '</span>';
@@ -1786,6 +2033,66 @@ html:has(.detalhe[open]) { overflow: hidden; }
       ? '<div class="posto-capa"><img src="' + fotos[0].src + '" alt="' + fotos[0].legenda + ', ' + nome + '" loading="lazy" width="960" height="1280"><b>' + logo('icone-foto') + fotos.length + '</b></div>'
       : '<div class="posto-capa posto-capa-vazia">' + logo('icone-foto') + '<span>Fotos em breve</span></div>');
   });
+
+  // Monta a Tabela Completa (Relação dos Postos, Bandeira, Combustíveis e Serviços) fiel à imagem de referência
+  var corpoTabela = document.getElementById('tabela-relacao-corpo');
+  function montarTabela() {
+    if (!corpoTabela) return;
+    var visiveis = postos.filter(function (li) { return !li.hidden; });
+    corpoTabela.innerHTML = visiveis.map(function (li, i) {
+      var b = li.dataset.bandeira;
+      var adit = li.dataset.aditivada || '';
+      var classeAdit = b === 'shell' ? 'aditivada-shell' : b === 'ipiranga' ? 'aditivada-ipiranga' : 'aditivada-petrobras';
+      var temConv = li.dataset.conveniencia === 'sim';
+      var temLav = li.dataset.lavagem === 'sim';
+      var temOleo = li.dataset.trocaOleo === 'sim';
+      var temCalib = li.dataset.calibrador === 'sim';
+      var sim = '<span class="selo-sim" title="Disponível">✔</span>';
+      var nao = '<span class="selo-nao" title="Não possui">✖</span>';
+      return '<tr class="' + (temConv ? 'linha-gruta' : '') + '" data-posto-id="' + li.dataset.id + '" style="cursor:pointer">' +
+        '<td><strong>' + (i + 1) + '</strong></td>' +
+        '<td>' + li.dataset.nome + '</td>' +
+        '<td><div style="display:inline-flex;align-items:center;gap:6px;font-weight:700"><svg style="width:26px;height:26px" aria-hidden="true"><use href="#logo-' + b + '"/></svg>' + NOMES[b] + '</div></td>' +
+        '<td>' + li.dataset.q + '</td>' +
+        '<td>' + (temConv ? sim : nao) + '</td>' +
+        '<td>' + sim + '</td>' +
+        '<td><span class="posto-tag ' + classeAdit + '">' + adit + '</span></td>' +
+        '<td>' + sim + '</td>' +
+        '<td>' + sim + '</td>' +
+        '<td>' + (temLav ? sim : nao) + '</td>' +
+        '<td>' + (temOleo ? sim : nao) + '</td>' +
+        '<td>' + (temCalib ? sim : nao) + '</td>' +
+        '<td><strong>' + (li.dataset.horario || '') + '</strong></td>' +
+      '</tr>';
+    }).join('');
+    Array.prototype.forEach.call(corpoTabela.querySelectorAll('tr'), function (tr) {
+      tr.addEventListener('click', function () {
+        var alvo = document.querySelector('.posto[data-id="' + tr.getAttribute('data-posto-id') + '"]');
+        if (alvo) abrirDetalhe(alvo, tr);
+      });
+    });
+  }
+
+  // Alternador entre Visualização em Cards e Tabela Completa
+  var btnVistaCards = document.getElementById('vista-cards');
+  var btnVistaTabela = document.getElementById('vista-tabela');
+  var wrapTabela = document.getElementById('tabela-relacao-wrap');
+  var ulListaPostos = document.getElementById('lista-postos');
+  if (btnVistaCards && btnVistaTabela) {
+    btnVistaCards.addEventListener('click', function () {
+      btnVistaCards.setAttribute('aria-pressed', 'true');
+      btnVistaTabela.setAttribute('aria-pressed', 'false');
+      wrapTabela.hidden = true;
+      ulListaPostos.hidden = false;
+    });
+    btnVistaTabela.addEventListener('click', function () {
+      btnVistaTabela.setAttribute('aria-pressed', 'true');
+      btnVistaCards.setAttribute('aria-pressed', 'false');
+      montarTabela();
+      wrapTabela.hidden = false;
+      ulListaPostos.hidden = true;
+    });
+  }
 
   // data-fotos: caminho|legenda|caminho|legenda...
   function lerFotos(li) {
@@ -1849,6 +2156,30 @@ html:has(.detalhe[open]) { overflow: hidden; }
     document.getElementById('detalhe-waze').href = linkWaze(li);
     document.getElementById('detalhe-earth').href = linkEarth(li);
     recado.textContent = '';
+
+    // Preenche o bloco de descrição, combustíveis, serviços e horário dentro do modal #detalhe
+    var blocoServModal = document.getElementById('detalhe-servicos-bloco');
+    if (blocoServModal) {
+      var aditM = li.dataset.aditivada || 'Aditivada';
+      var temConvM = li.dataset.conveniencia === 'sim';
+      var temLavM = li.dataset.lavagem === 'sim';
+      var temOleoM = li.dataset.trocaOleo === 'sim';
+      var temCalibM = li.dataset.calibrador === 'sim';
+      var horM = li.dataset.horario || 'Seg a Sáb 06h00 às 22h00 | Dom 06h00 às 19h00';
+      blocoServModal.innerHTML =
+        (li.dataset.descricao ? '<p class="posto-desc" style="margin:0">' + li.dataset.descricao + '</p>' : '') +
+        '<div style="font-size:0.86rem;font-weight:700;color:var(--tinta)">🕒 Horário de funcionamento: <span style="font-weight:600;color:var(--cinza)">' + horM + '</span></div>' +
+        '<div class="detalhe-servicos-grade">' +
+          '<div class="detalhe-item-card"><span>⛽ Gasolina Comum</span><span class="posto-tag ok">Disponível ✔️</span></div>' +
+          '<div class="detalhe-item-card"><span>⚡ Gasolina Aditivada</span><span class="posto-tag ok">' + aditM + ' ✔️</span></div>' +
+          '<div class="detalhe-item-card"><span>🚛 Diesel S10</span><span class="posto-tag ok">Disponível ✔️</span></div>' +
+          '<div class="detalhe-item-card"><span>🚛 Diesel S500</span><span class="posto-tag ok">Disponível ✔️</span></div>' +
+          '<div class="detalhe-item-card"><span>🛢️ Troca de Óleo</span>' + (temOleoM ? '<span class="posto-tag ok">Possui ✔️</span>' : '<span class="posto-tag nao">Não possui ✖</span>') + '</div>' +
+          '<div class="detalhe-item-card"><span>🛞 Calibrador de Pneu</span>' + (temCalibM ? '<span class="posto-tag ok">Possui ✔️</span>' : '<span class="posto-tag nao">Não possui ✖</span>') + '</div>' +
+          '<div class="detalhe-item-card"><span>🚗 Lavagem Terceirizada</span>' + (temLavM ? '<span class="posto-tag ok">Possui ✔️</span>' : '<span class="posto-tag nao">Não possui ✖</span>') + '</div>' +
+          '<div class="detalhe-item-card"><span>🏪 Loja de Conveniência</span>' + (temConvM ? '<span class="posto-tag destaque-gruta">Exclusivo Gruta ✔️</span>' : '<span class="posto-tag nao">Não possui ✖</span>') + '</div>' +
+        '</div>';
+    }
     var fotos = lerFotos(li);
     galeria.hidden = !fotos.length;
     trilho.innerHTML = fotos.map(function (f) {
@@ -1928,9 +2259,10 @@ html:has(.detalhe[open]) { overflow: hidden; }
 
   // Filtros
   function normalizar(s) { return s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase(); }
-  postos.forEach(function (li) { li.dataset.busca = normalizar(li.textContent + ' ' + li.dataset.q); });
-  var estado = { zona: 'todas', bandeira: 'todas', busca: '' };
+  postos.forEach(function (li) { li.dataset.busca = normalizar(li.textContent + ' ' + li.dataset.q + ' ' + (li.dataset.descricao || '')); });
+  var estado = { zona: 'todas', bandeira: 'todas', servico: 'todos', busca: '' };
   var chips = Array.prototype.slice.call(document.querySelectorAll('.chip[data-zona]'));
+  var chipsServico = Array.prototype.slice.call(document.querySelectorAll('.chip[data-servico]'));
   var chipsBandeira = Array.prototype.slice.call(document.querySelectorAll('.chip-logo[data-bandeira]'));
   var busca = document.getElementById('busca-posto');
   var botaoBandeiras = document.getElementById('filtros-mais');
@@ -1942,9 +2274,25 @@ html:has(.detalhe[open]) { overflow: hidden; }
   var suave = 'cubic-bezier(.2,.7,.2,1)';
   var geracao = 0;
 
+  function combinaServico(li) {
+    var s = estado.servico;
+    if (!s || s === 'todos') return true;
+    if (s === 'troca-oleo') return li.dataset.trocaOleo === 'sim';
+    if (s === 'lavagem') return li.dataset.lavagem === 'sim';
+    if (s === 'conveniencia') return li.dataset.conveniencia === 'sim';
+    if (s === 'calibrador') return li.dataset.calibrador === 'sim';
+    if (s === 'diesel') return !!li.dataset.diesel;
+    if (s === 'v-power') return normalizar(li.dataset.aditivada || '') === 'v-power';
+    if (s === 'ipmax') return normalizar(li.dataset.aditivada || '') === 'ipmax';
+    if (s === 'grid') return normalizar(li.dataset.aditivada || '') === 'grid';
+    if (s === '24h') return li.dataset['24h'] === 'sim';
+    return true;
+  }
+
   function combina(li, termo) {
     return (estado.zona === 'todas' || li.dataset.zona === estado.zona) &&
            (estado.bandeira === 'todas' || li.dataset.bandeira === estado.bandeira) &&
+           combinaServico(li) &&
            (!termo || li.dataset.busca.indexOf(termo) !== -1);
   }
 
@@ -1954,6 +2302,7 @@ html:has(.detalhe[open]) { overflow: hidden; }
     postos.forEach(function (li) { li.getAnimations().forEach(function (a) { a.cancel(); }); });
     var total = postos.filter(function (li) { return combina(li, termo); }).length;
     chips.forEach(function (c) { c.setAttribute('aria-pressed', String(c.dataset.zona === estado.zona)); });
+    chipsServico.forEach(function (c) { c.setAttribute('aria-pressed', String(c.dataset.servico === estado.servico)); });
     chipsBandeira.forEach(function (c) { c.setAttribute('aria-pressed', String(c.dataset.bandeira === estado.bandeira)); });
     if (estado.bandeira !== 'todas') mostrarBandeiras(true);
     contagem.innerHTML = '<strong>' + total + '</strong> ' + (total === 1 ? 'posto encontrado' : 'postos encontrados');
@@ -1961,6 +2310,7 @@ html:has(.detalhe[open]) { overflow: hidden; }
     function trocar() {
       postos.forEach(function (li) { li.hidden = !combina(li, termo); });
       vazio.hidden = total !== 0;
+      montarTabela();
     }
     if (!animar || reduzir || !Element.prototype.animate) { geracao++; trocar(); return; }
 
@@ -2004,14 +2354,16 @@ html:has(.detalhe[open]) { overflow: hidden; }
     if (!abrir && estado.bandeira !== 'todas') { estado.bandeira = 'todas'; aplicar(true); }
   });
   chips.forEach(function (c) { c.addEventListener('click', function () { estado.zona = c.dataset.zona; aplicar(true); }); });
+  chipsServico.forEach(function (c) { c.addEventListener('click', function () { estado.servico = c.dataset.servico; aplicar(true); }); });
   chipsBandeira.forEach(function (c) { c.addEventListener('click', function () { estado.bandeira = c.dataset.bandeira; aplicar(true); }); });
   busca.addEventListener('input', function () { estado.busca = busca.value; aplicar(false); });
   document.getElementById('limpar-filtros').addEventListener('click', function () {
-    estado = { zona: 'todas', bandeira: 'todas', busca: '' }; busca.value = ''; aplicar(true);
+    estado = { zona: 'todas', bandeira: 'todas', servico: 'todos', busca: '' }; busca.value = ''; aplicar(true);
   });
   document.querySelectorAll('[data-bandeira-link]').forEach(function (a) {
-    a.addEventListener('click', function () { estado.bandeira = a.dataset.bandeiraLink; estado.zona = 'todas'; estado.busca = ''; busca.value = ''; aplicar(true); });
+    a.addEventListener('click', function () { estado.bandeira = a.dataset.bandeiraLink; estado.zona = 'todas'; estado.servico = 'todos'; estado.busca = ''; busca.value = ''; aplicar(true); });
   });
+  montarTabela();
 
   // Formulário de interesse dos lojistas: valida no aparelho, envia para a Netlify Forms e mostra o resultado
   // ali mesmo. Se o envio falhar (sem internet, ou fora da Netlify), diz isso e oferece o WhatsApp da central.
@@ -2265,7 +2617,7 @@ html:has(.detalhe[open]) { overflow: hidden; }
     form.addEventListener('submit', function (e) {
       e.preventDefault();
       busca.value = campo.value;
-      estado.busca = campo.value; estado.zona = 'todas'; estado.bandeira = 'todas';
+      estado.busca = campo.value; estado.zona = 'todas'; estado.bandeira = 'todas'; estado.servico = 'todos';
       aplicar(true);
       irParaPostos();
     });
@@ -2300,6 +2652,7 @@ html:has(.detalhe[open]) { overflow: hidden; }
         }
       });
       contagem.insertAdjacentHTML('beforeend', ', do mais perto ao mais longe de você');
+      montarTabela();
     }
 
     // Ilha: some enquanto a abertura (que já tem o botão de localização) está na tela. Cada troca de
@@ -2354,7 +2707,7 @@ html:has(.detalhe[open]) { overflow: hidden; }
         var lat = pos.coords.latitude, lng = pos.coords.longitude;
         postos.forEach(function (li) { li.km = distanciaKm(lat, lng, Number(li.dataset.lat), Number(li.dataset.lng)); });
         var maisPerto = postos.slice().sort(function (a, b) { return a.km - b.km; })[0];
-        estado.busca = ''; busca.value = ''; estado.zona = 'todas'; estado.bandeira = 'todas';
+        estado.busca = ''; busca.value = ''; estado.zona = 'todas'; estado.bandeira = 'todas'; estado.servico = 'todos';
         aplicar(false);
         ordenar();
         var zona = maisPerto.querySelector('.zona'), cidade = zona.querySelector('small');
